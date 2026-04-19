@@ -1,0 +1,36 @@
+{
+  "process": {
+    "inputs": [
+      "Aircraft-Level Operational Requirements",
+      "Applicable Regulations",
+      "Certification Basis"
+    ],
+    "outputs": [
+      "Software Accomplishment Summary (SAS)",
+      "SSA Report",
+      "System Verification Report"
+    ],
+    "tasks": [
+      {
+        "Id": 1,
+        "ParentId": null,
+        "Name": "Define Aircraft Functions",
+        "Description": "Identify all aircraft-level functions that will be allocated to systems and software, establishing the top-level functional decomposition.",
+        "Inputs": ["Aircraft-Level Operational Requirements"],
+        "Outputs": ["Aircraft Function List"],
+        "Standards": ["ARP4754A §5.1"],
+        "AcademicRefs": []
+      },
+      {
+        "Id": 2,
+        "ParentId": null,
+        "Name": "Develop System Requirements",
+        "Description": "Derive and document system requirements from aircraft functions and operational requirements, including functional, performance, safety, and interface requirements.",
+        "Inputs": ["Aircraft Function List", "Applicable Regulations"],
+        "Outputs": ["System Requirements Specification"],
+        "Standards": ["ARP4754A §5.2", "ARP4754A §5.3"],
+        "AcademicRefs": []
+      }
+    ]
+  }
+}

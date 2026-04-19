@@ -1,0 +1,557 @@
+  {
+    "Id": 2000,
+    "ParentId": null,
+    "Name": "WCET Analysis Initiation and Scoping",
+    "Description": "Defining the specific functional module, hardware platform, and operational constraints for which the worst-case execution time must be determined.",
+    "Inputs": [
+      "System Requirements Specification (Timing Constraints)",
+      "Source Code Module",
+      "Target Hardware/Processor Specification"
+    ],
+    "Outputs": [
+      "WCET Scope Document",
+      "Assumed Execution Context"
+    ],
+    "Standards": [
+      "Timing Analysis Protocol",
+      "ISO 26262 (Automotive Safety)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": false
+  },
+  {
+    "Id": 2001,
+    "ParentId": "2000",
+    "Name": "Characterize Code and Program Dependencies",
+    "Description": "Mapping out all control flow paths, data dependencies, and potential external resource accesses (e.g., I/O, network calls) that affect execution time.",
+    "Inputs": [
+      "Source Code Module",
+      "Control Flow Graph (CFG)"
+    ],
+    "Outputs": [
+      "Dependency Map",
+      "Critical Path Identification"
+    ],
+    "Standards": [
+      "Software Architecture Description"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 2002,
+    "ParentId": "2000",
+    "Name": "Model the Execution Environment and Assumptions",
+    "Description": "Establishing the system model, including details on cache behavior, memory hierarchy, operating system scheduling jitter, and interrupt handling latency.",
+    "Inputs": [
+      "Target Hardware Manual",
+      "OS Kernel Specification",
+      "Cache Map"
+    ],
+    "Outputs": [
+      "Execution Model Specification",
+      "Timing Assumption List"
+    ],
+    "Standards": [
+      "Real-Time Operating System (RTOS) Standards"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 2003,
+    "ParentId": "2001",
+    "Name": "Define Boundary Condition Test Vectors",
+    "Description": "Generating extreme input data sets (maximum array size, minimum/maximum valid inputs, rapid change sequences) designed to force the code down every potential critical path.",
+    "Inputs": [
+      "Dependency Map",
+      "System Requirements Specification"
+    ],
+    "Outputs": [
+      "Input Test Vector Set",
+      "Worst-Case Scenario Definitions"
+    ],
+    "Standards": [
+      "Boundary Value Analysis"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 2004,
+    "ParentId": "2002",
+    "Name": "Set Up Timing Measurement Tools",
+    "Description": "Configuring hardware-in-the-loop (HIL) simulators and specialized timing analysis tools (e.g., specialized debuggers, emulators) to measure execution time accurately.",
+    "Inputs": [
+      "Execution Model Specification",
+      "Test Bench Configuration"
+    ],
+    "Outputs": [
+      "Measurement Script",
+      "System Initialization Report"
+    ],
+    "Standards": [
+      "Hardware Validation Protocol"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 2005,
+    "ParentId": "2003",
+    "Name": "Execute and Collect Timing Data",
+    "Description": "Running the test vector set (from 2003) repeatedly under the controlled environment (from 2004) to record the maximum observed execution time for each critical path.",
+    "Inputs": [
+      "Input Test Vector Set",
+      "Measurement Script"
+    ],
+    "Outputs": [
+      "Raw Timing Data Log",
+      "Maximum Observed Time Estimates"
+    ],
+    "Standards": [
+      "Scientific Measurement Methodology"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 2006,
+    "ParentId": "2005",
+    "Name": "Analyze Performance Metrics and Identify Jitter",
+    "Description": "Processing the raw data to determine the true statistical worst-case execution time (WCET), identifying sources of timing variability (jitter), and pinpointing performance bottlenecks.",
+    "Inputs": [
+      "Raw Timing Data Log",
+      "Execution Model Specification"
+    ],
+    "Outputs": [
+      "Timing Analysis Report",
+      "Critical Bottleneck Identification"
+    ],
+    "Standards": [
+      "Statistical Process Control (SPC)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 2007,
+    "ParentId": "2006",
+    "Name": "Iterative Code Refinement and Model Update",
+    "Description": "If the calculated WCET violates timing requirements, the source code must be refactored (e.g., to eliminate cache thrashing or excessive locks), and the execution model must be updated to reflect the change.",
+    "Inputs": [
+      "Timing Analysis Report",
+      "Source Code Module"
+    ],
+    "Outputs": [
+      "Refactored Code Patch",
+      "Updated Execution Model"
+    ],
+    "Standards": [
+      "Real-Time Scheduling Theory"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 2008,
+    "ParentId": "2007",
+    "Name": "Formal Verification and Final Validation",
+    "Description": "Performing a final, comprehensive run of the refactored code through the entire test suite and formal model to certify that the newly calculated WCET meets all safety and performance requirements.",
+    "Inputs": [
+      "Refactored Code Patch",
+      "Full Test Suite",
+      "Updated Execution Model"
+    ],
+    "Outputs": [
+      "Final WCET Certificate",
+      "Validation and Sign-off Document"
+    ],
+    "Standards": [
+      "Safety Certification Standards (e.g., DO-178C, ISO 26262)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+    {
+    "Id": 3000,
+    "ParentId": null,
+    "Name": "Interference Analysis Planning and Scope Definition",
+    "Description": "Defining the system boundaries, the set of interacting components (tasks), and the critical shared resources (CPU, memory bus, peripherals) that must be analyzed for contention.",
+    "Inputs": [
+      "System Architecture Description",
+      "Task Decomposition Diagram",
+      "Safety Requirements Specification"
+    ],
+    "Outputs": [
+      "Interference Analysis Plan",
+      "Resource Usage Matrix (RUM)"
+    ],
+    "Standards": [
+      "Safety-Critical System Design Principles",
+      "ARINC 653 (Resource Partitioning)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": false
+  },
+  {
+    "Id": 3001,
+    "ParentId": "3000",
+    "Name": "Hardware Platform Characterization (Interference Sources)",
+    "Description": "Detailed analysis of the physical hardware constraints, including cache coherence protocols, memory bus timing limits, DMA capabilities, and peripheral arbitration mechanisms.",
+    "Inputs": [
+      "Hardware Manuals (Datasheets)",
+      "System Bus Diagram"
+    ],
+    "Outputs": [
+      "Hardware Timing Constraints Report",
+      "Observable Interference Sources List"
+    ],
+    "Standards": [
+      "Electrical Engineering Standards",
+      "Real-Time Hardware Specification"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 3002,
+    "ParentId": "3000",
+    "Name": "Model Shared Resource Consumption",
+    "Description": "Creating a detailed model of how each task accesses and utilizes shared resources (e.g., cache lines, memory bandwidth, mutexes) based on the hardware constraints identified.",
+    "Inputs": [
+      "Resource Usage Matrix",
+      "Hardware Timing Constraints Report"
+    ],
+    "Outputs": [
+      "Resource Dependency Model",
+      "Resource Capacity Definition"
+    ],
+    "Standards": [
+      "Real-Time Scheduling Theory",
+      "Bus Arbitration Protocol Documentation"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 3003,
+    "ParentId": "3002",
+    "Name": "Identify Task Dependencies and Conflicts",
+    "Description": "Performing pairwise interaction analysis to map all potential and actual overlaps between task executions and shared resource access (e.g., Task A waiting for Task B to release a critical section).",
+    "Inputs": [
+      "Resource Dependency Model",
+      "Task Execution Schedule"
+    ],
+    "Outputs": [
+      "Conflict Matrix",
+      "Synchronization Primitive Inventory"
+    ],
+    "Standards": [
+      "Concurrency Control Mechanisms (Mutexes, Semaphores)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 3004,
+    "ParentId": "3003",
+    "Name": "Quantify Worst-Case Interference Impact",
+    "Description": "Using analytical methods to mathematically determine the maximum detrimental effect one task can have on another's timing or data integrity due to the identified conflicts.",
+    "Inputs": [
+      "Conflict Matrix",
+      "Worst-Case Execution Time (WCET) Estimates"
+    ],
+    "Outputs": [
+      "Interference Quantification Report",
+      "Critical Timing Violation Estimates"
+    ],
+    "Standards": [
+      "Schedulability Analysis Techniques (e.g., Utilization Bounding)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 3005,
+    "ParentId": "3004",
+    "Name": "Assess Safety and Timing Violations",
+    "Description": "Comparing the calculated worst-case interference limits against the established safety margins and hard real-time deadlines. Determining if the system is non-schedulable or unsafe due to contention.",
+    "Inputs": [
+      "Interference Quantification Report",
+      "Safety Requirements Specification"
+    ],
+    "Outputs": [
+      "Violation Assessment Report",
+      "Safety Violation Flag"
+    ],
+    "Standards": [
+      "Hard Real-Time System Constraints"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 3006,
+    "ParentId": "3005",
+    "Name": "Develop Mitigation and Isolation Strategies",
+    "Description": "Designing countermeasures to eliminate or reduce observed interference. This may involve resource partitioning (time/space), priority modification, or introducing synchronization barriers.",
+    "Inputs": [
+      "Violation Assessment Report",
+      "System Architecture Diagram"
+    ],
+    "Outputs": [
+      "System Refinement Design Document",
+      "Scheduling Algorithm Modification Plan"
+    ],
+    "Standards": [
+      "Resource Partitioning Techniques",
+      "Isolation Protocol Design"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 3007,
+    "ParentId": "3006",
+    "Name": "Re-Analyze and Validate Mitigation Effectiveness",
+    "Description": "Rerunning the interference quantification process using the modified system model and resource allocation to prove that the newly implemented strategy eliminates all critical violations.",
+    "Inputs": [
+      "System Refinement Design Document",
+      "Updated Code/Scheduler Parameters"
+    ],
+    "Outputs": [
+      "Final Interference Confirmation Report",
+      "Updated Schedulability Analysis"
+    ],
+    "Standards": [
+      "Model Checking Theory",
+      "Verification and Validation (V&V)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 3008,
+    "ParentId": "3007",
+    "Name": "Document Final Safety Case",
+    "Description": "Compiling the complete documentation, including all assumptions, test results, and formal proof of resource isolation, to satisfy regulatory safety sign-off.",
+    "Inputs": [
+      "Final Interference Confirmation Report",
+      "System Architecture Definition"
+    ],
+    "Outputs": [
+      "Safety Case Report (Interference Analysis)",
+      "System Acceptance Sign-off"
+    ],
+    "Standards": [
+      "DO-178C (Software Considerations)",
+      "Functional Safety Management"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 4000,
+    "ParentId": null,
+    "Name": "Hardware Interference Analysis Planning and Scope Definition",
+    "Description": "Establishing the scope of the hardware analysis: identifying the physical boundaries, timing metrics, and components where contention is possible (CPU, Memory, I/O, Bus).",
+    "Inputs": [
+      "System Architecture Diagram",
+      "Target Hardware Manuals",
+      "Safety Criticality Level (ASIL/DAL)"
+    ],
+    "Outputs": [
+      "HW Interference Analysis Plan",
+      "Resource Allocation Map (RAM)"
+    ],
+    "Standards": [
+      "System Engineering Standards",
+      "Quantitative Analysis Methodology"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": false
+  },
+  {
+    "Id": 4001,
+    "ParentId": "4000",
+    "Name": "Microbenchmarking Environment Setup",
+    "Description": "Configuring the test harness, profiling tools, and isolated test modules to ensure that measured performance metrics are as close as possible to the bare hardware performance, minimizing overhead.",
+    "Inputs": [
+      "Source Code Module",
+      "Profiling Tools/Analyzers"
+    ],
+    "Outputs": [
+      "Test Bench Configuration Scripts",
+      "Microbenchmarking Protocol"
+    ],
+    "Standards": [
+      "Empirical Measurement Standards"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 4002,
+    "ParentId": "4000",
+    "Name": "Cache and Memory Hierarchy Analysis (Benchmarked)",
+    "Description": "Using controlled microbenchmarks to quantify cache hit/miss ratios, measure cache line transfer rates, and detect cross-core/cross-process cache interference.",
+    "Inputs": [
+      "Cache Map Specification",
+      "Microbenchmarking Protocol"
+    ],
+    "Outputs": [
+      "Cache Interference Map",
+      "Memory Access Profile"
+    ],
+    "Standards": [
+      "Cache Coherence Protocol Standards",
+      "Profiling Techniques (e.g., Hardware Performance Counters)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 4003,
+    "ParentId": "4000",
+    "Name": "System Bus and Memory Bandwidth Analysis (Benchmarked)",
+    "Description": "Executing microbenchmarks designed to saturate the system bus and memory controller to quantify total usable bandwidth, transaction overhead, and potential queuing delays under load.",
+    "Inputs": [
+      "System Bus Diagram",
+      "Microbenchmarking Protocol"
+    ],
+    "Outputs": [
+      "Bus Utilization Profile",
+      "Bottleneck Identification Report (Throughput Limits)"
+    ],
+    "Standards": [
+      "Data Bus Theory",
+      "Throughput Measurement Methodology"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 4004,
+    "ParentId": "4000",
+    "Name": "I/O and Peripheral Interaction Analysis",
+    "Description": "Analyzing dedicated I/O resources, DMA capabilities, and interrupt handling overhead using controlled benchmark tasks to quantify timing impact.",
+    "Inputs": [
+      "Peripheral Component Inventory",
+      "System Bus Diagram"
+    ],
+    "Outputs": [
+      "DMA Timing Constraint Report",
+      "Interrupt Latency Budget"
+    ],
+    "Standards": [
+      "Bus Mastering Protocols",
+      "Hardware-Software Interface Specification (HSI)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 4005,
+    "ParentId": "4001",
+    "Name": "Synthesize Resource Interaction Model",
+    "Description": "Combining the quantitative findings (cache, bus, I/O) into a single, predictive model that predicts total, simultaneous, multi-source interference effects, factoring in measured overheads.",
+    "Inputs": [
+      "Cache Interference Map",
+      "Bus Utilization Profile",
+      "DMA Timing Constraint Report"
+    ],
+    "Outputs": [
+      "Composite Interference Model",
+      "Potential Interference Failure Modes List"
+    ],
+    "Standards": [
+      "System-Level Modeling",
+      "Fault Domain Analysis"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 4006,
+    "ParentId": "4005",
+    "Name": "Analyze Timing Jitter and Non-Determinism",
+    "Description": "Focusing on unpredictability (e.g., OS jitter, context switching variability) by running statistical benchmarking over long periods to determine the upper bound of variability.",
+    "Inputs": [
+      "Composite Interference Model",
+      "OS Kernel Scheduling Policies"
+    ],
+    "Outputs": [
+      "Jitter Quantification Report",
+      "Determinism Violation Assessment"
+    ],
+    "Standards": [
+      "Hard Real-Time Scheduling Theory",
+      "Statistical Jitter Analysis"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 4007,
+    "ParentId": "4006",
+    "Name": "Generate Hardware Stress Test Vectors",
+    "Description": "Creating workload mixes and input sequences designed to intentionally force the hardware into its absolute worst-case combination of resource contention, validated by prior microbenchmarking results.",
+    "Inputs": [
+      "Jitter Quantification Report",
+      "Potential Interference Failure Modes List"
+    ],
+    "Outputs": [
+      "Hardware Stress Test Suite",
+      "Worst-Case Input Parameters"
+    ],
+    "Standards": [
+      "Fault Injection Testing",
+      "Stress Testing Methodology"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 4008,
+    "ParentId": "4007",
+    "Name": "Execute and Measure Interference Stress Tests",
+    "Description": "Running the generated stress vectors on the hardware to measure the true, worst-case degradation in performance metrics and validating the predictions made by the microbenchmarks.",
+    "Inputs": [
+      "Hardware Stress Test Suite",
+      "Timing Measurement Tools"
+    ],
+    "Outputs": [
+      "Raw Performance Degradation Data",
+      "Measured Interference Impact Report"
+    ],
+    "Standards": [
+      "Quantitative Measurement Standards (Metrology)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 4009,
+    "ParentId": "4008",
+    "Name": "Final Analysis and Safety Case Generation",
+    "Description": "Synthesizing all hardware findings, proposing concrete hardware or software mitigation strategies, and generating the final certified report proving the system's deterministic behavior.",
+    "Inputs": [
+      "Measured Interference Impact Report",
+      "Composite Interference Model"
+    ],
+    "Outputs": [
+      "Final Hardware Interference Safety Case",
+      "Design Modification Recommendations"
+    ],
+    "Standards": [
+      "Safety-Critical Hardware Certification (e.g., DO-254)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  }
+
+
+  
+
+```

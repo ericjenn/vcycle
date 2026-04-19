@@ -1,0 +1,193 @@
+  {
+    "Id": 1000,
+    "ParentId": null,
+    "Name": "Bug Detection and Preparation (Triage)",
+    "Description": "Initial phase focusing on identifying the failure symptom and setting up the necessary environment for investigation.",
+    "Inputs": [],
+    "Outputs": [
+      "Defect Report",
+      "Test Plan Update"
+    ],
+    "Standards": [
+      "Software Quality Assurance (SQA)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": false
+  },
+  {
+    "Id": 1001,
+    "ParentId": "1000",
+    "Name": "Develop Test Cases and Scenarios",
+    "Description": "Creation of specific, failing test cases designed to challenge the system's known failure points and boundary conditions until the bug can be consistently triggered.",
+    "Inputs": [
+      "System Requirements Specification",
+      "Failure Symptom Report"
+    ],
+    "Outputs": [
+      "Test Case Matrix",
+      "Repro Steps Document"
+    ],
+    "Standards": [
+      "IEEE 829",
+      "Black-Box Testing Principles"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 1002,
+    "ParentId": "1000",
+    "Name": "Set Up Debugging and Monitoring Environment",
+    "Description": "Configuration and validation of specialized tools (debuggers, logging frameworks, profilers) and hardware simulators required for deep runtime observation.",
+    "Inputs": [
+      "Code Repository",
+      "Target Hardware/OS Specification"
+    ],
+    "Outputs": [
+      "Debugging Environment Configuration",
+      "Logging Schema Definition"
+    ],
+    "Standards": [
+      "DevSecOps Best Practices"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 1003,
+    "ParentId": "1001",
+    "Name": "Reproduce the Failure (Confirmation)",
+    "Description": "Systematic execution of the failure-triggering test case in a controlled environment until the bug is consistently observed, capturing the precise sequence of events.",
+    "Inputs": [
+      "Test Case Matrix",
+      "Debugging Environment"
+    ],
+    "Outputs": [
+      "Failure Log",
+      "Reproducible Trace File"
+    ],
+    "Standards": [
+      "Software Testing Principles"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 1004,
+    "ParentId": "1003",
+    "Name": "Deep Technical Investigation (Diagnosis)",
+    "Description": "The core technical process involving multiple methods to trace data flow, memory allocation, and execution paths at the point of failure.",
+    "Inputs": [
+      "Reproducible Trace File",
+      "Debugging Environment"
+    ],
+    "Outputs": [
+      "Execution Trace Dump",
+      "Hypothesis of Failure Mechanism"
+    ],
+    "Standards": [
+      "Defensive Programming Practices"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 1005,
+    "ParentId": "1004",
+    "Name": "Code Inspection and Root Cause Analysis (RCA)",
+    "Description": "Analyzing the code surrounding the failure point using logic review, manual inspection (code review), and formal techniques (e.g., Fault Tree Analysis) to determine the fundamental cause.",
+    "Inputs": [
+      "Execution Trace Dump",
+      "Hypothesis of Failure Mechanism",
+      "Source Code Files"
+    ],
+    "Outputs": [
+      "Root Cause Analysis Report (The 'Why')",
+      "Design Flaw Confirmation"
+    ],
+    "Standards": [
+      "Fault Tree Analysis (FTA)",
+      "MISRA C/C++ Guidelines"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 1006,
+    "ParentId": "1005",
+    "Name": "Develop and Implement Mitigation Patch",
+    "Description": "Developing the minimal, robust code changes necessary to correct the root cause. Requires peer review prior to commit.",
+    "Inputs": [
+      "Root Cause Analysis Report",
+      "Design Specification"
+    ],
+    "Outputs": [
+      "Code Patch/Commit",
+      "Code Review Approval"
+    ],
+    "Standards": [
+      "Clean Code Principles",
+      "Change Control Board Protocol"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 1007,
+    "ParentId": "1006",
+    "Name": "Unit Test and Fix Validation",
+    "Description": "Executing highly targeted unit tests (TDD approach) to prove that the patch successfully resolves the initial failure, ideally in isolation.",
+    "Inputs": [
+      "Code Patch/Commit",
+      "Original Failing Test Case"
+    ],
+    "Outputs": [
+      "Unit Test Pass Report (Bug Fixed)",
+      "Build Artifact V2.0"
+    ],
+    "Standards": [
+      "Test-Driven Development (TDD)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 1008,
+    "ParentId": "1007",
+    "Name": "Full Regression and System Validation",
+    "Description": "Executing the entire suite of existing system tests, integration tests, and performance tests to ensure that the fix did not introduce any new side effects or regressions.",
+    "Inputs": [
+      "Build Artifact V2.0",
+      "Full Test Suite (Integration/System)"
+    ],
+    "Outputs": [
+      "System Validation Report",
+      "Regression Pass Confirmation"
+    ],
+    "Standards": [
+      "Software Verification and Validation (V&V)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  },
+  {
+    "Id": 1009,
+    "ParentId": "1008",
+    "Name": "Documentation and Process Update",
+    "Description": "Finalizing the process by updating the knowledge base, revising design documents, and implementing architectural changes or preventative checks to ensure the bug never reappears.",
+    "Inputs": [
+      "Root Cause Analysis Report",
+      "System Validation Report"
+    ],
+    "Outputs": [
+      "Knowledge Base Article (Lessons Learned)",
+      "Updated Requirements Traceability Matrix (RTM)"
+    ],
+    "Standards": [
+      "Configuration Management",
+      "Process Improvement (CAPA)"
+    ],
+    "AcademicRefs": [],
+    "IsSequential": true
+  }
+

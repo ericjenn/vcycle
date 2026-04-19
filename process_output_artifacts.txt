@@ -1,0 +1,159 @@
+ART-001 | Aircraft-Level Operational Requirements
+ART-002 | Applicable Regulations
+ART-003 | Certification Basis
+ART-004 | System Verification Report
+ART-005 | Software Accomplishment Summary (SAS)
+ART-006 | SSA Report
+ART-007 | Aircraft Function List
+ART-008 | System Requirements Specification
+ART-009 | System Architecture Description
+ART-010 | Software Requirements Specification
+ART-011 | System Verification Plan
+ART-012 | Interface Control Document
+ART-013 | Preliminary Aircraft Function List
+ART-014 | Allocated Aircraft Function List
+ART-015 | Functional Requirements
+ART-016 | Performance Requirements
+ART-017 | Safety Requirements
+ART-018 | Interface Requirements
+ART-019 | Architectural Needs and Constraints
+ART-020 | Hardware Architecture Description
+ART-021 | Software Architecture Description
+ART-022 | System Interface Description
+ART-023 | Software Allocation Analysis
+ART-024 | Allocated Software Requirements
+ART-025 | Verification Objectives
+ART-026 | Verification Methods
+ART-027 | Test Strategies
+ART-028 | Identified System Interfaces
+ART-029 | Plan for Software Aspects of Certification (PSAC)
+ART-030 | Software Development Plan (SDP)
+ART-031 | Software Verification Plan (SVP)
+ART-032 | Software Configuration Management Plan (SCMP)
+ART-033 | Software Quality Assurance Plan (SQAP)
+ART-034 | High-Level Software Requirements
+ART-035 | Low-Level Software Requirements
+ART-036 | Software Architecture Implementation
+ART-037 | Source Code
+ART-038 | Software Verification Results
+ART-039 | Configuration Management Records
+ART-040 | Quality Assurance Records
+ART-041 | Function Allocation Criteria
+ART-042 | System Function Allocation
+ART-043 | Software Component Function Allocation
+ART-044 | Hardware-Software Interface Requirements
+ART-045 | Hardware-Software Interface Design
+ART-046 | Integrated Hardware Architecture
+ART-047 | Integrated Software Architecture
+ART-048 | Integrated System Interfaces
+ART-049 | Reviewed System Requirements
+ART-050 | Software-Allocable Requirements
+ART-051 | Reviewed Software Allocation Analysis
+ART-052 | Assigned Software Requirements
+ART-053 | Traceability Matrix
+ART-054 | Completeness Verification Report
+ART-055 | Reviewed Verification Objectives
+ART-056 | Potential Verification Methods
+ART-057 | Evaluated Verification Methods
+ART-058 | Reviewed Verification Methods
+ART-059 | Test Strategy Components
+ART-060 | Test Strategy Framework
+ART-061 | Coded Software Modules
+ART-062 | Software Architecture Implementation Verification Report
+ART-063 | Unit Test Results
+ART-064 | Integration Test Results
+ART-065 | Coverage Analysis Report
+ART-066 | Configuration Baselines
+ART-067 | Change Control Records
+ART-068 | Configuration Audit Reports
+ART-069 | SQAP Compliance Review Report
+ART-070 | Process Audit Reports
+ART-071 | Verified Quality Assurance Records
+ART-072 | FHA Report
+ART-073 | PSSA Report
+ART-074 | Fault Tree Analysis Results
+ART-075 | FMEA Results
+ART-076 | CMA Results
+ART-077 | DAL Assignment
+ART-078 | Safety-Critical Functions
+ART-079 | Function Safety Analysis
+ART-080 | Reviewed Software Requirements
+ART-081 | Missing Requirements List
+ART-082 | Identified Failure Conditions
+ART-083 | Classified Failure Conditions
+ART-084 | Reviewed Safety Information
+ART-085 | Safety Compliance Verification Results
+ART-086 | Hazard Mitigation Assessment
+ART-087 | Identified Faults
+ART-088 | Fault Tree Diagram
+ART-089 | Identified Failure Modes
+ART-090 | Failure Mode Effects Analysis
+ART-091 | Identified Common Mode Failures
+ART-092 | Common Mode Failure Analysis
+ART-093 | System Validation Evidence
+ART-094 | Software High-Level Requirements
+ART-095 | Software Low-Level Requirements
+ART-096 | Software Architecture
+ART-097 | Executable Object Code
+ART-098 | Software Verification Cases and Procedures
+ART-099 | Structural Coverage Analysis Report
+ART-100 | Traceability Data (HLR to LLR)
+ART-101 | Traceability Data (LLR to Source Code)
+ART-102 | Software Configuration Index (SCI)
+ART-103 | Subsystem Requirements Specification
+ART-104 | System Verification Procedures
+ART-105 | System Verification Results
+ART-106 | Reviewed Interface Control Document
+ART-107 | Reviewed Operational Requirements
+ART-108 | Identified Aircraft Functions
+ART-109 | Reviewed Aircraft Functions
+ART-110 | Top-Level Functions
+ART-111 | Identified Functional Requirements
+ART-112 | Reviewed Interface Context
+ART-113 | Identified Interface Requirements
+ART-114 | Compiled Derived Requirements
+ART-115 | Identified Architectural Needs
+ART-116 | Identified Architectural Constraints
+ART-117 | Reviewed Architectural Needs and Constraints
+ART-118 | Hardware Architecture Concepts
+ART-119 | Evaluated Hardware Architecture Concepts
+ART-120 | Selected Hardware Architecture
+ART-121 | Verification Needs
+ART-122 | Compiled Verification Objectives
+ART-123 | Compiled Verification Methods
+ART-124 | Compiled Test Strategies
+ART-125 | Reviewed System Architecture
+ART-126 | Identified Interface Points
+ART-127 | Interface Requirements Analysis
+ART-128 | Reviewed System Interfaces
+ART-129 | Identified Allocation Criteria
+ART-130 | Reviewed Allocation Criteria
+ART-131 | System Allocation Options
+ART-132 | Selected System Allocations
+ART-133 | Reviewed System Function Allocation
+ART-134 | Software Component Allocation Options
+ART-135 | Selected Software Component Allocations
+ART-136 | Reviewed Software Component Function Allocation
+ART-137 | Reviewed Architecture Descriptions
+ART-138 | Reviewed Interface Requirements
+ART-139 | Interface Design Concepts
+ART-140 | Evaluated Interface Design Concepts
+ART-141 | Selected Interface Design
+ART-142 | Reviewed Interface Design
+ART-143 | Reviewed Hardware Architecture Description
+ART-144 | Integration Requirements
+ART-145 | Reviewed Software Architecture Description
+ART-146 | Reviewed System Interface Description
+ART-147 | Reviewed Integrated Architectures
+ART-148 | Reviewed System Requirements Specification
+ART-149 | Potential Software Allocations
+ART-150 | Identified Software-Allocable Requirements
+ART-151 | Reviewed Software-Allocable Requirements
+ART-152 | Examined Software Allocation Analysis
+ART-153 | Verified Allocation Completeness
+ART-154 | Reviewed Analyzed Requirements
+ART-155 | Component Assignment Decisions
+ART-156 | Traceability Links
+ART-157 | Reviewed Test Strategy Components
+ART-158 | System Architecture Analysis for Test Framework
+ART-159 | Integrated Test Strategy Framework

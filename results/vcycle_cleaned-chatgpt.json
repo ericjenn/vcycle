@@ -1,0 +1,4136 @@
+{
+   "process": {
+  "inputs": [
+    "Aircraft-Level Operational Requirements",
+    "Applicable Regulations",
+    "Certification Basis",
+    "System Verification Report"
+  ],
+  "outputs": [
+    "Software Accomplishment Summary (SAS)",
+    "SSA Report",
+    "System Verification Report"
+  ],
+  "tasks": [
+    {
+      "Id": 1,
+      "ParentId": null,
+      "Name": "Define Aircraft Functions",
+      "Description": "Identify all aircraft-level functions that will be allocated to systems and software, establishing the top-level functional decomposition.",
+      "Inputs": [
+        "Aircraft-Level Operational Requirements"
+      ],
+      "Outputs": [
+        "Aircraft Function List"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 2,
+      "ParentId": null,
+      "Name": "Develop System Requirements",
+      "Description": "Derive and document system requirements from aircraft functions and operational requirements, including functional, performance, safety, and interface requirements.",
+      "Inputs": [
+        "Aircraft Function List",
+        "Applicable Regulations"
+      ],
+      "Outputs": [
+        "System Requirements Specification"
+      ],
+      "Standards": [
+        "ARP4754A §5.2",
+        "ARP4754A §5.3"
+      ],
+      "AcademicRefs": [
+        "REF-001",
+        "REF-002",
+        "REF-003"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 3,
+      "ParentId": null,
+      "Name": "Define System Architecture",
+      "Description": "Establish the system architecture to meet the system requirements, considering hardware, software, and interfaces.",
+      "Inputs": [
+        "System Requirements Specification"
+      ],
+      "Outputs": [
+        "System Architecture Description"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [
+        "REF-004",
+        "REF-005",
+        "REF-006"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 4,
+      "ParentId": null,
+      "Name": "Allocate System-to-Software Requirements",
+      "Description": "Allocate system requirements to software components, ensuring traceability and completeness.",
+      "Inputs": [
+        "System Requirements Specification",
+        "System Architecture Description"
+      ],
+      "Outputs": [
+        "Software Requirements Specification"
+      ],
+      "Standards": [
+        "ARP4754A §5.2",
+        "ARP4754A §5.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 5,
+      "ParentId": null,
+      "Name": "Plan System-Level Verification",
+      "Description": "Develop a verification plan to ensure the system meets its requirements, including test strategies and methods.",
+      "Inputs": [
+        "System Requirements Specification",
+        "System Architecture Description"
+      ],
+      "Outputs": [
+        "System Verification Plan"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 6,
+      "ParentId": null,
+      "Name": "Define System Interfaces",
+      "Description": "Identify and document all system interfaces, ensuring compatibility and integration with other systems.",
+      "Inputs": [
+        "System Architecture Description"
+      ],
+      "Outputs": [
+        "Interface Control Document"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [
+        "REF-007",
+        "REF-008",
+        "REF-009"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 7,
+      "ParentId": 1,
+      "Name": "Identify Aircraft-Level Functions",
+      "Description": "Identify and list all aircraft-level functions based on operational requirements.",
+      "Inputs": [
+        "Aircraft-Level Operational Requirements"
+      ],
+      "Outputs": [
+        "Preliminary Aircraft Function List"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [
+        "REF-010",
+        "REF-011",
+        "REF-012"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 8,
+      "ParentId": 1,
+      "Name": "Allocate Functions to Systems",
+      "Description": "Allocate identified aircraft-level functions to specific systems and software components.",
+      "Inputs": [
+        "Preliminary Aircraft Function List"
+      ],
+      "Outputs": [
+        "Allocated Aircraft Function List"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [
+        "REF-013",
+        "REF-014",
+        "REF-015"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 9,
+      "ParentId": 1,
+      "Name": "Establish Functional Decomposition",
+      "Description": "Establish the top-level functional decomposition of the aircraft functions.",
+      "Inputs": [
+        "Allocated Aircraft Function List"
+      ],
+      "Outputs": [
+        "Aircraft Function List"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [
+        "REF-013",
+        "REF-016",
+        "REF-017"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 10,
+      "ParentId": 2,
+      "Name": "Derive Functional Requirements",
+      "Description": "Derive functional requirements from aircraft functions and operational requirements.",
+      "Inputs": [
+        "Aircraft Function List",
+        "Applicable Regulations"
+      ],
+      "Outputs": [
+        "Functional Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [
+        "REF-018",
+        "REF-019",
+        "REF-020"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 11,
+      "ParentId": 2,
+      "Name": "Derive Performance Requirements",
+      "Description": "Derive performance requirements based on operational needs and constraints.",
+      "Inputs": [
+        "Aircraft Function List",
+        "Applicable Regulations"
+      ],
+      "Outputs": [
+        "Performance Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [
+        "REF-021",
+        "REF-022",
+        "REF-023"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 12,
+      "ParentId": 2,
+      "Name": "Derive Safety Requirements",
+      "Description": "Derive safety requirements to ensure compliance with safety standards.",
+      "Inputs": [
+        "Aircraft Function List",
+        "Applicable Regulations"
+      ],
+      "Outputs": [
+        "Safety Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [
+        "REF-024",
+        "REF-025",
+        "REF-026"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 13,
+      "ParentId": 2,
+      "Name": "Derive Interface Requirements",
+      "Description": "Derive interface requirements to ensure proper integration with other systems.",
+      "Inputs": [
+        "Aircraft Function List",
+        "Applicable Regulations"
+      ],
+      "Outputs": [
+        "Interface Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [
+        "REF-027",
+        "REF-028",
+        "REF-029"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 14,
+      "ParentId": 2,
+      "Name": "Document System Requirements",
+      "Description": "Compile and document all derived requirements into the System Requirements Specification.",
+      "Inputs": [
+        "Functional Requirements",
+        "Performance Requirements",
+        "Safety Requirements",
+        "Interface Requirements"
+      ],
+      "Outputs": [
+        "System Requirements Specification"
+      ],
+      "Standards": [
+        "ARP4754A §5.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 15,
+      "ParentId": 3,
+      "Name": "Analyze System Requirements",
+      "Description": "Analyze the system requirements to identify architectural needs and constraints.",
+      "Inputs": [
+        "System Requirements Specification"
+      ],
+      "Outputs": [
+        "Architectural Needs and Constraints"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [
+        "REF-030",
+        "REF-031",
+        "REF-032"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 16,
+      "ParentId": 3,
+      "Name": "Design Hardware Architecture",
+      "Description": "Design the hardware architecture to meet identified needs and constraints.",
+      "Inputs": [
+        "Architectural Needs and Constraints"
+      ],
+      "Outputs": [
+        "Hardware Architecture Description"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [
+        "REF-033",
+        "REF-034",
+        "REF-035"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 17,
+      "ParentId": 3,
+      "Name": "Design Software Architecture",
+      "Description": "Design the software architecture to meet identified needs and constraints.",
+      "Inputs": [
+        "Architectural Needs and Constraints"
+      ],
+      "Outputs": [
+        "Software Architecture Description"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [
+        "REF-004",
+        "REF-005",
+        "REF-006"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 18,
+      "ParentId": 3,
+      "Name": "Define System Interfaces",
+      "Description": "Define the interfaces between hardware and software components.",
+      "Inputs": [
+        "Hardware Architecture Description",
+        "Software Architecture Description"
+      ],
+      "Outputs": [
+        "System Interface Description"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [
+        "REF-036",
+        "REF-037",
+        "REF-005"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 19,
+      "ParentId": 3,
+      "Name": "Compile System Architecture Description",
+      "Description": "Compile the hardware, software, and interface designs into the System Architecture Description.",
+      "Inputs": [
+        "Hardware Architecture Description",
+        "Software Architecture Description",
+        "System Interface Description"
+      ],
+      "Outputs": [
+        "System Architecture Description"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 20,
+      "ParentId": 4,
+      "Name": "Analyze System Requirements for Software Allocation",
+      "Description": "Analyze system requirements to determine which can be allocated to software components.",
+      "Inputs": [
+        "System Requirements Specification",
+        "System Architecture Description"
+      ],
+      "Outputs": [
+        "Software Allocation Analysis"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [
+        "REF-013",
+        "REF-038",
+        "REF-028"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 21,
+      "ParentId": 4,
+      "Name": "Allocate Requirements to Software Components",
+      "Description": "Allocate analyzed system requirements to specific software components.",
+      "Inputs": [
+        "Software Allocation Analysis"
+      ],
+      "Outputs": [
+        "Allocated Software Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 22,
+      "ParentId": 4,
+      "Name": "Ensure Traceability and Completeness",
+      "Description": "Ensure traceability and completeness of allocated software requirements.",
+      "Inputs": [
+        "Allocated Software Requirements"
+      ],
+      "Outputs": [
+        "Software Requirements Specification"
+      ],
+      "Standards": [
+        "ARP4754A §5.3"
+      ],
+      "AcademicRefs": [
+        "REF-039",
+        "REF-040",
+        "REF-041"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 23,
+      "ParentId": 5,
+      "Name": "Identify Verification Objectives",
+      "Description": "Identify the objectives for system-level verification based on system requirements.",
+      "Inputs": [
+        "System Requirements Specification"
+      ],
+      "Outputs": [
+        "Verification Objectives"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [
+        "REF-042",
+        "REF-043",
+        "REF-044"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 24,
+      "ParentId": 5,
+      "Name": "Select Verification Methods",
+      "Description": "Select appropriate verification methods to achieve the identified objectives.",
+      "Inputs": [
+        "Verification Objectives"
+      ],
+      "Outputs": [
+        "Verification Methods"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [
+        "REF-045",
+        "REF-046",
+        "REF-047"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 25,
+      "ParentId": 5,
+      "Name": "Develop Test Strategies",
+      "Description": "Develop test strategies to implement the selected verification methods.",
+      "Inputs": [
+        "Verification Methods",
+        "System Architecture Description"
+      ],
+      "Outputs": [
+        "Test Strategies"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [
+        "REF-048",
+        "REF-049",
+        "REF-050"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 26,
+      "ParentId": 5,
+      "Name": "Compile System Verification Plan",
+      "Description": "Compile the verification objectives, methods, and test strategies into the System Verification Plan.",
+      "Inputs": [
+        "Verification Objectives",
+        "Verification Methods",
+        "Test Strategies"
+      ],
+      "Outputs": [
+        "System Verification Plan"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 27,
+      "ParentId": 6,
+      "Name": "Identify System Interfaces",
+      "Description": "Identify all interfaces required for system integration based on the System Architecture Description.",
+      "Inputs": [
+        "System Architecture Description"
+      ],
+      "Outputs": [
+        "Identified System Interfaces"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [
+        "REF-051",
+        "REF-052",
+        "REF-053"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 28,
+      "ParentId": 6,
+      "Name": "Document System Interfaces",
+      "Description": "Document the identified system interfaces in the Interface Control Document.",
+      "Inputs": [
+        "Identified System Interfaces"
+      ],
+      "Outputs": [
+        "Interface Control Document"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 29,
+      "ParentId": null,
+      "Name": "Develop Software Plans",
+      "Description": "Develop the software plans including PSAC, SDP, SVP, SCMP, and SQAP to guide the software development process.",
+      "Inputs": [
+        "Certification Basis"
+      ],
+      "Outputs": [
+        "Plan for Software Aspects of Certification (PSAC)",
+        "Software Development Plan (SDP)",
+        "Software Verification Plan (SVP)",
+        "Software Configuration Management Plan (SCMP)",
+        "Software Quality Assurance Plan (SQAP)"
+      ],
+      "Standards": [
+        "DO-178C §4.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 30,
+      "ParentId": 4,
+      "Name": "Develop High-Level Requirements",
+      "Description": "Develop high-level software requirements from system requirements ensuring traceability.",
+      "Inputs": [
+        "Software Requirements Specification"
+      ],
+      "Outputs": [
+        "High-Level Software Requirements"
+      ],
+      "Standards": [
+        "DO-178C Table A-2"
+      ],
+      "AcademicRefs": [
+        "REF-054",
+        "REF-055",
+        "REF-056"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 31,
+      "ParentId": 30,
+      "Name": "Develop Low-Level Requirements",
+      "Description": "Develop low-level software requirements from high-level requirements ensuring traceability.",
+      "Inputs": [
+        "High-Level Software Requirements"
+      ],
+      "Outputs": [
+        "Low-Level Software Requirements"
+      ],
+      "Standards": [
+        "DO-178C Table A-3"
+      ],
+      "AcademicRefs": [
+        "REF-057",
+        "REF-058",
+        "REF-059"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 32,
+      "ParentId": 17,
+      "Name": "Implement Software Architecture",
+      "Description": "Implement the software architecture based on the design to support software requirements.",
+      "Inputs": [
+        "Software Architecture Description"
+      ],
+      "Outputs": [
+        "Software Architecture Implementation"
+      ],
+      "Standards": [
+        "DO-178C Table A-4"
+      ],
+      "AcademicRefs": [
+        "REF-060",
+        "REF-036",
+        "REF-006"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 33,
+      "ParentId": 31,
+      "Name": "Implement Source Code",
+      "Description": "Develop source code from low-level requirements ensuring traceability and compliance with coding standards.",
+      "Inputs": [
+        "Low-Level Software Requirements"
+      ],
+      "Outputs": [
+        "Source Code"
+      ],
+      "Standards": [
+        "DO-178C Table A-5"
+      ],
+      "AcademicRefs": [
+        "REF-061",
+        "REF-062",
+        "REF-063"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 34,
+      "ParentId": 33,
+      "Name": "Conduct Software Verification",
+      "Description": "Perform unit and integration testing, and conduct coverage analysis to verify the software.",
+      "Inputs": [
+        "Source Code",
+        "Software Verification Plan (SVP)"
+      ],
+      "Outputs": [
+        "Software Verification Results"
+      ],
+      "Standards": [
+        "DO-178C Table A-6"
+      ],
+      "AcademicRefs": [
+        "REF-064",
+        "REF-065",
+        "REF-066"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 35,
+      "ParentId": null,
+      "Name": "Perform Configuration Management",
+      "Description": "Manage software configuration items to ensure integrity and traceability throughout the software lifecycle.",
+      "Inputs": [
+        "Software Configuration Management Plan (SCMP)"
+      ],
+      "Outputs": [
+        "Configuration Management Records"
+      ],
+      "Standards": [
+        "DO-178C §7.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 36,
+      "ParentId": null,
+      "Name": "Conduct Software Quality Assurance",
+      "Description": "Ensure compliance with software quality assurance processes and standards.",
+      "Inputs": [
+        "Software Quality Assurance Plan (SQAP)"
+      ],
+      "Outputs": [
+        "Quality Assurance Records"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [
+        "REF-067",
+        "REF-068",
+        "REF-069"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 37,
+      "ParentId": 8,
+      "Name": "Analyze Aircraft Functions",
+      "Description": "Analyze the identified aircraft-level functions to determine allocation criteria.",
+      "Inputs": [
+        "Preliminary Aircraft Function List"
+      ],
+      "Outputs": [
+        "Function Allocation Criteria"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 38,
+      "ParentId": 8,
+      "Name": "Allocate Functions to Systems",
+      "Description": "Allocate aircraft functions to specific systems based on the established criteria.",
+      "Inputs": [
+        "Function Allocation Criteria"
+      ],
+      "Outputs": [
+        "System Function Allocation"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [
+        "REF-070",
+        "REF-071",
+        "REF-072"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 39,
+      "ParentId": 8,
+      "Name": "Allocate Functions to Software Components",
+      "Description": "Allocate aircraft functions to specific software components ensuring alignment with system allocations.",
+      "Inputs": [
+        "System Function Allocation"
+      ],
+      "Outputs": [
+        "Software Component Function Allocation"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 40,
+      "ParentId": 8,
+      "Name": "Compile Allocated Aircraft Function List",
+      "Description": "Compile the allocated functions into a comprehensive list for further development.",
+      "Inputs": [
+        "Software Component Function Allocation"
+      ],
+      "Outputs": [
+        "Allocated Aircraft Function List"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 41,
+      "ParentId": 18,
+      "Name": "Identify Hardware-Software Interface Requirements",
+      "Description": "Identify the specific interface requirements between hardware and software components based on architecture descriptions.",
+      "Inputs": [
+        "Hardware Architecture Description",
+        "Software Architecture Description"
+      ],
+      "Outputs": [
+        "Hardware-Software Interface Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 42,
+      "ParentId": 18,
+      "Name": "Design Hardware-Software Interfaces",
+      "Description": "Design the interfaces between hardware and software components to meet identified requirements.",
+      "Inputs": [
+        "Hardware-Software Interface Requirements"
+      ],
+      "Outputs": [
+        "Hardware-Software Interface Design"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [
+        "REF-004",
+        "REF-073",
+        "REF-074"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 43,
+      "ParentId": 18,
+      "Name": "Document System Interface Description",
+      "Description": "Document the designed interfaces in the System Interface Description.",
+      "Inputs": [
+        "Hardware-Software Interface Design"
+      ],
+      "Outputs": [
+        "System Interface Description"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 44,
+      "ParentId": 19,
+      "Name": "Integrate Hardware Architecture",
+      "Description": "Integrate the hardware architecture description into the System Architecture Description.",
+      "Inputs": [
+        "Hardware Architecture Description"
+      ],
+      "Outputs": [
+        "Integrated Hardware Architecture"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 45,
+      "ParentId": 19,
+      "Name": "Integrate Software Architecture",
+      "Description": "Integrate the software architecture description into the System Architecture Description.",
+      "Inputs": [
+        "Software Architecture Description"
+      ],
+      "Outputs": [
+        "Integrated Software Architecture"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 46,
+      "ParentId": 19,
+      "Name": "Integrate System Interfaces",
+      "Description": "Integrate the system interface description into the System Architecture Description.",
+      "Inputs": [
+        "System Interface Description"
+      ],
+      "Outputs": [
+        "Integrated System Interfaces"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 47,
+      "ParentId": 19,
+      "Name": "Compile Final System Architecture Description",
+      "Description": "Compile the integrated hardware, software, and interface architectures into the final System Architecture Description.",
+      "Inputs": [
+        "Integrated Hardware Architecture",
+        "Integrated Software Architecture",
+        "Integrated System Interfaces"
+      ],
+      "Outputs": [
+        "System Architecture Description"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [
+        "REF-075",
+        "REF-076",
+        "REF-077"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 48,
+      "ParentId": 20,
+      "Name": "Review System Requirements",
+      "Description": "Review the System Requirements Specification to identify potential software allocations.",
+      "Inputs": [
+        "System Requirements Specification"
+      ],
+      "Outputs": [
+        "Reviewed System Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [
+        "REF-031",
+        "REF-078",
+        "REF-079"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 49,
+      "ParentId": 20,
+      "Name": "Identify Software-Allocable Requirements",
+      "Description": "Identify requirements from the reviewed system requirements that can be allocated to software components.",
+      "Inputs": [
+        "Reviewed System Requirements",
+        "System Architecture Description"
+      ],
+      "Outputs": [
+        "Software-Allocable Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 50,
+      "ParentId": 20,
+      "Name": "Document Software Allocation Analysis",
+      "Description": "Document the analysis of system requirements for software allocation.",
+      "Inputs": [
+        "Software-Allocable Requirements"
+      ],
+      "Outputs": [
+        "Software Allocation Analysis"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [
+        "REF-013",
+        "REF-080",
+        "REF-027"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 51,
+      "ParentId": 21,
+      "Name": "Review Software Allocation Analysis",
+      "Description": "Review the Software Allocation Analysis to understand the system requirements allocated to software components.",
+      "Inputs": [
+        "Software Allocation Analysis"
+      ],
+      "Outputs": [
+        "Reviewed Software Allocation Analysis"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 52,
+      "ParentId": 21,
+      "Name": "Assign Requirements to Software Components",
+      "Description": "Assign each analyzed requirement to the appropriate software component based on the allocation analysis.",
+      "Inputs": [
+        "Reviewed Software Allocation Analysis"
+      ],
+      "Outputs": [
+        "Assigned Software Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [
+        "REF-081",
+        "REF-082",
+        "REF-083"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 53,
+      "ParentId": 21,
+      "Name": "Document Allocated Software Requirements",
+      "Description": "Document the allocated software requirements for each component in a structured format.",
+      "Inputs": [
+        "Assigned Software Requirements"
+      ],
+      "Outputs": [
+        "Allocated Software Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [
+        "REF-031",
+        "REF-084",
+        "REF-085"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 54,
+      "ParentId": 22,
+      "Name": "Establish Requirement Traceability",
+      "Description": "Establish traceability from allocated software requirements to system requirements.",
+      "Inputs": [
+        "Allocated Software Requirements"
+      ],
+      "Outputs": [
+        "Traceability Matrix"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [
+        "REF-039",
+        "REF-040",
+        "REF-086"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 55,
+      "ParentId": 22,
+      "Name": "Verify Requirement Completeness",
+      "Description": "Verify that all allocated software requirements are complete and address all necessary aspects.",
+      "Inputs": [
+        "Allocated Software Requirements"
+      ],
+      "Outputs": [
+        "Completeness Verification Report"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 56,
+      "ParentId": 22,
+      "Name": "Compile Software Requirements Specification",
+      "Description": "Compile the traceability matrix and completeness verification into the Software Requirements Specification.",
+      "Inputs": [
+        "Traceability Matrix",
+        "Completeness Verification Report"
+      ],
+      "Outputs": [
+        "Software Requirements Specification"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [
+        "REF-087",
+        "REF-031",
+        "REF-002"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 57,
+      "ParentId": 24,
+      "Name": "Review Verification Objectives",
+      "Description": "Review the verification objectives to understand the scope and requirements for verification.",
+      "Inputs": [
+        "Verification Objectives"
+      ],
+      "Outputs": [
+        "Reviewed Verification Objectives"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [
+        "REF-088",
+        "REF-089",
+        "REF-056"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 58,
+      "ParentId": 24,
+      "Name": "Identify Potential Verification Methods",
+      "Description": "Identify potential verification methods that can be applied to meet the reviewed objectives.",
+      "Inputs": [
+        "Reviewed Verification Objectives"
+      ],
+      "Outputs": [
+        "Potential Verification Methods"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [
+        "REF-090",
+        "REF-091",
+        "REF-092"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 59,
+      "ParentId": 24,
+      "Name": "Evaluate Verification Methods",
+      "Description": "Evaluate the identified verification methods for feasibility and effectiveness.",
+      "Inputs": [
+        "Potential Verification Methods"
+      ],
+      "Outputs": [
+        "Evaluated Verification Methods"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [
+        "REF-090",
+        "REF-091",
+        "REF-047"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 60,
+      "ParentId": 24,
+      "Name": "Select Final Verification Methods",
+      "Description": "Select the most appropriate verification methods from the evaluated options.",
+      "Inputs": [
+        "Evaluated Verification Methods"
+      ],
+      "Outputs": [
+        "Verification Methods"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [
+        "REF-093",
+        "REF-094",
+        "REF-095"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 61,
+      "ParentId": 25,
+      "Name": "Review Verification Methods",
+      "Description": "Review the selected verification methods to understand their requirements and constraints.",
+      "Inputs": [
+        "Verification Methods"
+      ],
+      "Outputs": [
+        "Reviewed Verification Methods"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [
+        "REF-096",
+        "REF-097",
+        "REF-098"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 62,
+      "ParentId": 25,
+      "Name": "Identify Test Strategy Components",
+      "Description": "Identify the components and elements required for developing test strategies based on the reviewed methods.",
+      "Inputs": [
+        "Reviewed Verification Methods",
+        "System Architecture Description"
+      ],
+      "Outputs": [
+        "Test Strategy Components"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [
+        "REF-099",
+        "REF-100",
+        "REF-101"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 63,
+      "ParentId": 25,
+      "Name": "Develop Test Strategy Framework",
+      "Description": "Develop a framework for the test strategies incorporating identified components and system architecture.",
+      "Inputs": [
+        "Test Strategy Components",
+        "System Architecture Description"
+      ],
+      "Outputs": [
+        "Test Strategy Framework"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [
+        "REF-102",
+        "REF-103",
+        "REF-104"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 64,
+      "ParentId": 25,
+      "Name": "Document Test Strategies",
+      "Description": "Document the developed test strategies in a structured format for implementation.",
+      "Inputs": [
+        "Test Strategy Framework"
+      ],
+      "Outputs": [
+        "Test Strategies"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [
+        "REF-105",
+        "REF-106",
+        "REF-107"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 65,
+      "ParentId": 29,
+      "Name": "Develop PSAC",
+      "Description": "Develop the Plan for Software Aspects of Certification (PSAC) to outline the certification approach.",
+      "Inputs": [
+        "Certification Basis"
+      ],
+      "Outputs": [
+        "Plan for Software Aspects of Certification (PSAC)"
+      ],
+      "Standards": [
+        "DO-178C §4.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 66,
+      "ParentId": 29,
+      "Name": "Develop SDP",
+      "Description": "Develop the Software Development Plan (SDP) to define the software development lifecycle and processes.",
+      "Inputs": [
+        "Certification Basis"
+      ],
+      "Outputs": [
+        "Software Development Plan (SDP)"
+      ],
+      "Standards": [
+        "DO-178C §4.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 67,
+      "ParentId": 29,
+      "Name": "Develop SVP",
+      "Description": "Develop the Software Verification Plan (SVP) to specify verification activities and methods.",
+      "Inputs": [
+        "Certification Basis"
+      ],
+      "Outputs": [
+        "Software Verification Plan (SVP)"
+      ],
+      "Standards": [
+        "DO-178C §4.2"
+      ],
+      "AcademicRefs": [
+        "REF-108",
+        "REF-091",
+        "REF-092"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 68,
+      "ParentId": 29,
+      "Name": "Develop SCMP",
+      "Description": "Develop the Software Configuration Management Plan (SCMP) to manage software configuration items.",
+      "Inputs": [
+        "Certification Basis"
+      ],
+      "Outputs": [
+        "Software Configuration Management Plan (SCMP)"
+      ],
+      "Standards": [
+        "DO-178C §4.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 69,
+      "ParentId": 29,
+      "Name": "Develop SQAP",
+      "Description": "Develop the Software Quality Assurance Plan (SQAP) to ensure software quality processes are followed.",
+      "Inputs": [
+        "Certification Basis"
+      ],
+      "Outputs": [
+        "Software Quality Assurance Plan (SQAP)"
+      ],
+      "Standards": [
+        "DO-178C §4.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 70,
+      "ParentId": 32,
+      "Name": "Code Software Modules",
+      "Description": "Develop code for individual software modules based on the software architecture design.",
+      "Inputs": [
+        "Software Architecture Description"
+      ],
+      "Outputs": [
+        "Coded Software Modules"
+      ],
+      "Standards": [
+        "DO-178C Table A-4"
+      ],
+      "AcademicRefs": [
+        "REF-109",
+        "REF-110",
+        "REF-111"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 71,
+      "ParentId": 32,
+      "Name": "Integrate Software Modules",
+      "Description": "Integrate coded software modules to form the complete software architecture implementation.",
+      "Inputs": [
+        "Coded Software Modules"
+      ],
+      "Outputs": [
+        "Integrated Software Architecture"
+      ],
+      "Standards": [
+        "DO-178C Table A-4"
+      ],
+      "AcademicRefs": [
+        "REF-112",
+        "REF-113",
+        "REF-005"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 72,
+      "ParentId": 32,
+      "Name": "Verify Software Architecture Implementation",
+      "Description": "Verify the integrated software architecture implementation against the design and requirements.",
+      "Inputs": [
+        "Integrated Software Architecture"
+      ],
+      "Outputs": [
+        "Software Architecture Implementation Verification Report"
+      ],
+      "Standards": [
+        "DO-178C Table A-4"
+      ],
+      "AcademicRefs": [
+        "REF-098",
+        "REF-114",
+        "REF-005"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 73,
+      "ParentId": 34,
+      "Name": "Perform Unit Testing",
+      "Description": "Conduct unit testing on individual software components to verify their functionality against requirements.",
+      "Inputs": [
+        "Source Code",
+        "Software Verification Plan (SVP)"
+      ],
+      "Outputs": [
+        "Unit Test Results"
+      ],
+      "Standards": [
+        "DO-178C Table A-6"
+      ],
+      "AcademicRefs": [
+        "REF-115",
+        "REF-100",
+        "REF-116"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 74,
+      "ParentId": 34,
+      "Name": "Perform Integration Testing",
+      "Description": "Conduct integration testing to verify the interaction between integrated software components.",
+      "Inputs": [
+        "Source Code",
+        "Software Verification Plan (SVP)"
+      ],
+      "Outputs": [
+        "Integration Test Results"
+      ],
+      "Standards": [
+        "DO-178C Table A-6"
+      ],
+      "AcademicRefs": [
+        "REF-103",
+        "REF-117",
+        "REF-118"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 75,
+      "ParentId": 34,
+      "Name": "Conduct Coverage Analysis",
+      "Description": "Perform coverage analysis to ensure that the software code has been adequately tested.",
+      "Inputs": [
+        "Source Code",
+        "Software Verification Plan (SVP)"
+      ],
+      "Outputs": [
+        "Coverage Analysis Report"
+      ],
+      "Standards": [
+        "DO-178C Table A-6"
+      ],
+      "AcademicRefs": [
+        "REF-119",
+        "REF-120",
+        "REF-121"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 76,
+      "ParentId": 35,
+      "Name": "Establish Configuration Baselines",
+      "Description": "Define and establish baselines for software configuration items as per the SCMP.",
+      "Inputs": [
+        "Software Configuration Management Plan (SCMP)"
+      ],
+      "Outputs": [
+        "Configuration Baselines"
+      ],
+      "Standards": [
+        "DO-178C §7.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 77,
+      "ParentId": 35,
+      "Name": "Control Configuration Changes",
+      "Description": "Manage and document changes to configuration items to maintain integrity.",
+      "Inputs": [
+        "Configuration Baselines"
+      ],
+      "Outputs": [
+        "Change Control Records"
+      ],
+      "Standards": [
+        "DO-178C §7.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 78,
+      "ParentId": 35,
+      "Name": "Perform Configuration Audits",
+      "Description": "Conduct audits to verify that configuration items conform to their specifications.",
+      "Inputs": [
+        "Configuration Baselines",
+        "Change Control Records"
+      ],
+      "Outputs": [
+        "Configuration Audit Reports"
+      ],
+      "Standards": [
+        "DO-178C §7.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 79,
+      "ParentId": 35,
+      "Name": "Maintain Configuration Records",
+      "Description": "Maintain records of configuration status and changes throughout the software lifecycle.",
+      "Inputs": [
+        "Configuration Audit Reports"
+      ],
+      "Outputs": [
+        "Configuration Management Records"
+      ],
+      "Standards": [
+        "DO-178C §7.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 80,
+      "ParentId": 36,
+      "Name": "Review SQAP Compliance",
+      "Description": "Review the Software Quality Assurance Plan (SQAP) to ensure it meets DO-178C standards.",
+      "Inputs": [
+        "Software Quality Assurance Plan (SQAP)"
+      ],
+      "Outputs": [
+        "SQAP Compliance Review Report"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 81,
+      "ParentId": 36,
+      "Name": "Conduct Process Audits",
+      "Description": "Conduct audits of software processes to verify adherence to the SQAP.",
+      "Inputs": [
+        "SQAP Compliance Review Report"
+      ],
+      "Outputs": [
+        "Process Audit Reports"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 82,
+      "ParentId": 36,
+      "Name": "Verify Quality Assurance Records",
+      "Description": "Verify that quality assurance records are complete and accurate as per the SQAP.",
+      "Inputs": [
+        "Process Audit Reports"
+      ],
+      "Outputs": [
+        "Verified Quality Assurance Records"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 83,
+      "ParentId": 36,
+      "Name": "Compile Quality Assurance Records",
+      "Description": "Compile verified quality assurance records into a structured format.",
+      "Inputs": [
+        "Verified Quality Assurance Records"
+      ],
+      "Outputs": [
+        "Quality Assurance Records"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 84,
+      "ParentId": null,
+      "Name": "Conduct Functional Hazard Assessment (FHA)",
+      "Description": "Perform FHA to identify and classify potential failure conditions and their effects on the aircraft.",
+      "Inputs": [
+        "Aircraft Function List",
+        "Applicable Regulations"
+      ],
+      "Outputs": [
+        "FHA Report"
+      ],
+      "Standards": [
+        "ARP4761 §3.2"
+      ],
+      "AcademicRefs": [
+        "REF-122",
+        "REF-123",
+        "REF-124"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 85,
+      "ParentId": null,
+      "Name": "Conduct Preliminary System Safety Assessment (PSSA)",
+      "Description": "Perform PSSA to evaluate system architecture and identify safety requirements and design constraints.",
+      "Inputs": [
+        "System Architecture Description",
+        "FHA Report"
+      ],
+      "Outputs": [
+        "PSSA Report"
+      ],
+      "Standards": [
+        "ARP4761 §3.3"
+      ],
+      "AcademicRefs": [
+        "REF-125",
+        "REF-025",
+        "REF-126"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 86,
+      "ParentId": null,
+      "Name": "Conduct System Safety Assessment (SSA)",
+      "Description": "Perform SSA to verify that the implemented system meets safety requirements and mitigates identified hazards.",
+      "Inputs": [
+        "PSSA Report",
+        "System Verification Report"
+      ],
+      "Outputs": [
+        "SSA Report"
+      ],
+      "Standards": [
+        "ARP4761 §3.4"
+      ],
+      "AcademicRefs": [
+        "REF-127",
+        "REF-128",
+        "REF-129"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 87,
+      "ParentId": 85,
+      "Name": "Perform Fault Tree Analysis (FTA)",
+      "Description": "Conduct FTA to analyze potential faults and their impact on system safety.",
+      "Inputs": [
+        "System Architecture Description",
+        "PSSA Report"
+      ],
+      "Outputs": [
+        "Fault Tree Analysis Results"
+      ],
+      "Standards": [
+        "ARP4761 §4.4"
+      ],
+      "AcademicRefs": [
+        "REF-130",
+        "REF-131",
+        "REF-132"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 88,
+      "ParentId": 85,
+      "Name": "Perform Failure Modes and Effects Analysis (FMEA)",
+      "Description": "Conduct FMEA to identify potential failure modes and their effects on system components.",
+      "Inputs": [
+        "System Architecture Description",
+        "PSSA Report"
+      ],
+      "Outputs": [
+        "FMEA Results"
+      ],
+      "Standards": [
+        "ARP4761 §4.5"
+      ],
+      "AcademicRefs": [
+        "REF-133",
+        "REF-134",
+        "REF-135"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 89,
+      "ParentId": 85,
+      "Name": "Perform Common Mode Analysis (CMA)",
+      "Description": "Conduct CMA to identify and mitigate common mode failures across system components.",
+      "Inputs": [
+        "System Architecture Description",
+        "PSSA Report"
+      ],
+      "Outputs": [
+        "CMA Results"
+      ],
+      "Standards": [
+        "ARP4761 §4.6"
+      ],
+      "AcademicRefs": [
+        "REF-136",
+        "REF-137",
+        "REF-026"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 90,
+      "ParentId": 85,
+      "Name": "Derive Safety Requirements and Assign DAL",
+      "Description": "Derive safety requirements and assign Design Assurance Levels (DAL) based on safety analysis results.",
+      "Inputs": [
+        "FHA Report",
+        "PSSA Report",
+        "Fault Tree Analysis Results",
+        "FMEA Results",
+        "CMA Results"
+      ],
+      "Outputs": [
+        "Safety Requirements",
+        "DAL Assignment"
+      ],
+      "Standards": [
+        "ARP4761 §3.5"
+      ],
+      "AcademicRefs": [
+        "REF-138",
+        "REF-139",
+        "REF-140"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 91,
+      "ParentId": 12,
+      "Name": "Identify Safety-Critical Functions",
+      "Description": "Identify functions that are critical to safety based on the Aircraft Function List and Applicable Regulations.",
+      "Inputs": [
+        "Aircraft Function List",
+        "Applicable Regulations"
+      ],
+      "Outputs": [
+        "Safety-Critical Functions"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [
+        "REF-141",
+        "REF-142",
+        "REF-143"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 92,
+      "ParentId": 12,
+      "Name": "Analyze Safety-Critical Functions",
+      "Description": "Analyze identified safety-critical functions to determine specific safety requirements.",
+      "Inputs": [
+        "Safety-Critical Functions"
+      ],
+      "Outputs": [
+        "Function Safety Analysis"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [
+        "REF-144",
+        "REF-026",
+        "REF-145"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 93,
+      "ParentId": 12,
+      "Name": "Derive Safety Requirements",
+      "Description": "Derive specific safety requirements from the function safety analysis.",
+      "Inputs": [
+        "Function Safety Analysis"
+      ],
+      "Outputs": [
+        "Safety Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [
+        "REF-141",
+        "REF-146",
+        "REF-147"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 94,
+      "ParentId": 55,
+      "Name": "Review Allocated Software Requirements",
+      "Description": "Review the allocated software requirements to ensure all necessary aspects are addressed.",
+      "Inputs": [
+        "Allocated Software Requirements"
+      ],
+      "Outputs": [
+        "Reviewed Software Requirements"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [
+        "REF-148",
+        "REF-039",
+        "REF-048"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 95,
+      "ParentId": 55,
+      "Name": "Identify Missing Requirements",
+      "Description": "Identify any missing requirements that are necessary for completeness.",
+      "Inputs": [
+        "Reviewed Software Requirements"
+      ],
+      "Outputs": [
+        "Missing Requirements List"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [
+        "REF-149",
+        "REF-039",
+        "REF-028"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 96,
+      "ParentId": 55,
+      "Name": "Document Completeness Verification",
+      "Description": "Document the verification of requirement completeness, including identified gaps.",
+      "Inputs": [
+        "Reviewed Software Requirements",
+        "Missing Requirements List"
+      ],
+      "Outputs": [
+        "Completeness Verification Report"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 97,
+      "ParentId": 84,
+      "Name": "Identify Potential Failure Conditions",
+      "Description": "Identify potential failure conditions for each aircraft function.",
+      "Inputs": [
+        "Aircraft Function List",
+        "Applicable Regulations"
+      ],
+      "Outputs": [
+        "Identified Failure Conditions"
+      ],
+      "Standards": [
+        "ARP4761 §3.2"
+      ],
+      "AcademicRefs": [
+        "REF-150",
+        "REF-026",
+        "REF-151"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 98,
+      "ParentId": 84,
+      "Name": "Classify Failure Conditions",
+      "Description": "Classify identified failure conditions based on their severity and impact on the aircraft.",
+      "Inputs": [
+        "Identified Failure Conditions"
+      ],
+      "Outputs": [
+        "Classified Failure Conditions"
+      ],
+      "Standards": [
+        "ARP4761 §3.2"
+      ],
+      "AcademicRefs": [
+        "REF-152",
+        "REF-153",
+        "REF-025"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 99,
+      "ParentId": 84,
+      "Name": "Document FHA Findings",
+      "Description": "Document the findings of the Functional Hazard Assessment in a comprehensive report.",
+      "Inputs": [
+        "Classified Failure Conditions"
+      ],
+      "Outputs": [
+        "FHA Report"
+      ],
+      "Standards": [
+        "ARP4761 §3.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 100,
+      "ParentId": 86,
+      "Name": "Review PSSA and System Verification Reports",
+      "Description": "Review the PSSA and System Verification Reports to gather necessary safety information.",
+      "Inputs": [
+        "PSSA Report",
+        "System Verification Report"
+      ],
+      "Outputs": [
+        "Reviewed Safety Information"
+      ],
+      "Standards": [
+        "ARP4761 §3.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 101,
+      "ParentId": 86,
+      "Name": "Verify Safety Requirements Compliance",
+      "Description": "Verify that the system implementation complies with safety requirements identified in the PSSA.",
+      "Inputs": [
+        "Reviewed Safety Information"
+      ],
+      "Outputs": [
+        "Safety Compliance Verification Results"
+      ],
+      "Standards": [
+        "ARP4761 §3.4"
+      ],
+      "AcademicRefs": [
+        "REF-154",
+        "REF-155",
+        "REF-156"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 102,
+      "ParentId": 86,
+      "Name": "Assess Hazard Mitigation Effectiveness",
+      "Description": "Assess the effectiveness of hazard mitigations implemented in the system.",
+      "Inputs": [
+        "Safety Compliance Verification Results"
+      ],
+      "Outputs": [
+        "Hazard Mitigation Assessment"
+      ],
+      "Standards": [
+        "ARP4761 §3.4"
+      ],
+      "AcademicRefs": [
+        "REF-157",
+        "REF-158",
+        "REF-159"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 103,
+      "ParentId": 86,
+      "Name": "Compile SSA Report",
+      "Description": "Compile the findings from the safety compliance verification and hazard mitigation assessment into the SSA Report.",
+      "Inputs": [
+        "Hazard Mitigation Assessment"
+      ],
+      "Outputs": [
+        "SSA Report"
+      ],
+      "Standards": [
+        "ARP4761 §3.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 104,
+      "ParentId": 87,
+      "Name": "Identify Faults for Analysis",
+      "Description": "Identify potential faults in the system architecture for inclusion in the fault tree.",
+      "Inputs": [
+        "System Architecture Description",
+        "PSSA Report"
+      ],
+      "Outputs": [
+        "Identified Faults"
+      ],
+      "Standards": [
+        "ARP4761 §4.4"
+      ],
+      "AcademicRefs": [
+        "REF-132",
+        "REF-160",
+        "REF-161"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 105,
+      "ParentId": 87,
+      "Name": "Construct Fault Tree",
+      "Description": "Construct the fault tree diagram to represent the logical relationships between identified faults.",
+      "Inputs": [
+        "Identified Faults"
+      ],
+      "Outputs": [
+        "Fault Tree Diagram"
+      ],
+      "Standards": [
+        "ARP4761 §4.4"
+      ],
+      "AcademicRefs": [
+        "REF-162",
+        "REF-131",
+        "REF-137"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 106,
+      "ParentId": 87,
+      "Name": "Analyze Fault Tree",
+      "Description": "Analyze the fault tree to determine the impact of faults on system safety.",
+      "Inputs": [
+        "Fault Tree Diagram"
+      ],
+      "Outputs": [
+        "Fault Tree Analysis Results"
+      ],
+      "Standards": [
+        "ARP4761 §4.4"
+      ],
+      "AcademicRefs": [
+        "REF-131",
+        "REF-163",
+        "REF-164"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 107,
+      "ParentId": 88,
+      "Name": "Identify Failure Modes",
+      "Description": "Identify potential failure modes for each system component based on the System Architecture Description.",
+      "Inputs": [
+        "System Architecture Description",
+        "PSSA Report"
+      ],
+      "Outputs": [
+        "Identified Failure Modes"
+      ],
+      "Standards": [
+        "ARP4761 §4.5"
+      ],
+      "AcademicRefs": [
+        "REF-165",
+        "REF-166",
+        "REF-167"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 108,
+      "ParentId": 88,
+      "Name": "Analyze Effects of Failure Modes",
+      "Description": "Analyze the effects of identified failure modes on system components and overall system performance.",
+      "Inputs": [
+        "Identified Failure Modes"
+      ],
+      "Outputs": [
+        "Failure Mode Effects Analysis"
+      ],
+      "Standards": [
+        "ARP4761 §4.5"
+      ],
+      "AcademicRefs": [
+        "REF-168",
+        "REF-169",
+        "REF-170"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 109,
+      "ParentId": 88,
+      "Name": "Document FMEA Results",
+      "Description": "Document the results of the failure modes and effects analysis in a structured format.",
+      "Inputs": [
+        "Failure Mode Effects Analysis"
+      ],
+      "Outputs": [
+        "FMEA Results"
+      ],
+      "Standards": [
+        "ARP4761 §4.5"
+      ],
+      "AcademicRefs": [
+        "REF-133",
+        "REF-171",
+        "REF-172"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 110,
+      "ParentId": 89,
+      "Name": "Identify Common Mode Failures",
+      "Description": "Identify potential common mode failures across system components using the System Architecture Description and PSSA Report.",
+      "Inputs": [
+        "System Architecture Description",
+        "PSSA Report"
+      ],
+      "Outputs": [
+        "Identified Common Mode Failures"
+      ],
+      "Standards": [
+        "ARP4761 §4.6"
+      ],
+      "AcademicRefs": [
+        "REF-173",
+        "REF-174",
+        "REF-175"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 111,
+      "ParentId": 89,
+      "Name": "Analyze Common Mode Failures",
+      "Description": "Analyze the identified common mode failures to assess their impact on system safety.",
+      "Inputs": [
+        "Identified Common Mode Failures"
+      ],
+      "Outputs": [
+        "Common Mode Failure Analysis"
+      ],
+      "Standards": [
+        "ARP4761 §4.6"
+      ],
+      "AcademicRefs": [
+        "REF-176",
+        "REF-177",
+        "REF-178"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 112,
+      "ParentId": 89,
+      "Name": "Mitigate Common Mode Failures",
+      "Description": "Develop and document mitigation strategies for the identified common mode failures.",
+      "Inputs": [
+        "Common Mode Failure Analysis"
+      ],
+      "Outputs": [
+        "CMA Results"
+      ],
+      "Standards": [
+        "ARP4761 §4.6"
+      ],
+      "AcademicRefs": [
+        "REF-179",
+        "REF-180",
+        "REF-181"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 113,
+      "ParentId": 90,
+      "Name": "Derive Safety Requirements",
+      "Description": "Derive specific safety requirements from safety analysis results to ensure compliance with safety standards.",
+      "Inputs": [
+        "FHA Report",
+        "PSSA Report",
+        "Fault Tree Analysis Results",
+        "FMEA Results",
+        "CMA Results"
+      ],
+      "Outputs": [
+        "Safety Requirements"
+      ],
+      "Standards": [
+        "ARP4761 §3.5"
+      ],
+      "AcademicRefs": [
+        "REF-182",
+        "REF-026",
+        "REF-025"
+      ],
+      "IsSequential": false
+    },
+    {
+      "Id": 114,
+      "ParentId": 90,
+      "Name": "Assign Design Assurance Levels (DAL)",
+      "Description": "Assign Design Assurance Levels (DAL) to system components based on derived safety requirements.",
+      "Inputs": [
+        "Safety Requirements"
+      ],
+      "Outputs": [
+        "DAL Assignment"
+      ],
+      "Standards": [
+        "ARP4761 §3.5"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 115,
+      "ParentId": null,
+      "Name": "Conduct System Validation",
+      "Description": "Perform validation activities to ensure the system meets the intended operational needs and requirements.",
+      "Inputs": [
+        "System Requirements Specification",
+        "System Verification Report"
+      ],
+      "Outputs": [
+        "System Validation Evidence"
+      ],
+      "Standards": [
+        "ARP4754A §6.4"
+      ],
+      "AcademicRefs": [
+        "REF-090",
+        "REF-091",
+        "REF-092"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 116,
+      "ParentId": 4,
+      "Name": "Develop Software High-Level Requirements",
+      "Description": "Develop software high-level requirements from system requirements ensuring traceability.",
+      "Inputs": [
+        "Software Requirements Specification"
+      ],
+      "Outputs": [
+        "Software High-Level Requirements"
+      ],
+      "Standards": [
+        "DO-178C Table A-2"
+      ],
+      "AcademicRefs": [
+        "REF-013",
+        "REF-183",
+        "REF-027"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 117,
+      "ParentId": 116,
+      "Name": "Develop Software Low-Level Requirements",
+      "Description": "Develop software low-level requirements from high-level requirements ensuring traceability.",
+      "Inputs": [
+        "Software High-Level Requirements"
+      ],
+      "Outputs": [
+        "Software Low-Level Requirements"
+      ],
+      "Standards": [
+        "DO-178C Table A-3"
+      ],
+      "AcademicRefs": [
+        "REF-043",
+        "REF-039",
+        "REF-184"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 118,
+      "ParentId": 17,
+      "Name": "Design Software Architecture",
+      "Description": "Design the software architecture to meet high-level requirements.",
+      "Inputs": [
+        "Software High-Level Requirements"
+      ],
+      "Outputs": [
+        "Software Architecture"
+      ],
+      "Standards": [
+        "DO-178C Table A-4"
+      ],
+      "AcademicRefs": [
+        "REF-112",
+        "REF-185",
+        "REF-006"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 119,
+      "ParentId": 33,
+      "Name": "Generate Executable Object Code",
+      "Description": "Compile and link the source code to generate executable object code.",
+      "Inputs": [
+        "Source Code"
+      ],
+      "Outputs": [
+        "Executable Object Code"
+      ],
+      "Standards": [
+        "DO-178C Table A-5"
+      ],
+      "AcademicRefs": [
+        "REF-186",
+        "REF-187",
+        "REF-188"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 120,
+      "ParentId": 34,
+      "Name": "Develop Software Verification Cases and Procedures",
+      "Description": "Develop verification cases and procedures to verify software requirements.",
+      "Inputs": [
+        "Software Verification Plan (SVP)",
+        "Software Requirements Specification"
+      ],
+      "Outputs": [
+        "Software Verification Cases and Procedures"
+      ],
+      "Standards": [
+        "DO-178C Table A-6"
+      ],
+      "AcademicRefs": [
+        "REF-189",
+        "REF-190",
+        "REF-191"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 121,
+      "ParentId": 34,
+      "Name": "Conduct Structural Coverage Analysis",
+      "Description": "Perform structural coverage analysis to ensure all code structures are exercised.",
+      "Inputs": [
+        "Source Code",
+        "Software Verification Results"
+      ],
+      "Outputs": [
+        "Structural Coverage Analysis Report"
+      ],
+      "Standards": [
+        "DO-178C Table A-7"
+      ],
+      "AcademicRefs": [
+        "REF-192",
+        "REF-193",
+        "REF-194"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 122,
+      "ParentId": 22,
+      "Name": "Establish Traceability from HLR to LLR",
+      "Description": "Establish bidirectional traceability from high-level to low-level requirements.",
+      "Inputs": [
+        "Software High-Level Requirements",
+        "Software Low-Level Requirements"
+      ],
+      "Outputs": [
+        "Traceability Data (HLR to LLR)"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [
+        "REF-039",
+        "REF-195",
+        "REF-196"
+      ],
+      "IsSequential": true
+    },
+    {
+      "Id": 123,
+      "ParentId": 33,
+      "Name": "Establish Traceability from LLR to Source Code",
+      "Description": "Establish bidirectional traceability from low-level requirements to source code.",
+      "Inputs": [
+        "Software Low-Level Requirements",
+        "Source Code"
+      ],
+      "Outputs": [
+        "Traceability Data (LLR to Source Code)"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 124,
+      "ParentId": 35,
+      "Name": "Compile Software Configuration Index",
+      "Description": "Compile the Software Configuration Index (SCI) to list all configuration items.",
+      "Inputs": [
+        "Configuration Management Records"
+      ],
+      "Outputs": [
+        "Software Configuration Index (SCI)"
+      ],
+      "Standards": [
+        "DO-178C §7.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 125,
+      "ParentId": 36,
+      "Name": "Compile Software Accomplishment Summary",
+      "Description": "Compile the Software Accomplishment Summary (SAS) to summarize the software development and verification activities.",
+      "Inputs": [
+        "Quality Assurance Records",
+        "Software Verification Results",
+        "Software Configuration Index (SCI)"
+      ],
+      "Outputs": [
+        "Software Accomplishment Summary (SAS)"
+      ],
+      "Standards": [
+        "DO-178C §11.20"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 126,
+      "ParentId": 2,
+      "Name": "Allocate System Requirements to Subsystems",
+      "Description": "Allocate system requirements to specific subsystems, ensuring traceability and completeness.",
+      "Inputs": [
+        "System Requirements Specification"
+      ],
+      "Outputs": [
+        "Subsystem Requirements Specification"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 127,
+      "ParentId": 5,
+      "Name": "Develop System Verification Procedures",
+      "Description": "Develop procedures for system verification to ensure requirements are met.",
+      "Inputs": [
+        "System Verification Plan"
+      ],
+      "Outputs": [
+        "System Verification Procedures"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 128,
+      "ParentId": 5,
+      "Name": "Conduct System Verification",
+      "Description": "Execute system verification procedures to validate system performance and compliance.",
+      "Inputs": [
+        "System Verification Procedures"
+      ],
+      "Outputs": [
+        "System Verification Results"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": true
+    },
+    {
+      "Id": 129,
+      "ParentId": 6,
+      "Name": "Review Interface Control Document",
+      "Description": "Review the Interface Control Document to ensure all interfaces are correctly defined and documented.",
+      "Inputs": [
+        "Interface Control Document"
+      ],
+      "Outputs": [
+        "Reviewed Interface Control Document"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 130,
+      "ParentId": 7,
+      "Name": "Review Operational Requirements",
+      "Description": "Review the aircraft-level operational requirements to understand functional needs.",
+      "Inputs": [
+        "Aircraft-Level Operational Requirements"
+      ],
+      "Outputs": [
+        "Reviewed Operational Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 131,
+      "ParentId": 7,
+      "Name": "Identify Functions",
+      "Description": "Identify potential aircraft-level functions from the reviewed operational requirements.",
+      "Inputs": [
+        "Reviewed Operational Requirements"
+      ],
+      "Outputs": [
+        "Identified Aircraft Functions"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 132,
+      "ParentId": 7,
+      "Name": "Compile Function List",
+      "Description": "Compile the identified functions into a preliminary aircraft function list.",
+      "Inputs": [
+        "Identified Aircraft Functions"
+      ],
+      "Outputs": [
+        "Preliminary Aircraft Function List"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 133,
+      "ParentId": 9,
+      "Name": "Review Allocated Aircraft Functions",
+      "Description": "Review the allocated aircraft functions to ensure completeness and accuracy.",
+      "Inputs": [
+        "Allocated Aircraft Function List"
+      ],
+      "Outputs": [
+        "Reviewed Aircraft Functions"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 134,
+      "ParentId": 9,
+      "Name": "Identify Top-Level Functions",
+      "Description": "Identify top-level functions from the reviewed aircraft functions.",
+      "Inputs": [
+        "Reviewed Aircraft Functions"
+      ],
+      "Outputs": [
+        "Top-Level Functions"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 135,
+      "ParentId": 9,
+      "Name": "Document Functional Decomposition",
+      "Description": "Document the top-level functional decomposition of the aircraft functions.",
+      "Inputs": [
+        "Top-Level Functions"
+      ],
+      "Outputs": [
+        "Aircraft Function List"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 136,
+      "ParentId": 10,
+      "Name": "Review Aircraft Functions",
+      "Description": "Review the aircraft function list to understand the functional context.",
+      "Inputs": [
+        "Aircraft Function List"
+      ],
+      "Outputs": [
+        "Reviewed Aircraft Functions"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 137,
+      "ParentId": 10,
+      "Name": "Identify Functional Requirements",
+      "Description": "Identify functional requirements based on the reviewed aircraft functions and applicable regulations.",
+      "Inputs": [
+        "Reviewed Aircraft Functions",
+        "Applicable Regulations"
+      ],
+      "Outputs": [
+        "Identified Functional Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 138,
+      "ParentId": 10,
+      "Name": "Document Functional Requirements",
+      "Description": "Document the identified functional requirements in a structured format.",
+      "Inputs": [
+        "Identified Functional Requirements"
+      ],
+      "Outputs": [
+        "Functional Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 139,
+      "ParentId": 13,
+      "Name": "Review Aircraft Functions and Regulations",
+      "Description": "Review the aircraft function list and applicable regulations to understand interface requirements.",
+      "Inputs": [
+        "Aircraft Function List",
+        "Applicable Regulations"
+      ],
+      "Outputs": [
+        "Reviewed Interface Context"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 140,
+      "ParentId": 13,
+      "Name": "Identify Interface Requirements",
+      "Description": "Identify specific interface requirements based on the reviewed interface context.",
+      "Inputs": [
+        "Reviewed Interface Context"
+      ],
+      "Outputs": [
+        "Identified Interface Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 141,
+      "ParentId": 13,
+      "Name": "Document Interface Requirements",
+      "Description": "Document the identified interface requirements in a structured format.",
+      "Inputs": [
+        "Identified Interface Requirements"
+      ],
+      "Outputs": [
+        "Interface Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 142,
+      "ParentId": 14,
+      "Name": "Compile Derived Requirements",
+      "Description": "Compile all derived requirements from functional, performance, safety, and interface categories.",
+      "Inputs": [
+        "Functional Requirements",
+        "Performance Requirements",
+        "Safety Requirements",
+        "Interface Requirements"
+      ],
+      "Outputs": [
+        "Compiled Derived Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 143,
+      "ParentId": 14,
+      "Name": "Document System Requirements Specification",
+      "Description": "Document the compiled derived requirements into the System Requirements Specification.",
+      "Inputs": [
+        "Compiled Derived Requirements"
+      ],
+      "Outputs": [
+        "System Requirements Specification"
+      ],
+      "Standards": [
+        "ARP4754A §5.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 144,
+      "ParentId": 15,
+      "Name": "Review System Requirements",
+      "Description": "Review the System Requirements Specification to understand the architectural needs.",
+      "Inputs": [
+        "System Requirements Specification"
+      ],
+      "Outputs": [
+        "Reviewed System Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 145,
+      "ParentId": 15,
+      "Name": "Identify Architectural Needs",
+      "Description": "Identify architectural needs based on the reviewed system requirements.",
+      "Inputs": [
+        "Reviewed System Requirements"
+      ],
+      "Outputs": [
+        "Identified Architectural Needs"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 146,
+      "ParentId": 15,
+      "Name": "Identify Architectural Constraints",
+      "Description": "Identify architectural constraints imposed by the system requirements.",
+      "Inputs": [
+        "Reviewed System Requirements"
+      ],
+      "Outputs": [
+        "Identified Architectural Constraints"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 147,
+      "ParentId": 15,
+      "Name": "Compile Architectural Needs and Constraints",
+      "Description": "Compile the identified architectural needs and constraints into a structured document.",
+      "Inputs": [
+        "Identified Architectural Needs",
+        "Identified Architectural Constraints"
+      ],
+      "Outputs": [
+        "Architectural Needs and Constraints"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 148,
+      "ParentId": 16,
+      "Name": "Review Architectural Needs and Constraints",
+      "Description": "Review the architectural needs and constraints to understand the hardware design requirements.",
+      "Inputs": [
+        "Architectural Needs and Constraints"
+      ],
+      "Outputs": [
+        "Reviewed Architectural Needs and Constraints"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 149,
+      "ParentId": 16,
+      "Name": "Develop Hardware Architecture Concepts",
+      "Description": "Develop initial hardware architecture concepts based on the reviewed needs and constraints.",
+      "Inputs": [
+        "Reviewed Architectural Needs and Constraints"
+      ],
+      "Outputs": [
+        "Hardware Architecture Concepts"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 150,
+      "ParentId": 16,
+      "Name": "Evaluate Hardware Architecture Concepts",
+      "Description": "Evaluate the developed hardware architecture concepts for feasibility and compliance.",
+      "Inputs": [
+        "Hardware Architecture Concepts"
+      ],
+      "Outputs": [
+        "Evaluated Hardware Architecture Concepts"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 151,
+      "ParentId": 16,
+      "Name": "Select Final Hardware Architecture",
+      "Description": "Select the final hardware architecture based on the evaluation results.",
+      "Inputs": [
+        "Evaluated Hardware Architecture Concepts"
+      ],
+      "Outputs": [
+        "Selected Hardware Architecture"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 152,
+      "ParentId": 16,
+      "Name": "Document Hardware Architecture Description",
+      "Description": "Document the selected hardware architecture in a structured format.",
+      "Inputs": [
+        "Selected Hardware Architecture"
+      ],
+      "Outputs": [
+        "Hardware Architecture Description"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 153,
+      "ParentId": 23,
+      "Name": "Review System Requirements",
+      "Description": "Review the System Requirements Specification to understand verification needs.",
+      "Inputs": [
+        "System Requirements Specification"
+      ],
+      "Outputs": [
+        "Reviewed System Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 154,
+      "ParentId": 23,
+      "Name": "Identify Verification Needs",
+      "Description": "Identify specific verification needs based on the reviewed system requirements.",
+      "Inputs": [
+        "Reviewed System Requirements"
+      ],
+      "Outputs": [
+        "Verification Needs"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 155,
+      "ParentId": 23,
+      "Name": "Define Verification Objectives",
+      "Description": "Define verification objectives to address identified verification needs.",
+      "Inputs": [
+        "Verification Needs"
+      ],
+      "Outputs": [
+        "Verification Objectives"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 156,
+      "ParentId": 26,
+      "Name": "Compile Verification Objectives",
+      "Description": "Gather and organize verification objectives into a structured format for inclusion in the System Verification Plan.",
+      "Inputs": [
+        "Verification Objectives"
+      ],
+      "Outputs": [
+        "Compiled Verification Objectives"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 157,
+      "ParentId": 26,
+      "Name": "Compile Verification Methods",
+      "Description": "Gather and organize verification methods into a structured format for inclusion in the System Verification Plan.",
+      "Inputs": [
+        "Verification Methods"
+      ],
+      "Outputs": [
+        "Compiled Verification Methods"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 158,
+      "ParentId": 26,
+      "Name": "Compile Test Strategies",
+      "Description": "Gather and organize test strategies into a structured format for inclusion in the System Verification Plan.",
+      "Inputs": [
+        "Test Strategies"
+      ],
+      "Outputs": [
+        "Compiled Test Strategies"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 159,
+      "ParentId": 26,
+      "Name": "Integrate Verification Plan Components",
+      "Description": "Integrate compiled objectives, methods, and strategies into the final System Verification Plan.",
+      "Inputs": [
+        "Compiled Verification Objectives",
+        "Compiled Verification Methods",
+        "Compiled Test Strategies"
+      ],
+      "Outputs": [
+        "System Verification Plan"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 160,
+      "ParentId": 27,
+      "Name": "Review System Architecture Description",
+      "Description": "Review the System Architecture Description to understand integration needs.",
+      "Inputs": [
+        "System Architecture Description"
+      ],
+      "Outputs": [
+        "Reviewed System Architecture"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 161,
+      "ParentId": 27,
+      "Name": "Identify Interface Points",
+      "Description": "Identify specific interface points required for system integration.",
+      "Inputs": [
+        "Reviewed System Architecture"
+      ],
+      "Outputs": [
+        "Identified Interface Points"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 162,
+      "ParentId": 27,
+      "Name": "Analyze Interface Requirements",
+      "Description": "Analyze the identified interface points to determine specific requirements.",
+      "Inputs": [
+        "Identified Interface Points"
+      ],
+      "Outputs": [
+        "Interface Requirements Analysis"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 163,
+      "ParentId": 27,
+      "Name": "Compile Identified System Interfaces",
+      "Description": "Compile the analyzed interface requirements into a structured list of system interfaces.",
+      "Inputs": [
+        "Interface Requirements Analysis"
+      ],
+      "Outputs": [
+        "Identified System Interfaces"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 164,
+      "ParentId": 28,
+      "Name": "Review Identified System Interfaces",
+      "Description": "Review the identified system interfaces to ensure completeness and accuracy.",
+      "Inputs": [
+        "Identified System Interfaces"
+      ],
+      "Outputs": [
+        "Reviewed System Interfaces"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 165,
+      "ParentId": 28,
+      "Name": "Compile Interface Control Document",
+      "Description": "Compile the reviewed system interfaces into the Interface Control Document.",
+      "Inputs": [
+        "Reviewed System Interfaces"
+      ],
+      "Outputs": [
+        "Interface Control Document"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 166,
+      "ParentId": 37,
+      "Name": "Review Aircraft Functions",
+      "Description": "Review the preliminary aircraft function list to understand the context for allocation.",
+      "Inputs": [
+        "Preliminary Aircraft Function List"
+      ],
+      "Outputs": [
+        "Reviewed Aircraft Functions"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 167,
+      "ParentId": 37,
+      "Name": "Identify Allocation Criteria",
+      "Description": "Identify criteria for allocating aircraft functions to systems and components.",
+      "Inputs": [
+        "Reviewed Aircraft Functions"
+      ],
+      "Outputs": [
+        "Identified Allocation Criteria"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 168,
+      "ParentId": 37,
+      "Name": "Document Function Allocation Criteria",
+      "Description": "Document the identified allocation criteria for aircraft functions.",
+      "Inputs": [
+        "Identified Allocation Criteria"
+      ],
+      "Outputs": [
+        "Function Allocation Criteria"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 169,
+      "ParentId": 38,
+      "Name": "Review Function Allocation Criteria",
+      "Description": "Review the function allocation criteria to ensure they are suitable for system allocation.",
+      "Inputs": [
+        "Function Allocation Criteria"
+      ],
+      "Outputs": [
+        "Reviewed Allocation Criteria"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 170,
+      "ParentId": 38,
+      "Name": "Identify System Allocation Options",
+      "Description": "Identify potential systems to which functions can be allocated based on the reviewed criteria.",
+      "Inputs": [
+        "Reviewed Allocation Criteria"
+      ],
+      "Outputs": [
+        "System Allocation Options"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 171,
+      "ParentId": 38,
+      "Name": "Select System for Function Allocation",
+      "Description": "Select the most appropriate system for each function based on the identified options.",
+      "Inputs": [
+        "System Allocation Options"
+      ],
+      "Outputs": [
+        "Selected System Allocations"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 172,
+      "ParentId": 38,
+      "Name": "Document System Function Allocation",
+      "Description": "Document the allocation of functions to systems in a structured format.",
+      "Inputs": [
+        "Selected System Allocations"
+      ],
+      "Outputs": [
+        "System Function Allocation"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 173,
+      "ParentId": 39,
+      "Name": "Review System Function Allocation",
+      "Description": "Review the system function allocation to identify functions that need to be allocated to software components.",
+      "Inputs": [
+        "System Function Allocation"
+      ],
+      "Outputs": [
+        "Reviewed System Function Allocation"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 174,
+      "ParentId": 39,
+      "Name": "Identify Software Component Allocation Options",
+      "Description": "Identify potential software components for function allocation based on the reviewed system function allocation.",
+      "Inputs": [
+        "Reviewed System Function Allocation"
+      ],
+      "Outputs": [
+        "Software Component Allocation Options"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 175,
+      "ParentId": 39,
+      "Name": "Select Software Components for Function Allocation",
+      "Description": "Select the most appropriate software components for each function based on identified options.",
+      "Inputs": [
+        "Software Component Allocation Options"
+      ],
+      "Outputs": [
+        "Selected Software Component Allocations"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 176,
+      "ParentId": 39,
+      "Name": "Document Software Component Function Allocation",
+      "Description": "Document the allocation of functions to software components in a structured format.",
+      "Inputs": [
+        "Selected Software Component Allocations"
+      ],
+      "Outputs": [
+        "Software Component Function Allocation"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 177,
+      "ParentId": 40,
+      "Name": "Review Software Component Function Allocation",
+      "Description": "Review the software component function allocation to ensure all functions are correctly assigned.",
+      "Inputs": [
+        "Software Component Function Allocation"
+      ],
+      "Outputs": [
+        "Reviewed Software Component Function Allocation"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 178,
+      "ParentId": 40,
+      "Name": "Compile Comprehensive Function List",
+      "Description": "Compile the reviewed function allocations into a comprehensive list for further development.",
+      "Inputs": [
+        "Reviewed Software Component Function Allocation"
+      ],
+      "Outputs": [
+        "Allocated Aircraft Function List"
+      ],
+      "Standards": [
+        "ARP4754A §5.1"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 179,
+      "ParentId": 41,
+      "Name": "Review Architecture Descriptions",
+      "Description": "Review the hardware and software architecture descriptions to understand interface requirements.",
+      "Inputs": [
+        "Hardware Architecture Description",
+        "Software Architecture Description"
+      ],
+      "Outputs": [
+        "Reviewed Architecture Descriptions"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 180,
+      "ParentId": 41,
+      "Name": "Identify Interface Requirements",
+      "Description": "Identify specific interface requirements between hardware and software based on reviewed architecture descriptions.",
+      "Inputs": [
+        "Reviewed Architecture Descriptions"
+      ],
+      "Outputs": [
+        "Identified Interface Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 181,
+      "ParentId": 41,
+      "Name": "Document Hardware-Software Interface Requirements",
+      "Description": "Document the identified interface requirements in a structured format.",
+      "Inputs": [
+        "Identified Interface Requirements"
+      ],
+      "Outputs": [
+        "Hardware-Software Interface Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 182,
+      "ParentId": 42,
+      "Name": "Review Interface Requirements",
+      "Description": "Review the hardware-software interface requirements to understand design needs.",
+      "Inputs": [
+        "Hardware-Software Interface Requirements"
+      ],
+      "Outputs": [
+        "Reviewed Interface Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 183,
+      "ParentId": 42,
+      "Name": "Develop Interface Design Concepts",
+      "Description": "Develop initial design concepts for hardware-software interfaces based on reviewed requirements.",
+      "Inputs": [
+        "Reviewed Interface Requirements"
+      ],
+      "Outputs": [
+        "Interface Design Concepts"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 184,
+      "ParentId": 42,
+      "Name": "Evaluate Interface Design Concepts",
+      "Description": "Evaluate the developed interface design concepts for feasibility and compliance.",
+      "Inputs": [
+        "Interface Design Concepts"
+      ],
+      "Outputs": [
+        "Evaluated Interface Design Concepts"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 185,
+      "ParentId": 42,
+      "Name": "Select Final Interface Design",
+      "Description": "Select the final interface design based on evaluation results.",
+      "Inputs": [
+        "Evaluated Interface Design Concepts"
+      ],
+      "Outputs": [
+        "Selected Interface Design"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 186,
+      "ParentId": 42,
+      "Name": "Document Hardware-Software Interface Design",
+      "Description": "Document the selected hardware-software interface design in a structured format.",
+      "Inputs": [
+        "Selected Interface Design"
+      ],
+      "Outputs": [
+        "Hardware-Software Interface Design"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 187,
+      "ParentId": 43,
+      "Name": "Review Interface Design",
+      "Description": "Review the hardware-software interface design to ensure it meets system requirements.",
+      "Inputs": [
+        "Hardware-Software Interface Design"
+      ],
+      "Outputs": [
+        "Reviewed Interface Design"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 188,
+      "ParentId": 43,
+      "Name": "Compile System Interface Description",
+      "Description": "Compile the reviewed interface design into the System Interface Description document.",
+      "Inputs": [
+        "Reviewed Interface Design"
+      ],
+      "Outputs": [
+        "System Interface Description"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 189,
+      "ParentId": 44,
+      "Name": "Review Hardware Architecture Description",
+      "Description": "Review the hardware architecture description to understand integration requirements.",
+      "Inputs": [
+        "Hardware Architecture Description"
+      ],
+      "Outputs": [
+        "Reviewed Hardware Architecture Description"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 190,
+      "ParentId": 44,
+      "Name": "Identify Integration Requirements",
+      "Description": "Identify specific requirements for integrating the hardware architecture into the system architecture.",
+      "Inputs": [
+        "Reviewed Hardware Architecture Description"
+      ],
+      "Outputs": [
+        "Integration Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 191,
+      "ParentId": 44,
+      "Name": "Integrate Hardware Architecture",
+      "Description": "Integrate the hardware architecture into the system architecture based on identified requirements.",
+      "Inputs": [
+        "Integration Requirements"
+      ],
+      "Outputs": [
+        "Integrated Hardware Architecture"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 192,
+      "ParentId": 45,
+      "Name": "Review Software Architecture Description",
+      "Description": "Review the software architecture description to understand integration requirements.",
+      "Inputs": [
+        "Software Architecture Description"
+      ],
+      "Outputs": [
+        "Reviewed Software Architecture Description"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 193,
+      "ParentId": 45,
+      "Name": "Identify Integration Requirements",
+      "Description": "Identify specific requirements for integrating the software architecture into the system architecture.",
+      "Inputs": [
+        "Reviewed Software Architecture Description"
+      ],
+      "Outputs": [
+        "Integration Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 194,
+      "ParentId": 45,
+      "Name": "Integrate Software Architecture",
+      "Description": "Integrate the software architecture into the system architecture based on identified requirements.",
+      "Inputs": [
+        "Integration Requirements"
+      ],
+      "Outputs": [
+        "Integrated Software Architecture"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 195,
+      "ParentId": 46,
+      "Name": "Review System Interface Description",
+      "Description": "Review the System Interface Description to understand integration requirements.",
+      "Inputs": [
+        "System Interface Description"
+      ],
+      "Outputs": [
+        "Reviewed System Interface Description"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 196,
+      "ParentId": 46,
+      "Name": "Identify Integration Requirements",
+      "Description": "Identify specific requirements for integrating the system interfaces into the system architecture.",
+      "Inputs": [
+        "Reviewed System Interface Description"
+      ],
+      "Outputs": [
+        "Integration Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 197,
+      "ParentId": 46,
+      "Name": "Integrate System Interfaces",
+      "Description": "Integrate the system interfaces into the system architecture based on identified requirements.",
+      "Inputs": [
+        "Integration Requirements"
+      ],
+      "Outputs": [
+        "Integrated System Interfaces"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 198,
+      "ParentId": 47,
+      "Name": "Review Integrated Architectures",
+      "Description": "Review the integrated hardware, software, and interface architectures to ensure completeness and consistency.",
+      "Inputs": [
+        "Integrated Hardware Architecture",
+        "Integrated Software Architecture",
+        "Integrated System Interfaces"
+      ],
+      "Outputs": [
+        "Reviewed Integrated Architectures"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 199,
+      "ParentId": 47,
+      "Name": "Compile System Architecture Description",
+      "Description": "Compile the reviewed integrated architectures into the final System Architecture Description document.",
+      "Inputs": [
+        "Reviewed Integrated Architectures"
+      ],
+      "Outputs": [
+        "System Architecture Description"
+      ],
+      "Standards": [
+        "ARP4754A §5.4"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 200,
+      "ParentId": 48,
+      "Name": "Review System Requirements Specification",
+      "Description": "Examine the System Requirements Specification to ensure clarity and completeness.",
+      "Inputs": [
+        "System Requirements Specification"
+      ],
+      "Outputs": [
+        "Reviewed System Requirements Specification"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 201,
+      "ParentId": 48,
+      "Name": "Identify Potential Software Allocations",
+      "Description": "Identify requirements within the reviewed specification that can be allocated to software components.",
+      "Inputs": [
+        "Reviewed System Requirements Specification"
+      ],
+      "Outputs": [
+        "Potential Software Allocations"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 202,
+      "ParentId": 49,
+      "Name": "Review System Requirements for Software Allocation",
+      "Description": "Review the system requirements to identify those suitable for software allocation.",
+      "Inputs": [
+        "Reviewed System Requirements",
+        "System Architecture Description"
+      ],
+      "Outputs": [
+        "Identified Software-Allocable Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 203,
+      "ParentId": 49,
+      "Name": "Analyze Software-Allocable Requirements",
+      "Description": "Analyze identified requirements to confirm their suitability for allocation to software components.",
+      "Inputs": [
+        "Identified Software-Allocable Requirements"
+      ],
+      "Outputs": [
+        "Software-Allocable Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 204,
+      "ParentId": 50,
+      "Name": "Review Software-Allocable Requirements",
+      "Description": "Review the software-allocable requirements to ensure they are suitable for documentation.",
+      "Inputs": [
+        "Software-Allocable Requirements"
+      ],
+      "Outputs": [
+        "Reviewed Software-Allocable Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 205,
+      "ParentId": 50,
+      "Name": "Compile Software Allocation Analysis",
+      "Description": "Compile the reviewed software-allocable requirements into the Software Allocation Analysis document.",
+      "Inputs": [
+        "Reviewed Software-Allocable Requirements"
+      ],
+      "Outputs": [
+        "Software Allocation Analysis"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 206,
+      "ParentId": 51,
+      "Name": "Examine Software Allocation Analysis",
+      "Description": "Examine the Software Allocation Analysis to identify key system requirements allocated to software components.",
+      "Inputs": [
+        "Software Allocation Analysis"
+      ],
+      "Outputs": [
+        "Examined Software Allocation Analysis"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 207,
+      "ParentId": 51,
+      "Name": "Verify Allocation Completeness",
+      "Description": "Verify that all system requirements have been adequately allocated to software components.",
+      "Inputs": [
+        "Examined Software Allocation Analysis"
+      ],
+      "Outputs": [
+        "Verified Allocation Completeness"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 208,
+      "ParentId": 51,
+      "Name": "Document Review Findings",
+      "Description": "Document the findings from the review of the Software Allocation Analysis.",
+      "Inputs": [
+        "Verified Allocation Completeness"
+      ],
+      "Outputs": [
+        "Reviewed Software Allocation Analysis"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 209,
+      "ParentId": 52,
+      "Name": "Review Analyzed Requirements",
+      "Description": "Review each analyzed requirement to understand its allocation context.",
+      "Inputs": [
+        "Reviewed Software Allocation Analysis"
+      ],
+      "Outputs": [
+        "Reviewed Analyzed Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 210,
+      "ParentId": 52,
+      "Name": "Determine Appropriate Software Component",
+      "Description": "Determine the most suitable software component for each reviewed requirement.",
+      "Inputs": [
+        "Reviewed Analyzed Requirements"
+      ],
+      "Outputs": [
+        "Component Assignment Decisions"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 211,
+      "ParentId": 52,
+      "Name": "Assign Requirements to Components",
+      "Description": "Assign each requirement to the identified software component based on the decision.",
+      "Inputs": [
+        "Component Assignment Decisions"
+      ],
+      "Outputs": [
+        "Assigned Software Requirements"
+      ],
+      "Standards": [
+        "ARP4754A §5.2"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 212,
+      "ParentId": 54,
+      "Name": "Review Allocated Software Requirements",
+      "Description": "Review the allocated software requirements to ensure they are ready for traceability analysis.",
+      "Inputs": [
+        "Allocated Software Requirements"
+      ],
+      "Outputs": [
+        "Reviewed Software Requirements"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 213,
+      "ParentId": 54,
+      "Name": "Identify Traceability Links",
+      "Description": "Identify traceability links between allocated software requirements and system requirements.",
+      "Inputs": [
+        "Reviewed Software Requirements"
+      ],
+      "Outputs": [
+        "Traceability Links"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 214,
+      "ParentId": 54,
+      "Name": "Document Traceability Matrix",
+      "Description": "Document the identified traceability links in a traceability matrix.",
+      "Inputs": [
+        "Traceability Links"
+      ],
+      "Outputs": [
+        "Traceability Matrix"
+      ],
+      "Standards": [
+        "DO-178C §6.3"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 215,
+      "ParentId": 63,
+      "Name": "Review Test Strategy Components",
+      "Description": "Review the identified test strategy components to understand their integration into the framework.",
+      "Inputs": [
+        "Test Strategy Components"
+      ],
+      "Outputs": [
+        "Reviewed Test Strategy Components"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 216,
+      "ParentId": 63,
+      "Name": "Analyze System Architecture for Test Framework",
+      "Description": "Analyze the system architecture to determine its influence on the test strategy framework.",
+      "Inputs": [
+        "System Architecture Description"
+      ],
+      "Outputs": [
+        "System Architecture Analysis for Test Framework"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 217,
+      "ParentId": 63,
+      "Name": "Integrate Components into Test Strategy Framework",
+      "Description": "Integrate the reviewed components and system architecture analysis into the test strategy framework.",
+      "Inputs": [
+        "Reviewed Test Strategy Components",
+        "System Architecture Analysis for Test Framework"
+      ],
+      "Outputs": [
+        "Integrated Test Strategy Framework"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    },
+    {
+      "Id": 218,
+      "ParentId": 63,
+      "Name": "Document Test Strategy Framework",
+      "Description": "Document the integrated test strategy framework in a structured format.",
+      "Inputs": [
+        "Integrated Test Strategy Framework"
+      ],
+      "Outputs": [
+        "Test Strategy Framework"
+      ],
+      "Standards": [
+        "ARP4754A §6"
+      ],
+      "AcademicRefs": [],
+      "IsSequential": false
+    }
+  ]
+}
+}
