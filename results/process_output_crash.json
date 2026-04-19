@@ -1,0 +1,6606 @@
+{
+  "process": {
+    "inputs": [
+      "ART-001",
+      "ART-002",
+      "ART-003",
+      "ART-004"
+    ],
+    "outputs": [
+      "ART-004",
+      "ART-005",
+      "ART-006"
+    ],
+    "tasks": [
+      {
+        "Id": 1,
+        "ParentId": null,
+        "Name": "Define Aircraft Functions",
+        "Description": "",
+        "Inputs": [
+          "ART-001"
+        ],
+        "Outputs": [
+          "ART-007"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 2,
+        "ParentId": null,
+        "Name": "Develop System Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-002",
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-008"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 3,
+        "ParentId": null,
+        "Name": "Define System Architecture",
+        "Description": "",
+        "Inputs": [
+          "ART-008"
+        ],
+        "Outputs": [
+          "ART-009"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 4,
+        "ParentId": null,
+        "Name": "Allocate System-to-Software Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-008",
+          "ART-009"
+        ],
+        "Outputs": [
+          "ART-010"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 5,
+        "ParentId": null,
+        "Name": "Plan System-Level Verification",
+        "Description": "",
+        "Inputs": [
+          "ART-008",
+          "ART-009"
+        ],
+        "Outputs": [
+          "ART-011"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 6,
+        "ParentId": null,
+        "Name": "Define System Interfaces",
+        "Description": "",
+        "Inputs": [
+          "ART-009"
+        ],
+        "Outputs": [
+          "ART-012"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 7,
+        "ParentId": 1,
+        "Name": "Identify Aircraft-Level Functions",
+        "Description": "",
+        "Inputs": [
+          "ART-001"
+        ],
+        "Outputs": [
+          "ART-013"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 8,
+        "ParentId": 1,
+        "Name": "Allocate Functions to Systems",
+        "Description": "",
+        "Inputs": [
+          "ART-013"
+        ],
+        "Outputs": [
+          "ART-014"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 9,
+        "ParentId": 1,
+        "Name": "Establish Functional Decomposition",
+        "Description": "",
+        "Inputs": [
+          "ART-014"
+        ],
+        "Outputs": [
+          "ART-007"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 10,
+        "ParentId": 2,
+        "Name": "Derive Functional Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-002",
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-015"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 11,
+        "ParentId": 2,
+        "Name": "Derive Performance Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-002",
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-016"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 12,
+        "ParentId": 2,
+        "Name": "Derive Safety Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-002",
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-017"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 13,
+        "ParentId": 2,
+        "Name": "Derive Interface Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-002",
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-018"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 14,
+        "ParentId": 2,
+        "Name": "Document System Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-015",
+          "ART-016",
+          "ART-017",
+          "ART-018"
+        ],
+        "Outputs": [
+          "ART-008"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 15,
+        "ParentId": 3,
+        "Name": "Analyze System Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-008"
+        ],
+        "Outputs": [
+          "ART-019"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 16,
+        "ParentId": 3,
+        "Name": "Design Hardware Architecture",
+        "Description": "",
+        "Inputs": [
+          "ART-019"
+        ],
+        "Outputs": [
+          "ART-020"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 17,
+        "ParentId": 3,
+        "Name": "Design Software Architecture",
+        "Description": "",
+        "Inputs": [
+          "ART-019"
+        ],
+        "Outputs": [
+          "ART-021"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 18,
+        "ParentId": 3,
+        "Name": "Define System Interfaces",
+        "Description": "",
+        "Inputs": [
+          "ART-020",
+          "ART-021"
+        ],
+        "Outputs": [
+          "ART-022"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 19,
+        "ParentId": 3,
+        "Name": "Compile System Architecture Description",
+        "Description": "",
+        "Inputs": [
+          "ART-020",
+          "ART-021",
+          "ART-022"
+        ],
+        "Outputs": [
+          "ART-009"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 20,
+        "ParentId": 4,
+        "Name": "Analyze System Requirements for Software Allocation",
+        "Description": "",
+        "Inputs": [
+          "ART-008",
+          "ART-009"
+        ],
+        "Outputs": [
+          "ART-023"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 21,
+        "ParentId": 4,
+        "Name": "Allocate Requirements to Software Components",
+        "Description": "",
+        "Inputs": [
+          "ART-023"
+        ],
+        "Outputs": [
+          "ART-024"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 22,
+        "ParentId": 4,
+        "Name": "Ensure Traceability and Completeness",
+        "Description": "",
+        "Inputs": [
+          "ART-024"
+        ],
+        "Outputs": [
+          "ART-010"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 23,
+        "ParentId": 5,
+        "Name": "Identify Verification Objectives",
+        "Description": "",
+        "Inputs": [
+          "ART-008"
+        ],
+        "Outputs": [
+          "ART-025"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 24,
+        "ParentId": 5,
+        "Name": "Select Verification Methods",
+        "Description": "",
+        "Inputs": [
+          "ART-025"
+        ],
+        "Outputs": [
+          "ART-026"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 25,
+        "ParentId": 5,
+        "Name": "Develop Test Strategies",
+        "Description": "",
+        "Inputs": [
+          "ART-009",
+          "ART-026"
+        ],
+        "Outputs": [
+          "ART-027"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 26,
+        "ParentId": 5,
+        "Name": "Compile System Verification Plan",
+        "Description": "",
+        "Inputs": [
+          "ART-025",
+          "ART-026",
+          "ART-027"
+        ],
+        "Outputs": [
+          "ART-011"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 27,
+        "ParentId": 6,
+        "Name": "Identify System Interfaces",
+        "Description": "",
+        "Inputs": [
+          "ART-009"
+        ],
+        "Outputs": [
+          "ART-028"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 28,
+        "ParentId": 6,
+        "Name": "Document System Interfaces",
+        "Description": "",
+        "Inputs": [
+          "ART-028"
+        ],
+        "Outputs": [
+          "ART-012"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 29,
+        "ParentId": null,
+        "Name": "Develop Software Plans",
+        "Description": "",
+        "Inputs": [
+          "ART-003"
+        ],
+        "Outputs": [
+          "ART-029",
+          "ART-030",
+          "ART-031",
+          "ART-032",
+          "ART-033"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 30,
+        "ParentId": 4,
+        "Name": "Develop High-Level Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-010"
+        ],
+        "Outputs": [
+          "ART-034"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 31,
+        "ParentId": 30,
+        "Name": "Develop Low-Level Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-034"
+        ],
+        "Outputs": [
+          "ART-035"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 32,
+        "ParentId": 17,
+        "Name": "Implement Software Architecture",
+        "Description": "",
+        "Inputs": [
+          "ART-021"
+        ],
+        "Outputs": [
+          "ART-036"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 33,
+        "ParentId": 31,
+        "Name": "Implement Source Code",
+        "Description": "",
+        "Inputs": [
+          "ART-035"
+        ],
+        "Outputs": [
+          "ART-037"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 34,
+        "ParentId": 33,
+        "Name": "Conduct Software Verification",
+        "Description": "",
+        "Inputs": [
+          "ART-031",
+          "ART-037"
+        ],
+        "Outputs": [
+          "ART-038"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 35,
+        "ParentId": null,
+        "Name": "Perform Configuration Management",
+        "Description": "",
+        "Inputs": [
+          "ART-032"
+        ],
+        "Outputs": [
+          "ART-039"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 36,
+        "ParentId": null,
+        "Name": "Conduct Software Quality Assurance",
+        "Description": "",
+        "Inputs": [
+          "ART-033"
+        ],
+        "Outputs": [
+          "ART-040"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 37,
+        "ParentId": 8,
+        "Name": "Analyze Aircraft Functions",
+        "Description": "",
+        "Inputs": [
+          "ART-013"
+        ],
+        "Outputs": [
+          "ART-041"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 38,
+        "ParentId": 8,
+        "Name": "Allocate Functions to Systems",
+        "Description": "",
+        "Inputs": [
+          "ART-041"
+        ],
+        "Outputs": [
+          "ART-042"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 39,
+        "ParentId": 8,
+        "Name": "Allocate Functions to Software Components",
+        "Description": "",
+        "Inputs": [
+          "ART-042"
+        ],
+        "Outputs": [
+          "ART-043"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 40,
+        "ParentId": 8,
+        "Name": "Compile Allocated Aircraft Function List",
+        "Description": "",
+        "Inputs": [
+          "ART-043"
+        ],
+        "Outputs": [
+          "ART-014"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 41,
+        "ParentId": 18,
+        "Name": "Identify Hardware-Software Interface Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-020",
+          "ART-021"
+        ],
+        "Outputs": [
+          "ART-044"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 42,
+        "ParentId": 18,
+        "Name": "Design Hardware-Software Interfaces",
+        "Description": "",
+        "Inputs": [
+          "ART-044"
+        ],
+        "Outputs": [
+          "ART-045"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 43,
+        "ParentId": 18,
+        "Name": "Document System Interface Description",
+        "Description": "",
+        "Inputs": [
+          "ART-045"
+        ],
+        "Outputs": [
+          "ART-022"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 44,
+        "ParentId": 19,
+        "Name": "Integrate Hardware Architecture",
+        "Description": "",
+        "Inputs": [
+          "ART-020"
+        ],
+        "Outputs": [
+          "ART-046"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 45,
+        "ParentId": 19,
+        "Name": "Integrate Software Architecture",
+        "Description": "",
+        "Inputs": [
+          "ART-021"
+        ],
+        "Outputs": [
+          "ART-047"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 46,
+        "ParentId": 19,
+        "Name": "Integrate System Interfaces",
+        "Description": "",
+        "Inputs": [
+          "ART-022"
+        ],
+        "Outputs": [
+          "ART-048"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 47,
+        "ParentId": 19,
+        "Name": "Compile Final System Architecture Description",
+        "Description": "",
+        "Inputs": [
+          "ART-046",
+          "ART-047",
+          "ART-048"
+        ],
+        "Outputs": [
+          "ART-009"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 48,
+        "ParentId": 20,
+        "Name": "Review System Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-008"
+        ],
+        "Outputs": [
+          "ART-049"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 49,
+        "ParentId": 20,
+        "Name": "Identify Software-Allocable Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-009",
+          "ART-049"
+        ],
+        "Outputs": [
+          "ART-050"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 50,
+        "ParentId": 20,
+        "Name": "Document Software Allocation Analysis",
+        "Description": "",
+        "Inputs": [
+          "ART-050"
+        ],
+        "Outputs": [
+          "ART-023"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 51,
+        "ParentId": 21,
+        "Name": "Review Software Allocation Analysis",
+        "Description": "",
+        "Inputs": [
+          "ART-023"
+        ],
+        "Outputs": [
+          "ART-051"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 52,
+        "ParentId": 21,
+        "Name": "Assign Requirements to Software Components",
+        "Description": "",
+        "Inputs": [
+          "ART-051"
+        ],
+        "Outputs": [
+          "ART-052"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 53,
+        "ParentId": 21,
+        "Name": "Document Allocated Software Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-052"
+        ],
+        "Outputs": [
+          "ART-024"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": true
+      },
+      {
+        "Id": 54,
+        "ParentId": 22,
+        "Name": "Establish Requirement Traceability",
+        "Description": "",
+        "Inputs": [
+          "ART-024"
+        ],
+        "Outputs": [
+          "ART-053"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 55,
+        "ParentId": 22,
+        "Name": "Verify Requirement Completeness",
+        "Description": "",
+        "Inputs": [
+          "ART-024"
+        ],
+        "Outputs": [
+          "ART-054"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 56,
+        "ParentId": 22,
+        "Name": "Compile Software Requirements Specification",
+        "Description": "",
+        "Inputs": [
+          "ART-053",
+          "ART-054"
+        ],
+        "Outputs": [
+          "ART-010"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": true
+      },
+      {
+        "Id": 57,
+        "ParentId": 24,
+        "Name": "Review Verification Objectives",
+        "Description": "",
+        "Inputs": [
+          "ART-025"
+        ],
+        "Outputs": [
+          "ART-055"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 58,
+        "ParentId": 24,
+        "Name": "Identify Potential Verification Methods",
+        "Description": "",
+        "Inputs": [
+          "ART-055"
+        ],
+        "Outputs": [
+          "ART-056"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 59,
+        "ParentId": 24,
+        "Name": "Evaluate Verification Methods",
+        "Description": "",
+        "Inputs": [
+          "ART-056"
+        ],
+        "Outputs": [
+          "ART-057"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": true
+      },
+      {
+        "Id": 60,
+        "ParentId": 24,
+        "Name": "Select Final Verification Methods",
+        "Description": "",
+        "Inputs": [
+          "ART-057"
+        ],
+        "Outputs": [
+          "ART-026"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 61,
+        "ParentId": 25,
+        "Name": "Review Verification Methods",
+        "Description": "",
+        "Inputs": [
+          "ART-026"
+        ],
+        "Outputs": [
+          "ART-058"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 62,
+        "ParentId": 25,
+        "Name": "Identify Test Strategy Components",
+        "Description": "",
+        "Inputs": [
+          "ART-009",
+          "ART-058"
+        ],
+        "Outputs": [
+          "ART-059"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 63,
+        "ParentId": 25,
+        "Name": "Develop Test Strategy Framework",
+        "Description": "",
+        "Inputs": [
+          "ART-009",
+          "ART-059"
+        ],
+        "Outputs": [
+          "ART-060"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 64,
+        "ParentId": 25,
+        "Name": "Document Test Strategies",
+        "Description": "",
+        "Inputs": [
+          "ART-060"
+        ],
+        "Outputs": [
+          "ART-027"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 65,
+        "ParentId": 29,
+        "Name": "Develop PSAC",
+        "Description": "",
+        "Inputs": [
+          "ART-003"
+        ],
+        "Outputs": [
+          "ART-029"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": true
+      },
+      {
+        "Id": 66,
+        "ParentId": 29,
+        "Name": "Develop SDP",
+        "Description": "",
+        "Inputs": [
+          "ART-003"
+        ],
+        "Outputs": [
+          "ART-030"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": true
+      },
+      {
+        "Id": 67,
+        "ParentId": 29,
+        "Name": "Develop SVP",
+        "Description": "",
+        "Inputs": [
+          "ART-003"
+        ],
+        "Outputs": [
+          "ART-031"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": true
+      },
+      {
+        "Id": 68,
+        "ParentId": 29,
+        "Name": "Develop SCMP",
+        "Description": "",
+        "Inputs": [
+          "ART-003"
+        ],
+        "Outputs": [
+          "ART-032"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": true
+      },
+      {
+        "Id": 69,
+        "ParentId": 29,
+        "Name": "Develop SQAP",
+        "Description": "",
+        "Inputs": [
+          "ART-003"
+        ],
+        "Outputs": [
+          "ART-033"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": true
+      },
+      {
+        "Id": 70,
+        "ParentId": 32,
+        "Name": "Code Software Modules",
+        "Description": "",
+        "Inputs": [
+          "ART-021"
+        ],
+        "Outputs": [
+          "ART-061"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 71,
+        "ParentId": 32,
+        "Name": "Integrate Software Modules",
+        "Description": "",
+        "Inputs": [
+          "ART-061"
+        ],
+        "Outputs": [
+          "ART-047"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 72,
+        "ParentId": 32,
+        "Name": "Verify Software Architecture Implementation",
+        "Description": "",
+        "Inputs": [
+          "ART-047"
+        ],
+        "Outputs": [
+          "ART-062"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 73,
+        "ParentId": 34,
+        "Name": "Perform Unit Testing",
+        "Description": "",
+        "Inputs": [
+          "ART-031",
+          "ART-037"
+        ],
+        "Outputs": [
+          "ART-063"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": true
+      },
+      {
+        "Id": 74,
+        "ParentId": 34,
+        "Name": "Perform Integration Testing",
+        "Description": "",
+        "Inputs": [
+          "ART-031",
+          "ART-037"
+        ],
+        "Outputs": [
+          "ART-064"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 75,
+        "ParentId": 34,
+        "Name": "Conduct Coverage Analysis",
+        "Description": "",
+        "Inputs": [
+          "ART-031",
+          "ART-037"
+        ],
+        "Outputs": [
+          "ART-065"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 76,
+        "ParentId": 35,
+        "Name": "Establish Configuration Baselines",
+        "Description": "",
+        "Inputs": [
+          "ART-032"
+        ],
+        "Outputs": [
+          "ART-066"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 77,
+        "ParentId": 35,
+        "Name": "Control Configuration Changes",
+        "Description": "",
+        "Inputs": [
+          "ART-066"
+        ],
+        "Outputs": [
+          "ART-067"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 78,
+        "ParentId": 35,
+        "Name": "Perform Configuration Audits",
+        "Description": "",
+        "Inputs": [
+          "ART-066",
+          "ART-067"
+        ],
+        "Outputs": [
+          "ART-068"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 79,
+        "ParentId": 35,
+        "Name": "Maintain Configuration Records",
+        "Description": "",
+        "Inputs": [
+          "ART-068"
+        ],
+        "Outputs": [
+          "ART-039"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 80,
+        "ParentId": 36,
+        "Name": "Review SQAP Compliance",
+        "Description": "",
+        "Inputs": [
+          "ART-033"
+        ],
+        "Outputs": [
+          "ART-069"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 81,
+        "ParentId": 36,
+        "Name": "Conduct Process Audits",
+        "Description": "",
+        "Inputs": [
+          "ART-069"
+        ],
+        "Outputs": [
+          "ART-070"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 82,
+        "ParentId": 36,
+        "Name": "Verify Quality Assurance Records",
+        "Description": "",
+        "Inputs": [
+          "ART-070"
+        ],
+        "Outputs": [
+          "ART-071"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 83,
+        "ParentId": 36,
+        "Name": "Compile Quality Assurance Records",
+        "Description": "",
+        "Inputs": [
+          "ART-071"
+        ],
+        "Outputs": [
+          "ART-040"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 84,
+        "ParentId": null,
+        "Name": "Conduct Functional Hazard Assessment (FHA)",
+        "Description": "",
+        "Inputs": [
+          "ART-002",
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-072"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 85,
+        "ParentId": null,
+        "Name": "Conduct Preliminary System Safety Assessment (PSSA)",
+        "Description": "",
+        "Inputs": [
+          "ART-009",
+          "ART-072"
+        ],
+        "Outputs": [
+          "ART-073"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 86,
+        "ParentId": null,
+        "Name": "Conduct System Safety Assessment (SSA)",
+        "Description": "",
+        "Inputs": [
+          "ART-004",
+          "ART-073"
+        ],
+        "Outputs": [
+          "ART-006"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 87,
+        "ParentId": 85,
+        "Name": "Perform Fault Tree Analysis (FTA)",
+        "Description": "",
+        "Inputs": [
+          "ART-009",
+          "ART-073"
+        ],
+        "Outputs": [
+          "ART-074"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 88,
+        "ParentId": 85,
+        "Name": "Perform Failure Modes and Effects Analysis (FMEA)",
+        "Description": "",
+        "Inputs": [
+          "ART-009",
+          "ART-073"
+        ],
+        "Outputs": [
+          "ART-075"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 89,
+        "ParentId": 85,
+        "Name": "Perform Common Mode Analysis (CMA)",
+        "Description": "",
+        "Inputs": [
+          "ART-009",
+          "ART-073"
+        ],
+        "Outputs": [
+          "ART-076"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 90,
+        "ParentId": 85,
+        "Name": "Derive Safety Requirements and Assign DAL",
+        "Description": "",
+        "Inputs": [
+          "ART-072",
+          "ART-073",
+          "ART-074",
+          "ART-075",
+          "ART-076"
+        ],
+        "Outputs": [
+          "ART-017",
+          "ART-077"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 91,
+        "ParentId": 12,
+        "Name": "Identify Safety-Critical Functions",
+        "Description": "",
+        "Inputs": [
+          "ART-002",
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-078"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 92,
+        "ParentId": 12,
+        "Name": "Analyze Safety-Critical Functions",
+        "Description": "",
+        "Inputs": [
+          "ART-078"
+        ],
+        "Outputs": [
+          "ART-079"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 93,
+        "ParentId": 12,
+        "Name": "Derive Safety Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-079"
+        ],
+        "Outputs": [
+          "ART-017"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 94,
+        "ParentId": 55,
+        "Name": "Review Allocated Software Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-024"
+        ],
+        "Outputs": [
+          "ART-080"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 95,
+        "ParentId": 55,
+        "Name": "Identify Missing Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-080"
+        ],
+        "Outputs": [
+          "ART-081"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 96,
+        "ParentId": 55,
+        "Name": "Document Completeness Verification",
+        "Description": "",
+        "Inputs": [
+          "ART-080",
+          "ART-081"
+        ],
+        "Outputs": [
+          "ART-054"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 97,
+        "ParentId": 84,
+        "Name": "Identify Potential Failure Conditions",
+        "Description": "",
+        "Inputs": [
+          "ART-002",
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-082"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 98,
+        "ParentId": 84,
+        "Name": "Classify Failure Conditions",
+        "Description": "",
+        "Inputs": [
+          "ART-082"
+        ],
+        "Outputs": [
+          "ART-083"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 99,
+        "ParentId": 84,
+        "Name": "Document FHA Findings",
+        "Description": "",
+        "Inputs": [
+          "ART-083"
+        ],
+        "Outputs": [
+          "ART-072"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 100,
+        "ParentId": 86,
+        "Name": "Review PSSA and System Verification Reports",
+        "Description": "",
+        "Inputs": [
+          "ART-004",
+          "ART-073"
+        ],
+        "Outputs": [
+          "ART-084"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 101,
+        "ParentId": 86,
+        "Name": "Verify Safety Requirements Compliance",
+        "Description": "",
+        "Inputs": [
+          "ART-084"
+        ],
+        "Outputs": [
+          "ART-085"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 102,
+        "ParentId": 86,
+        "Name": "Assess Hazard Mitigation Effectiveness",
+        "Description": "",
+        "Inputs": [
+          "ART-085"
+        ],
+        "Outputs": [
+          "ART-086"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 103,
+        "ParentId": 86,
+        "Name": "Compile SSA Report",
+        "Description": "",
+        "Inputs": [
+          "ART-086"
+        ],
+        "Outputs": [
+          "ART-006"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 104,
+        "ParentId": 87,
+        "Name": "Identify Faults for Analysis",
+        "Description": "",
+        "Inputs": [
+          "ART-009",
+          "ART-073"
+        ],
+        "Outputs": [
+          "ART-087"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 105,
+        "ParentId": 87,
+        "Name": "Construct Fault Tree",
+        "Description": "",
+        "Inputs": [
+          "ART-087"
+        ],
+        "Outputs": [
+          "ART-088"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 106,
+        "ParentId": 87,
+        "Name": "Analyze Fault Tree",
+        "Description": "",
+        "Inputs": [
+          "ART-088"
+        ],
+        "Outputs": [
+          "ART-074"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 107,
+        "ParentId": 88,
+        "Name": "Identify Failure Modes",
+        "Description": "",
+        "Inputs": [
+          "ART-009",
+          "ART-073"
+        ],
+        "Outputs": [
+          "ART-089"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 108,
+        "ParentId": 88,
+        "Name": "Analyze Effects of Failure Modes",
+        "Description": "",
+        "Inputs": [
+          "ART-089"
+        ],
+        "Outputs": [
+          "ART-090"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 109,
+        "ParentId": 88,
+        "Name": "Document FMEA Results",
+        "Description": "",
+        "Inputs": [
+          "ART-090"
+        ],
+        "Outputs": [
+          "ART-075"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 110,
+        "ParentId": 89,
+        "Name": "Identify Common Mode Failures",
+        "Description": "",
+        "Inputs": [
+          "ART-009",
+          "ART-073"
+        ],
+        "Outputs": [
+          "ART-091"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 111,
+        "ParentId": 89,
+        "Name": "Analyze Common Mode Failures",
+        "Description": "",
+        "Inputs": [
+          "ART-091"
+        ],
+        "Outputs": [
+          "ART-092"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 112,
+        "ParentId": 89,
+        "Name": "Mitigate Common Mode Failures",
+        "Description": "",
+        "Inputs": [
+          "ART-092"
+        ],
+        "Outputs": [
+          "ART-076"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 113,
+        "ParentId": 90,
+        "Name": "Derive Safety Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-072",
+          "ART-073",
+          "ART-074",
+          "ART-075",
+          "ART-076"
+        ],
+        "Outputs": [
+          "ART-017"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 114,
+        "ParentId": 90,
+        "Name": "Assign Design Assurance Levels (DAL)",
+        "Description": "",
+        "Inputs": [
+          "ART-017"
+        ],
+        "Outputs": [
+          "ART-077"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 115,
+        "ParentId": null,
+        "Name": "Conduct System Validation",
+        "Description": "",
+        "Inputs": [
+          "ART-004",
+          "ART-008"
+        ],
+        "Outputs": [
+          "ART-093"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 116,
+        "ParentId": 4,
+        "Name": "Develop Software High-Level Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-010"
+        ],
+        "Outputs": [
+          "ART-094"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 117,
+        "ParentId": 116,
+        "Name": "Develop Software Low-Level Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-094"
+        ],
+        "Outputs": [
+          "ART-095"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 118,
+        "ParentId": 17,
+        "Name": "Design Software Architecture",
+        "Description": "",
+        "Inputs": [
+          "ART-094"
+        ],
+        "Outputs": [
+          "ART-096"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 119,
+        "ParentId": 33,
+        "Name": "Generate Executable Object Code",
+        "Description": "",
+        "Inputs": [
+          "ART-037"
+        ],
+        "Outputs": [
+          "ART-097"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 120,
+        "ParentId": 34,
+        "Name": "Develop Software Verification Cases and Procedures",
+        "Description": "",
+        "Inputs": [
+          "ART-010",
+          "ART-031"
+        ],
+        "Outputs": [
+          "ART-098"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 121,
+        "ParentId": 34,
+        "Name": "Conduct Structural Coverage Analysis",
+        "Description": "",
+        "Inputs": [
+          "ART-037",
+          "ART-038"
+        ],
+        "Outputs": [
+          "ART-099"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 122,
+        "ParentId": 22,
+        "Name": "Establish Traceability from HLR to LLR",
+        "Description": "",
+        "Inputs": [
+          "ART-094",
+          "ART-095"
+        ],
+        "Outputs": [
+          "ART-100"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 123,
+        "ParentId": 33,
+        "Name": "Establish Traceability from LLR to Source Code",
+        "Description": "",
+        "Inputs": [
+          "ART-037",
+          "ART-095"
+        ],
+        "Outputs": [
+          "ART-101"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 124,
+        "ParentId": 35,
+        "Name": "Compile Software Configuration Index",
+        "Description": "",
+        "Inputs": [
+          "ART-039"
+        ],
+        "Outputs": [
+          "ART-102"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 125,
+        "ParentId": 36,
+        "Name": "Compile Software Accomplishment Summary",
+        "Description": "",
+        "Inputs": [
+          "ART-038",
+          "ART-040",
+          "ART-102"
+        ],
+        "Outputs": [
+          "ART-005"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 126,
+        "ParentId": 2,
+        "Name": "Allocate System Requirements to Subsystems",
+        "Description": "",
+        "Inputs": [
+          "ART-008"
+        ],
+        "Outputs": [
+          "ART-103"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 127,
+        "ParentId": 5,
+        "Name": "Develop System Verification Procedures",
+        "Description": "",
+        "Inputs": [
+          "ART-011"
+        ],
+        "Outputs": [
+          "ART-104"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 128,
+        "ParentId": 5,
+        "Name": "Conduct System Verification",
+        "Description": "",
+        "Inputs": [
+          "ART-104"
+        ],
+        "Outputs": [
+          "ART-105"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 129,
+        "ParentId": 6,
+        "Name": "Review Interface Control Document",
+        "Description": "",
+        "Inputs": [
+          "ART-012"
+        ],
+        "Outputs": [
+          "ART-106"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 130,
+        "ParentId": 7,
+        "Name": "Review Operational Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-001"
+        ],
+        "Outputs": [
+          "ART-107"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 131,
+        "ParentId": 7,
+        "Name": "Identify Functions",
+        "Description": "",
+        "Inputs": [
+          "ART-107"
+        ],
+        "Outputs": [
+          "ART-108"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 132,
+        "ParentId": 7,
+        "Name": "Compile Function List",
+        "Description": "",
+        "Inputs": [
+          "ART-108"
+        ],
+        "Outputs": [
+          "ART-013"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 133,
+        "ParentId": 9,
+        "Name": "Review Allocated Aircraft Functions",
+        "Description": "",
+        "Inputs": [
+          "ART-014"
+        ],
+        "Outputs": [
+          "ART-109"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 134,
+        "ParentId": 9,
+        "Name": "Identify Top-Level Functions",
+        "Description": "",
+        "Inputs": [
+          "ART-109"
+        ],
+        "Outputs": [
+          "ART-110"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 135,
+        "ParentId": 9,
+        "Name": "Document Functional Decomposition",
+        "Description": "",
+        "Inputs": [
+          "ART-110"
+        ],
+        "Outputs": [
+          "ART-007"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 136,
+        "ParentId": 10,
+        "Name": "Review Aircraft Functions",
+        "Description": "",
+        "Inputs": [
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-109"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 137,
+        "ParentId": 10,
+        "Name": "Identify Functional Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-002",
+          "ART-109"
+        ],
+        "Outputs": [
+          "ART-111"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 138,
+        "ParentId": 10,
+        "Name": "Document Functional Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-111"
+        ],
+        "Outputs": [
+          "ART-015"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 139,
+        "ParentId": 13,
+        "Name": "Review Aircraft Functions and Regulations",
+        "Description": "",
+        "Inputs": [
+          "ART-002",
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-112"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 140,
+        "ParentId": 13,
+        "Name": "Identify Interface Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-112"
+        ],
+        "Outputs": [
+          "ART-113"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 141,
+        "ParentId": 13,
+        "Name": "Document Interface Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-113"
+        ],
+        "Outputs": [
+          "ART-018"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 142,
+        "ParentId": 14,
+        "Name": "Compile Derived Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-015",
+          "ART-016",
+          "ART-017",
+          "ART-018"
+        ],
+        "Outputs": [
+          "ART-114"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 143,
+        "ParentId": 14,
+        "Name": "Document System Requirements Specification",
+        "Description": "",
+        "Inputs": [
+          "ART-114"
+        ],
+        "Outputs": [
+          "ART-008"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 144,
+        "ParentId": 15,
+        "Name": "Review System Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-008"
+        ],
+        "Outputs": [
+          "ART-049"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 145,
+        "ParentId": 15,
+        "Name": "Identify Architectural Needs",
+        "Description": "",
+        "Inputs": [
+          "ART-049"
+        ],
+        "Outputs": [
+          "ART-115"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 146,
+        "ParentId": 15,
+        "Name": "Identify Architectural Constraints",
+        "Description": "",
+        "Inputs": [
+          "ART-049"
+        ],
+        "Outputs": [
+          "ART-116"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 147,
+        "ParentId": 15,
+        "Name": "Compile Architectural Needs and Constraints",
+        "Description": "",
+        "Inputs": [
+          "ART-115",
+          "ART-116"
+        ],
+        "Outputs": [
+          "ART-019"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 148,
+        "ParentId": 16,
+        "Name": "Review Architectural Needs and Constraints",
+        "Description": "",
+        "Inputs": [
+          "ART-019"
+        ],
+        "Outputs": [
+          "ART-117"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 149,
+        "ParentId": 16,
+        "Name": "Develop Hardware Architecture Concepts",
+        "Description": "",
+        "Inputs": [
+          "ART-117"
+        ],
+        "Outputs": [
+          "ART-118"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 150,
+        "ParentId": 16,
+        "Name": "Evaluate Hardware Architecture Concepts",
+        "Description": "",
+        "Inputs": [
+          "ART-118"
+        ],
+        "Outputs": [
+          "ART-119"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 151,
+        "ParentId": 16,
+        "Name": "Select Final Hardware Architecture",
+        "Description": "",
+        "Inputs": [
+          "ART-119"
+        ],
+        "Outputs": [
+          "ART-120"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 152,
+        "ParentId": 16,
+        "Name": "Document Hardware Architecture Description",
+        "Description": "",
+        "Inputs": [
+          "ART-120"
+        ],
+        "Outputs": [
+          "ART-020"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 153,
+        "ParentId": 23,
+        "Name": "Review System Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-008"
+        ],
+        "Outputs": [
+          "ART-049"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 154,
+        "ParentId": 23,
+        "Name": "Identify Verification Needs",
+        "Description": "",
+        "Inputs": [
+          "ART-049"
+        ],
+        "Outputs": [
+          "ART-121"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 155,
+        "ParentId": 23,
+        "Name": "Define Verification Objectives",
+        "Description": "",
+        "Inputs": [
+          "ART-121"
+        ],
+        "Outputs": [
+          "ART-025"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 156,
+        "ParentId": 26,
+        "Name": "Compile Verification Objectives",
+        "Description": "",
+        "Inputs": [
+          "ART-025"
+        ],
+        "Outputs": [
+          "ART-122"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 157,
+        "ParentId": 26,
+        "Name": "Compile Verification Methods",
+        "Description": "",
+        "Inputs": [
+          "ART-026"
+        ],
+        "Outputs": [
+          "ART-123"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 158,
+        "ParentId": 26,
+        "Name": "Compile Test Strategies",
+        "Description": "",
+        "Inputs": [
+          "ART-027"
+        ],
+        "Outputs": [
+          "ART-124"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 159,
+        "ParentId": 26,
+        "Name": "Integrate Verification Plan Components",
+        "Description": "",
+        "Inputs": [
+          "ART-122",
+          "ART-123",
+          "ART-124"
+        ],
+        "Outputs": [
+          "ART-011"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 160,
+        "ParentId": 27,
+        "Name": "Review System Architecture Description",
+        "Description": "",
+        "Inputs": [
+          "ART-009"
+        ],
+        "Outputs": [
+          "ART-125"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 161,
+        "ParentId": 27,
+        "Name": "Identify Interface Points",
+        "Description": "",
+        "Inputs": [
+          "ART-125"
+        ],
+        "Outputs": [
+          "ART-126"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 162,
+        "ParentId": 27,
+        "Name": "Analyze Interface Requirements",
+        "Description": "",
+        "Inputs": [
+          "ART-126"
+        ],
+        "Outputs": [
+          "ART-127"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 163,
+        "ParentId": 27,
+        "Name": "Compile Identified System Interfaces",
+        "Description": "",
+        "Inputs": [
+          "ART-127"
+        ],
+        "Outputs": [
+          "ART-028"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 164,
+        "ParentId": 28,
+        "Name": "Review Identified System Interfaces",
+        "Description": "",
+        "Inputs": [
+          "ART-028"
+        ],
+        "Outputs": [
+          "ART-128"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 165,
+        "ParentId": 28,
+        "Name": "Compile Interface Control Document",
+        "Description": "",
+        "Inputs": [
+          "ART-128"
+        ],
+        "Outputs": [
+          "ART-012"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 166,
+        "ParentId": 37,
+        "Name": "Review Aircraft Functions",
+        "Description": "",
+        "Inputs": [
+          "ART-013"
+        ],
+        "Outputs": [
+          "ART-109"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 167,
+        "ParentId": 37,
+        "Name": "Identify Allocation Criteria",
+        "Description": "",
+        "Inputs": [
+          "ART-109"
+        ],
+        "Outputs": [
+          "ART-129"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 168,
+        "ParentId": 37,
+        "Name": "Document Function Allocation Criteria",
+        "Description": "",
+        "Inputs": [
+          "ART-129"
+        ],
+        "Outputs": [
+          "ART-041"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 169,
+        "ParentId": 38,
+        "Name": "Review Function Allocation Criteria",
+        "Description": "",
+        "Inputs": [
+          "ART-041"
+        ],
+        "Outputs": [
+          "ART-130"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 170,
+        "ParentId": 38,
+        "Name": "Identify System Allocation Options",
+        "Description": "",
+        "Inputs": [
+          "ART-130"
+        ],
+        "Outputs": [
+          "ART-131"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 171,
+        "ParentId": 38,
+        "Name": "Select System for Function Allocation",
+        "Description": "",
+        "Inputs": [
+          "ART-131"
+        ],
+        "Outputs": [
+          "ART-132"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 172,
+        "ParentId": 38,
+        "Name": "Document System Function Allocation",
+        "Description": "",
+        "Inputs": [
+          "ART-132"
+        ],
+        "Outputs": [
+          "ART-042"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 173,
+        "ParentId": 39,
+        "Name": "Review System Function Allocation",
+        "Description": "",
+        "Inputs": [
+          "ART-042"
+        ],
+        "Outputs": [
+          "ART-133"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 174,
+        "ParentId": 39,
+        "Name": "Identify Software Component Allocation Options",
+        "Description": "",
+        "Inputs": [
+          "ART-133"
+        ],
+        "Outputs": [
+          "ART-134"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 175,
+        "ParentId": 39,
+        "Name": "Select Software Components for Function Allocation",
+        "Description": "",
+        "Inputs": [
+          "ART-134"
+        ],
+        "Outputs": [
+          "ART-135"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 176,
+        "ParentId": 39,
+        "Name": "Document Software Component Function Allocation",
+        "Description": "",
+        "Inputs": [
+          "ART-135"
+        ],
+        "Outputs": [
+          "ART-043"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 177,
+        "ParentId": 40,
+        "Name": "Review Software Component Function Allocation",
+        "Description": "",
+        "Inputs": [
+          "ART-043"
+        ],
+        "Outputs": [
+          "ART-136"
+        ],
+        "Standards": [],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 178,
+        "ParentId": 40,
+        "Name": "Compile Comprehensive Function List",
+        "Description": "Compile the reviewed function allocations into a comprehensive list for further development.",
+        "Inputs": [
+          "ART-136"
+        ],
+        "Outputs": [
+          "ART-014"
+        ],
+        "Standards": [
+          "ARP4754A §5.1"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 179,
+        "ParentId": 41,
+        "Name": "Review Architecture Descriptions",
+        "Description": "Review the hardware and software architecture descriptions to understand interface requirements.",
+        "Inputs": [
+          "ART-020",
+          "ART-021"
+        ],
+        "Outputs": [
+          "ART-137"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 180,
+        "ParentId": 41,
+        "Name": "Identify Interface Requirements",
+        "Description": "Identify specific interface requirements between hardware and software based on reviewed architecture descriptions.",
+        "Inputs": [
+          "ART-137"
+        ],
+        "Outputs": [
+          "ART-113"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 181,
+        "ParentId": 41,
+        "Name": "Document Hardware-Software Interface Requirements",
+        "Description": "Document the identified interface requirements in a structured format.",
+        "Inputs": [
+          "ART-113"
+        ],
+        "Outputs": [
+          "ART-044"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 182,
+        "ParentId": 42,
+        "Name": "Review Interface Requirements",
+        "Description": "Review the hardware-software interface requirements to understand design needs.",
+        "Inputs": [
+          "ART-044"
+        ],
+        "Outputs": [
+          "ART-138"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 183,
+        "ParentId": 42,
+        "Name": "Develop Interface Design Concepts",
+        "Description": "Develop initial design concepts for hardware-software interfaces based on reviewed requirements.",
+        "Inputs": [
+          "ART-138"
+        ],
+        "Outputs": [
+          "ART-139"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 184,
+        "ParentId": 42,
+        "Name": "Evaluate Interface Design Concepts",
+        "Description": "Evaluate the developed interface design concepts for feasibility and compliance.",
+        "Inputs": [
+          "ART-139"
+        ],
+        "Outputs": [
+          "ART-140"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 185,
+        "ParentId": 42,
+        "Name": "Select Final Interface Design",
+        "Description": "Select the final interface design based on evaluation results.",
+        "Inputs": [
+          "ART-140"
+        ],
+        "Outputs": [
+          "ART-141"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 186,
+        "ParentId": 42,
+        "Name": "Document Hardware-Software Interface Design",
+        "Description": "Document the selected hardware-software interface design in a structured format.",
+        "Inputs": [
+          "ART-141"
+        ],
+        "Outputs": [
+          "ART-045"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 187,
+        "ParentId": 43,
+        "Name": "Review Interface Design",
+        "Description": "Review the hardware-software interface design to ensure it meets system requirements.",
+        "Inputs": [
+          "ART-045"
+        ],
+        "Outputs": [
+          "ART-142"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 188,
+        "ParentId": 43,
+        "Name": "Compile System Interface Description",
+        "Description": "Compile the reviewed interface design into the System Interface Description document.",
+        "Inputs": [
+          "ART-142"
+        ],
+        "Outputs": [
+          "ART-022"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 189,
+        "ParentId": 44,
+        "Name": "Review Hardware Architecture Description",
+        "Description": "Review the hardware architecture description to understand integration requirements.",
+        "Inputs": [
+          "ART-020"
+        ],
+        "Outputs": [
+          "ART-143"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 190,
+        "ParentId": 44,
+        "Name": "Identify Integration Requirements",
+        "Description": "Identify specific requirements for integrating the hardware architecture into the system architecture.",
+        "Inputs": [
+          "ART-143"
+        ],
+        "Outputs": [
+          "ART-144"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 191,
+        "ParentId": 44,
+        "Name": "Integrate Hardware Architecture",
+        "Description": "Integrate the hardware architecture into the system architecture based on identified requirements.",
+        "Inputs": [
+          "ART-144"
+        ],
+        "Outputs": [
+          "ART-046"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 192,
+        "ParentId": 45,
+        "Name": "Review Software Architecture Description",
+        "Description": "Review the software architecture description to understand integration requirements.",
+        "Inputs": [
+          "ART-021"
+        ],
+        "Outputs": [
+          "ART-145"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 193,
+        "ParentId": 45,
+        "Name": "Identify Integration Requirements",
+        "Description": "Identify specific requirements for integrating the software architecture into the system architecture.",
+        "Inputs": [
+          "ART-145"
+        ],
+        "Outputs": [
+          "ART-144"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 194,
+        "ParentId": 45,
+        "Name": "Integrate Software Architecture",
+        "Description": "Integrate the software architecture into the system architecture based on identified requirements.",
+        "Inputs": [
+          "ART-144"
+        ],
+        "Outputs": [
+          "ART-047"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 195,
+        "ParentId": 46,
+        "Name": "Review System Interface Description",
+        "Description": "Review the System Interface Description to understand integration requirements.",
+        "Inputs": [
+          "ART-022"
+        ],
+        "Outputs": [
+          "ART-146"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 196,
+        "ParentId": 46,
+        "Name": "Identify Integration Requirements",
+        "Description": "Identify specific requirements for integrating the system interfaces into the system architecture.",
+        "Inputs": [
+          "ART-146"
+        ],
+        "Outputs": [
+          "ART-144"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 197,
+        "ParentId": 46,
+        "Name": "Integrate System Interfaces",
+        "Description": "Integrate the system interfaces into the system architecture based on identified requirements.",
+        "Inputs": [
+          "ART-144"
+        ],
+        "Outputs": [
+          "ART-048"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 198,
+        "ParentId": 47,
+        "Name": "Review Integrated Architectures",
+        "Description": "Review the integrated hardware, software, and interface architectures to ensure completeness and consistency.",
+        "Inputs": [
+          "ART-046",
+          "ART-047",
+          "ART-048"
+        ],
+        "Outputs": [
+          "ART-147"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 199,
+        "ParentId": 47,
+        "Name": "Compile System Architecture Description",
+        "Description": "Compile the reviewed integrated architectures into the final System Architecture Description document.",
+        "Inputs": [
+          "ART-147"
+        ],
+        "Outputs": [
+          "ART-009"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 200,
+        "ParentId": 48,
+        "Name": "Review System Requirements Specification",
+        "Description": "Examine the System Requirements Specification to ensure clarity and completeness.",
+        "Inputs": [
+          "ART-008"
+        ],
+        "Outputs": [
+          "ART-148"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 201,
+        "ParentId": 48,
+        "Name": "Identify Potential Software Allocations",
+        "Description": "Identify requirements within the reviewed specification that can be allocated to software components.",
+        "Inputs": [
+          "ART-148"
+        ],
+        "Outputs": [
+          "ART-149"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 202,
+        "ParentId": 49,
+        "Name": "Review System Requirements for Software Allocation",
+        "Description": "Review the system requirements to identify those suitable for software allocation.",
+        "Inputs": [
+          "ART-009",
+          "ART-049"
+        ],
+        "Outputs": [
+          "ART-150"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 203,
+        "ParentId": 49,
+        "Name": "Analyze Software-Allocable Requirements",
+        "Description": "Analyze identified requirements to confirm their suitability for allocation to software components.",
+        "Inputs": [
+          "ART-150"
+        ],
+        "Outputs": [
+          "ART-050"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 204,
+        "ParentId": 50,
+        "Name": "Review Software-Allocable Requirements",
+        "Description": "Review the software-allocable requirements to ensure they are suitable for documentation.",
+        "Inputs": [
+          "ART-050"
+        ],
+        "Outputs": [
+          "ART-151"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 205,
+        "ParentId": 50,
+        "Name": "Compile Software Allocation Analysis",
+        "Description": "Compile the reviewed software-allocable requirements into the Software Allocation Analysis document.",
+        "Inputs": [
+          "ART-151"
+        ],
+        "Outputs": [
+          "ART-023"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 206,
+        "ParentId": 51,
+        "Name": "Examine Software Allocation Analysis",
+        "Description": "Examine the Software Allocation Analysis to identify key system requirements allocated to software components.",
+        "Inputs": [
+          "ART-023"
+        ],
+        "Outputs": [
+          "ART-152"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 207,
+        "ParentId": 51,
+        "Name": "Verify Allocation Completeness",
+        "Description": "Verify that all system requirements have been adequately allocated to software components.",
+        "Inputs": [
+          "ART-152"
+        ],
+        "Outputs": [
+          "ART-153"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 208,
+        "ParentId": 51,
+        "Name": "Document Review Findings",
+        "Description": "Document the findings from the review of the Software Allocation Analysis.",
+        "Inputs": [
+          "ART-153"
+        ],
+        "Outputs": [
+          "ART-051"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 209,
+        "ParentId": 52,
+        "Name": "Review Analyzed Requirements",
+        "Description": "Review each analyzed requirement to understand its allocation context.",
+        "Inputs": [
+          "ART-051"
+        ],
+        "Outputs": [
+          "ART-154"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 210,
+        "ParentId": 52,
+        "Name": "Determine Appropriate Software Component",
+        "Description": "Determine the most suitable software component for each reviewed requirement.",
+        "Inputs": [
+          "ART-154"
+        ],
+        "Outputs": [
+          "ART-155"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 211,
+        "ParentId": 52,
+        "Name": "Assign Requirements to Components",
+        "Description": "Assign each requirement to the identified software component based on the decision.",
+        "Inputs": [
+          "ART-155"
+        ],
+        "Outputs": [
+          "ART-052"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 212,
+        "ParentId": 54,
+        "Name": "Review Allocated Software Requirements",
+        "Description": "Review the allocated software requirements to ensure they are ready for traceability analysis.",
+        "Inputs": [
+          "ART-024"
+        ],
+        "Outputs": [
+          "ART-080"
+        ],
+        "Standards": [
+          "DO-178C §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 213,
+        "ParentId": 54,
+        "Name": "Identify Traceability Links",
+        "Description": "Identify traceability links between allocated software requirements and system requirements.",
+        "Inputs": [
+          "ART-080"
+        ],
+        "Outputs": [
+          "ART-156"
+        ],
+        "Standards": [
+          "DO-178C §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 214,
+        "ParentId": 54,
+        "Name": "Document Traceability Matrix",
+        "Description": "Document the identified traceability links in a traceability matrix.",
+        "Inputs": [
+          "ART-156"
+        ],
+        "Outputs": [
+          "ART-053"
+        ],
+        "Standards": [
+          "DO-178C §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 215,
+        "ParentId": 63,
+        "Name": "Review Test Strategy Components",
+        "Description": "Review the identified test strategy components to understand their integration into the framework.",
+        "Inputs": [
+          "ART-059"
+        ],
+        "Outputs": [
+          "ART-157"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 216,
+        "ParentId": 63,
+        "Name": "Analyze System Architecture for Test Framework",
+        "Description": "Analyze the system architecture to determine its influence on the test strategy framework.",
+        "Inputs": [
+          "ART-009"
+        ],
+        "Outputs": [
+          "ART-158"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 217,
+        "ParentId": 63,
+        "Name": "Integrate Components into Test Strategy Framework",
+        "Description": "Integrate the reviewed components and system architecture analysis into the test strategy framework.",
+        "Inputs": [
+          "ART-157",
+          "ART-158"
+        ],
+        "Outputs": [
+          "ART-159"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 218,
+        "ParentId": 63,
+        "Name": "Document Test Strategy Framework",
+        "Description": "Document the integrated test strategy framework in a structured format.",
+        "Inputs": [
+          "ART-159"
+        ],
+        "Outputs": [
+          "ART-060"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 219,
+        "ParentId": 11,
+        "Name": "Review System Functions",
+        "Description": "Review system functions to identify performance-related aspects.",
+        "Inputs": [
+          "ART-002",
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-114"
+        ],
+        "Standards": [
+          "ARP4754A §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 220,
+        "ParentId": 11,
+        "Name": "Analyze Performance Needs",
+        "Description": "Analyze the performance needs based on reviewed system functions.",
+        "Inputs": [
+          "ART-114"
+        ],
+        "Outputs": [
+          "ART-115"
+        ],
+        "Standards": [
+          "ARP4754A §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 221,
+        "ParentId": 11,
+        "Name": "Derive Performance Requirements",
+        "Description": "Derive specific performance requirements from analyzed performance needs.",
+        "Inputs": [
+          "ART-115"
+        ],
+        "Outputs": [
+          "ART-016"
+        ],
+        "Standards": [
+          "ARP4754A §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 222,
+        "ParentId": 57,
+        "Name": "Examine Verification Objectives",
+        "Description": "Examine the verification objectives to ensure they align with system requirements.",
+        "Inputs": [
+          "ART-025"
+        ],
+        "Outputs": [
+          "ART-122"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 223,
+        "ParentId": 57,
+        "Name": "Validate Verification Objectives",
+        "Description": "Validate the verification objectives for completeness and correctness.",
+        "Inputs": [
+          "ART-122"
+        ],
+        "Outputs": [
+          "ART-055"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 224,
+        "ParentId": 58,
+        "Name": "Review Verification Objectives",
+        "Description": "Review the verification objectives to understand the scope of potential methods.",
+        "Inputs": [
+          "ART-055"
+        ],
+        "Outputs": [
+          "ART-121"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 225,
+        "ParentId": 58,
+        "Name": "Identify Verification Techniques",
+        "Description": "Identify possible verification techniques applicable to the objectives.",
+        "Inputs": [
+          "ART-121"
+        ],
+        "Outputs": [
+          "ART-056"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 226,
+        "ParentId": 60,
+        "Name": "Review Evaluated Verification Methods",
+        "Description": "Examine the evaluated verification methods to ensure they meet the verification objectives.",
+        "Inputs": [
+          "ART-057"
+        ],
+        "Outputs": [
+          "ART-058"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 227,
+        "ParentId": 60,
+        "Name": "Select Appropriate Verification Methods",
+        "Description": "Choose the most suitable verification methods from the reviewed options for final implementation.",
+        "Inputs": [
+          "ART-058"
+        ],
+        "Outputs": [
+          "ART-026"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 228,
+        "ParentId": 61,
+        "Name": "Review Initial Verification Methods",
+        "Description": "Examine the initial set of verification methods for completeness and relevance.",
+        "Inputs": [
+          "ART-026"
+        ],
+        "Outputs": [
+          "ART-056"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 229,
+        "ParentId": 61,
+        "Name": "Evaluate Verification Method Effectiveness",
+        "Description": "Assess the effectiveness of the identified verification methods against system requirements.",
+        "Inputs": [
+          "ART-056"
+        ],
+        "Outputs": [
+          "ART-057"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 230,
+        "ParentId": 61,
+        "Name": "Finalize Verification Methods",
+        "Description": "Select and document the final verification methods to be used for system verification.",
+        "Inputs": [
+          "ART-057"
+        ],
+        "Outputs": [
+          "ART-058"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 231,
+        "ParentId": 62,
+        "Name": "Review System Architecture for Test Components",
+        "Description": "Examine the system architecture to identify potential components for test strategies.",
+        "Inputs": [
+          "ART-009"
+        ],
+        "Outputs": [
+          "ART-125"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 232,
+        "ParentId": 62,
+        "Name": "Identify Verification Method Components",
+        "Description": "Determine components of verification methods that are essential for test strategies.",
+        "Inputs": [
+          "ART-058"
+        ],
+        "Outputs": [
+          "ART-126"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 233,
+        "ParentId": 62,
+        "Name": "Compile Test Strategy Components",
+        "Description": "Compile identified components into a cohesive set for developing test strategies.",
+        "Inputs": [
+          "ART-125",
+          "ART-126"
+        ],
+        "Outputs": [
+          "ART-059"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 234,
+        "ParentId": 64,
+        "Name": "Review Test Strategy Framework",
+        "Description": "Review the developed test strategy framework to ensure completeness and alignment with system verification needs.",
+        "Inputs": [
+          "ART-060"
+        ],
+        "Outputs": [
+          "ART-157"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 235,
+        "ParentId": 64,
+        "Name": "Compile Test Strategies Document",
+        "Description": "Compile the reviewed test strategy components into a comprehensive test strategies document.",
+        "Inputs": [
+          "ART-157"
+        ],
+        "Outputs": [
+          "ART-027"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 236,
+        "ParentId": 70,
+        "Name": "Write Software Code",
+        "Description": "Develop the source code for individual software modules based on the software architecture.",
+        "Inputs": [
+          "ART-021"
+        ],
+        "Outputs": [
+          "ART-037"
+        ],
+        "Standards": [
+          "ARP4754A §4.6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 237,
+        "ParentId": 70,
+        "Name": "Review and Refactor Code",
+        "Description": "Conduct a code review and refactor the software modules to ensure compliance with coding standards.",
+        "Inputs": [
+          "ART-037"
+        ],
+        "Outputs": [
+          "ART-061"
+        ],
+        "Standards": [
+          "ARP4754A §4.6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 238,
+        "ParentId": 71,
+        "Name": "Prepare Software Modules for Integration",
+        "Description": "Prepare coded software modules for integration by ensuring compatibility and readiness.",
+        "Inputs": [
+          "ART-061"
+        ],
+        "Outputs": [
+          "ART-061"
+        ],
+        "Standards": [
+          "ARP4754A §4.5"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 239,
+        "ParentId": 71,
+        "Name": "Integrate Software Modules into Architecture",
+        "Description": "Combine prepared software modules into the existing software architecture framework.",
+        "Inputs": [
+          "ART-061"
+        ],
+        "Outputs": [
+          "ART-047"
+        ],
+        "Standards": [
+          "ARP4754A §4.5"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 240,
+        "ParentId": 72,
+        "Name": "Review Software Architecture Implementation",
+        "Description": "Review the software architecture implementation against design specifications.",
+        "Inputs": [
+          "ART-047"
+        ],
+        "Outputs": [
+          "ART-145"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 241,
+        "ParentId": 72,
+        "Name": "Analyze Software Architecture Implementation",
+        "Description": "Analyze the software architecture implementation for compliance with requirements.",
+        "Inputs": [
+          "ART-145"
+        ],
+        "Outputs": [
+          "ART-146"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 242,
+        "ParentId": 72,
+        "Name": "Test Software Architecture Implementation",
+        "Description": "Conduct tests to verify the software architecture implementation meets the specified criteria.",
+        "Inputs": [
+          "ART-146"
+        ],
+        "Outputs": [
+          "ART-062"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 243,
+        "ParentId": 91,
+        "Name": "Review Applicable Regulations and Function List",
+        "Description": "Examine the applicable regulations and aircraft function list to identify potential safety-critical functions.",
+        "Inputs": [
+          "ART-002",
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-114"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 244,
+        "ParentId": 91,
+        "Name": "Identify Safety-Critical Functions",
+        "Description": "Determine which functions are critical to system safety based on the reviewed information.",
+        "Inputs": [
+          "ART-114"
+        ],
+        "Outputs": [
+          "ART-078"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 245,
+        "ParentId": 92,
+        "Name": "Identify Potential Hazards",
+        "Description": "Identify potential hazards associated with safety-critical functions.",
+        "Inputs": [
+          "ART-078"
+        ],
+        "Outputs": [
+          "ART-082"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 246,
+        "ParentId": 92,
+        "Name": "Analyze Hazard Impact",
+        "Description": "Analyze the impact of identified hazards on system safety.",
+        "Inputs": [
+          "ART-082"
+        ],
+        "Outputs": [
+          "ART-079"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 247,
+        "ParentId": 93,
+        "Name": "Review Safety Analysis Results",
+        "Description": "Review the function safety analysis to identify potential safety requirements.",
+        "Inputs": [
+          "ART-079"
+        ],
+        "Outputs": [
+          "ART-084"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 248,
+        "ParentId": 93,
+        "Name": "Identify Safety Requirements",
+        "Description": "Identify specific safety requirements based on the reviewed safety analysis results.",
+        "Inputs": [
+          "ART-084"
+        ],
+        "Outputs": [
+          "ART-017"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 249,
+        "ParentId": 94,
+        "Name": "Review Software Requirements for Completeness",
+        "Description": "Examine allocated software requirements to ensure all necessary requirements are present.",
+        "Inputs": [
+          "ART-024"
+        ],
+        "Outputs": [
+          "ART-080"
+        ],
+        "Standards": [
+          "ARP4754A §4.6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 250,
+        "ParentId": 94,
+        "Name": "Review Software Requirements for Consistency",
+        "Description": "Check allocated software requirements for internal consistency and alignment with system requirements.",
+        "Inputs": [
+          "ART-024"
+        ],
+        "Outputs": [
+          "ART-080"
+        ],
+        "Standards": [
+          "ARP4754A §4.6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 251,
+        "ParentId": 94,
+        "Name": "Review Software Requirements for Traceability",
+        "Description": "Ensure that all allocated software requirements are traceable to higher-level system requirements.",
+        "Inputs": [
+          "ART-024"
+        ],
+        "Outputs": [
+          "ART-080"
+        ],
+        "Standards": [
+          "ARP4754A §4.6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 252,
+        "ParentId": 95,
+        "Name": "Review Software Allocation",
+        "Description": "Review the software allocation to identify potential gaps in requirements.",
+        "Inputs": [
+          "ART-080"
+        ],
+        "Outputs": [
+          "ART-151"
+        ],
+        "Standards": [
+          "ARP4754A §4.6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 253,
+        "ParentId": 95,
+        "Name": "Analyze Requirement Gaps",
+        "Description": "Analyze identified gaps to determine missing requirements.",
+        "Inputs": [
+          "ART-151"
+        ],
+        "Outputs": [
+          "ART-081"
+        ],
+        "Standards": [
+          "ARP4754A §4.6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 254,
+        "ParentId": 97,
+        "Name": "Review System Functions",
+        "Description": "Review system functions to understand potential failure conditions.",
+        "Inputs": [
+          "ART-002",
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-114"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 255,
+        "ParentId": 97,
+        "Name": "Identify Failure Conditions",
+        "Description": "Identify potential failure conditions based on reviewed system functions.",
+        "Inputs": [
+          "ART-114"
+        ],
+        "Outputs": [
+          "ART-082"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 256,
+        "ParentId": 99,
+        "Name": "Compile FHA Findings",
+        "Description": "Compile the results from the Functional Hazard Assessment into a structured format.",
+        "Inputs": [
+          "ART-083"
+        ],
+        "Outputs": [
+          "ART-072"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 257,
+        "ParentId": 99,
+        "Name": "Review FHA Findings",
+        "Description": "Review the compiled FHA findings for accuracy and completeness.",
+        "Inputs": [
+          "ART-072"
+        ],
+        "Outputs": [
+          "ART-072"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 258,
+        "ParentId": 99,
+        "Name": "Finalize FHA Report",
+        "Description": "Finalize the FHA report by incorporating review feedback and ensuring compliance with standards.",
+        "Inputs": [
+          "ART-072"
+        ],
+        "Outputs": [
+          "ART-072"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 259,
+        "ParentId": 100,
+        "Name": "Review PSSA Report",
+        "Description": "Examine the PSSA report to ensure it meets safety compliance standards.",
+        "Inputs": [
+          "ART-073"
+        ],
+        "Outputs": [
+          "ART-084"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 260,
+        "ParentId": 100,
+        "Name": "Review System Verification Report",
+        "Description": "Analyze the system verification report for adherence to safety compliance.",
+        "Inputs": [
+          "ART-004"
+        ],
+        "Outputs": [
+          "ART-084"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 261,
+        "ParentId": 101,
+        "Name": "Review Derived Safety Requirements",
+        "Description": "Review the derived safety requirements to ensure they are complete and accurate.",
+        "Inputs": [
+          "ART-084"
+        ],
+        "Outputs": [
+          "ART-080"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 262,
+        "ParentId": 101,
+        "Name": "Analyze Compliance with Safety Requirements",
+        "Description": "Analyze the system's compliance with the reviewed safety requirements.",
+        "Inputs": [
+          "ART-080"
+        ],
+        "Outputs": [
+          "ART-081"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 263,
+        "ParentId": 101,
+        "Name": "Document Safety Compliance Verification Results",
+        "Description": "Document the results of the compliance analysis in the safety compliance verification report.",
+        "Inputs": [
+          "ART-081"
+        ],
+        "Outputs": [
+          "ART-085"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 264,
+        "ParentId": 103,
+        "Name": "Gather Safety Assessment Data",
+        "Description": "Collect all necessary data and results from the Hazard Mitigation Assessment for the SSA report.",
+        "Inputs": [
+          "ART-086"
+        ],
+        "Outputs": [
+          "ART-084"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 265,
+        "ParentId": 103,
+        "Name": "Analyze Safety Data",
+        "Description": "Analyze the collected safety data to ensure it meets the required safety standards.",
+        "Inputs": [
+          "ART-084"
+        ],
+        "Outputs": [
+          "ART-085"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 266,
+        "ParentId": 103,
+        "Name": "Draft SSA Report",
+        "Description": "Prepare the initial draft of the System Safety Assessment report based on analyzed data.",
+        "Inputs": [
+          "ART-085"
+        ],
+        "Outputs": [
+          "ART-006"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 267,
+        "ParentId": 107,
+        "Name": "Review System Architecture for Failure Modes",
+        "Description": "Examine the system architecture to identify potential failure modes.",
+        "Inputs": [
+          "ART-009"
+        ],
+        "Outputs": [
+          "ART-087"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 268,
+        "ParentId": 107,
+        "Name": "Identify Failure Modes from PSSA",
+        "Description": "Analyze the PSSA report to identify additional failure modes.",
+        "Inputs": [
+          "ART-073"
+        ],
+        "Outputs": [
+          "ART-089"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 269,
+        "ParentId": 108,
+        "Name": "Review Failure Modes",
+        "Description": "Review the identified failure modes to understand their characteristics.",
+        "Inputs": [
+          "ART-089"
+        ],
+        "Outputs": [
+          "ART-087"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 270,
+        "ParentId": 108,
+        "Name": "Evaluate Impact on System Performance",
+        "Description": "Evaluate the impact of each failure mode on system performance.",
+        "Inputs": [
+          "ART-087"
+        ],
+        "Outputs": [
+          "ART-090"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 271,
+        "ParentId": 110,
+        "Name": "Review System Architecture for Common Mode Failures",
+        "Description": "Examine the system architecture to identify areas susceptible to common mode failures.",
+        "Inputs": [
+          "ART-009"
+        ],
+        "Outputs": [
+          "ART-087"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 272,
+        "ParentId": 110,
+        "Name": "Identify Common Mode Failure Scenarios",
+        "Description": "Identify specific scenarios where common mode failures could occur based on architecture review.",
+        "Inputs": [
+          "ART-073",
+          "ART-087"
+        ],
+        "Outputs": [
+          "ART-091"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 273,
+        "ParentId": 111,
+        "Name": "Review Common Mode Failures",
+        "Description": "Review identified common mode failures to understand potential impacts.",
+        "Inputs": [
+          "ART-091"
+        ],
+        "Outputs": [
+          "ART-087"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 274,
+        "ParentId": 111,
+        "Name": "Assess Impact on System Safety",
+        "Description": "Assess the impact of common mode failures on system safety and document findings.",
+        "Inputs": [
+          "ART-087"
+        ],
+        "Outputs": [
+          "ART-092"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 275,
+        "ParentId": 113,
+        "Name": "Review Safety Analysis Results",
+        "Description": "Review the results from safety analyses to identify potential safety requirements.",
+        "Inputs": [
+          "ART-072",
+          "ART-073",
+          "ART-074",
+          "ART-075",
+          "ART-076"
+        ],
+        "Outputs": [
+          "ART-084"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 276,
+        "ParentId": 113,
+        "Name": "Identify Safety Requirements",
+        "Description": "Identify safety requirements based on the reviewed safety analysis results.",
+        "Inputs": [
+          "ART-084"
+        ],
+        "Outputs": [
+          "ART-017"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 277,
+        "ParentId": 114,
+        "Name": "Review Safety Requirements",
+        "Description": "Review the safety requirements to determine the necessary Design Assurance Levels.",
+        "Inputs": [
+          "ART-017"
+        ],
+        "Outputs": [
+          "ART-084"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 278,
+        "ParentId": 114,
+        "Name": "Determine Design Assurance Levels",
+        "Description": "Determine the appropriate Design Assurance Levels based on the reviewed safety requirements.",
+        "Inputs": [
+          "ART-084"
+        ],
+        "Outputs": [
+          "ART-077"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 279,
+        "ParentId": 115,
+        "Name": "Review System Verification Report",
+        "Description": "Review the System Verification Report to ensure all verification activities are complete and accurate.",
+        "Inputs": [
+          "ART-004"
+        ],
+        "Outputs": [
+          "ART-084"
+        ],
+        "Standards": [
+          "ARP4754A §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 280,
+        "ParentId": 115,
+        "Name": "Validate System Requirements",
+        "Description": "Ensure the system requirements are met by comparing them against the operational requirements.",
+        "Inputs": [
+          "ART-008",
+          "ART-084"
+        ],
+        "Outputs": [
+          "ART-085"
+        ],
+        "Standards": [
+          "ARP4754A §6.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 281,
+        "ParentId": 115,
+        "Name": "Compile System Validation Evidence",
+        "Description": "Compile evidence from validation activities to demonstrate compliance with operational requirements.",
+        "Inputs": [
+          "ART-085"
+        ],
+        "Outputs": [
+          "ART-093"
+        ],
+        "Standards": [
+          "ARP4754A §6.5"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 282,
+        "ParentId": 118,
+        "Name": "Review Software High-Level Requirements",
+        "Description": "Review the software high-level requirements to ensure they are complete and clear.",
+        "Inputs": [
+          "ART-094"
+        ],
+        "Outputs": [
+          "ART-080"
+        ],
+        "Standards": [
+          "ARP4754A §4.5"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 283,
+        "ParentId": 118,
+        "Name": "Identify Architectural Components",
+        "Description": "Identify the architectural components needed to meet the software high-level requirements.",
+        "Inputs": [
+          "ART-080"
+        ],
+        "Outputs": [
+          "ART-115"
+        ],
+        "Standards": [
+          "ARP4754A §4.5"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 284,
+        "ParentId": 118,
+        "Name": "Define Software Architecture",
+        "Description": "Define the software architecture by organizing the identified components and their interactions.",
+        "Inputs": [
+          "ART-115"
+        ],
+        "Outputs": [
+          "ART-096"
+        ],
+        "Standards": [
+          "ARP4754A §4.5"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 285,
+        "ParentId": 126,
+        "Name": "Review System Requirements for Allocation",
+        "Description": "Review system requirements to identify allocation criteria for subsystems.",
+        "Inputs": [
+          "ART-008"
+        ],
+        "Outputs": [
+          "ART-129"
+        ],
+        "Standards": [
+          "ARP4754A §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 286,
+        "ParentId": 126,
+        "Name": "Identify Subsystem Allocation Options",
+        "Description": "Identify potential subsystems for each system requirement based on allocation criteria.",
+        "Inputs": [
+          "ART-129"
+        ],
+        "Outputs": [
+          "ART-131"
+        ],
+        "Standards": [
+          "ARP4754A §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 287,
+        "ParentId": 126,
+        "Name": "Select Subsystem Allocations",
+        "Description": "Select the most appropriate subsystem for each system requirement based on analysis.",
+        "Inputs": [
+          "ART-131"
+        ],
+        "Outputs": [
+          "ART-132"
+        ],
+        "Standards": [
+          "ARP4754A §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 288,
+        "ParentId": 126,
+        "Name": "Document Subsystem Requirements",
+        "Description": "Compile the selected subsystem allocations into the Subsystem Requirements Specification.",
+        "Inputs": [
+          "ART-132"
+        ],
+        "Outputs": [
+          "ART-103"
+        ],
+        "Standards": [
+          "ARP4754A §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 289,
+        "ParentId": 127,
+        "Name": "Review System Verification Plan",
+        "Description": "Examine the system verification plan to ensure it aligns with system requirements.",
+        "Inputs": [
+          "ART-011"
+        ],
+        "Outputs": [
+          "ART-055"
+        ],
+        "Standards": [
+          "ARP4754A §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 290,
+        "ParentId": 127,
+        "Name": "Identify Verification Procedures",
+        "Description": "Determine specific procedures needed to verify each system requirement.",
+        "Inputs": [
+          "ART-055"
+        ],
+        "Outputs": [
+          "ART-056"
+        ],
+        "Standards": [
+          "ARP4754A §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 291,
+        "ParentId": 127,
+        "Name": "Develop Verification Procedures",
+        "Description": "Create detailed procedures for each identified verification method.",
+        "Inputs": [
+          "ART-056"
+        ],
+        "Outputs": [
+          "ART-104"
+        ],
+        "Standards": [
+          "ARP4754A §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 292,
+        "ParentId": 128,
+        "Name": "Prepare Verification Environment",
+        "Description": "Set up the necessary environment and tools for system verification.",
+        "Inputs": [
+          "ART-104"
+        ],
+        "Outputs": [
+          "ART-125"
+        ],
+        "Standards": [
+          "ARP4754A §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 293,
+        "ParentId": 128,
+        "Name": "Execute Verification Procedures",
+        "Description": "Perform the verification procedures as per the developed plan.",
+        "Inputs": [
+          "ART-125"
+        ],
+        "Outputs": [
+          "ART-126"
+        ],
+        "Standards": [
+          "ARP4754A §6.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 294,
+        "ParentId": 128,
+        "Name": "Analyze Verification Results",
+        "Description": "Analyze the results obtained from executing the verification procedures.",
+        "Inputs": [
+          "ART-126"
+        ],
+        "Outputs": [
+          "ART-127"
+        ],
+        "Standards": [
+          "ARP4754A §6.5"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 295,
+        "ParentId": 128,
+        "Name": "Document Verification Findings",
+        "Description": "Compile and document the findings from the verification analysis.",
+        "Inputs": [
+          "ART-127"
+        ],
+        "Outputs": [
+          "ART-105"
+        ],
+        "Standards": [
+          "ARP4754A §6.6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 296,
+        "ParentId": 129,
+        "Name": "Check Document Completeness",
+        "Description": "Verify that the Interface Control Document contains all necessary sections and information.",
+        "Inputs": [
+          "ART-012"
+        ],
+        "Outputs": [
+          "ART-112"
+        ],
+        "Standards": [
+          "ARP4754A §4.5"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 297,
+        "ParentId": 129,
+        "Name": "Check Document Accuracy",
+        "Description": "Ensure the accuracy of the data and information presented in the Interface Control Document.",
+        "Inputs": [
+          "ART-112"
+        ],
+        "Outputs": [
+          "ART-106"
+        ],
+        "Standards": [
+          "ARP4754A §4.5"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 298,
+        "ParentId": 131,
+        "Name": "Extract Function Candidates",
+        "Description": "Extract potential function candidates from the reviewed operational requirements.",
+        "Inputs": [
+          "ART-107"
+        ],
+        "Outputs": [
+          "ART-110"
+        ],
+        "Standards": [
+          "ARP4754A §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 299,
+        "ParentId": 131,
+        "Name": "Validate Function Candidates",
+        "Description": "Validate the extracted function candidates against operational requirements.",
+        "Inputs": [
+          "ART-110"
+        ],
+        "Outputs": [
+          "ART-108"
+        ],
+        "Standards": [
+          "ARP4754A §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 300,
+        "ParentId": 132,
+        "Name": "Review Identified Functions",
+        "Description": "Review the identified aircraft functions to ensure completeness and accuracy.",
+        "Inputs": [
+          "ART-108"
+        ],
+        "Outputs": [
+          "ART-109"
+        ],
+        "Standards": [
+          "ARP4754A §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 301,
+        "ParentId": 132,
+        "Name": "Document Preliminary Function List",
+        "Description": "Document the reviewed functions into a preliminary list for further analysis.",
+        "Inputs": [
+          "ART-109"
+        ],
+        "Outputs": [
+          "ART-013"
+        ],
+        "Standards": [
+          "ARP4754A §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 302,
+        "ParentId": 133,
+        "Name": "Check Function Allocation Completeness",
+        "Description": "Ensure that all aircraft functions have been allocated to systems.",
+        "Inputs": [
+          "ART-014"
+        ],
+        "Outputs": [
+          "ART-109"
+        ],
+        "Standards": [
+          "ARP4754A §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 303,
+        "ParentId": 133,
+        "Name": "Verify Function Allocation Accuracy",
+        "Description": "Verify that the allocated functions accurately reflect system capabilities.",
+        "Inputs": [
+          "ART-014"
+        ],
+        "Outputs": [
+          "ART-109"
+        ],
+        "Standards": [
+          "ARP4754A §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 304,
+        "ParentId": 134,
+        "Name": "Review Function List",
+        "Description": "Examine the reviewed function list to identify potential top-level functions.",
+        "Inputs": [
+          "ART-109"
+        ],
+        "Outputs": [
+          "ART-110"
+        ],
+        "Standards": [
+          "ARP4754A §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 305,
+        "ParentId": 134,
+        "Name": "Select Top-Level Functions",
+        "Description": "Select and document the top-level functions from the reviewed list.",
+        "Inputs": [
+          "ART-110"
+        ],
+        "Outputs": [
+          "ART-110"
+        ],
+        "Standards": [
+          "ARP4754A §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 306,
+        "ParentId": 135,
+        "Name": "Review Top-Level Functions",
+        "Description": "Examine the top-level functions to ensure they are correctly identified and documented.",
+        "Inputs": [
+          "ART-110"
+        ],
+        "Outputs": [
+          "ART-111"
+        ],
+        "Standards": [
+          "ARP4754A §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 307,
+        "ParentId": 135,
+        "Name": "Decompose Functions",
+        "Description": "Break down top-level functions into detailed sub-functions.",
+        "Inputs": [
+          "ART-111"
+        ],
+        "Outputs": [
+          "ART-112"
+        ],
+        "Standards": [
+          "ARP4754A §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 308,
+        "ParentId": 135,
+        "Name": "Document Decomposed Functions",
+        "Description": "Record the detailed sub-functions in the functional decomposition document.",
+        "Inputs": [
+          "ART-112"
+        ],
+        "Outputs": [
+          "ART-007"
+        ],
+        "Standards": [
+          "ARP4754A §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 309,
+        "ParentId": 136,
+        "Name": "Review Function List",
+        "Description": "Examine the aircraft function list to ensure it includes all necessary functions.",
+        "Inputs": [
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-108"
+        ],
+        "Standards": [
+          "ARP4754A §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 310,
+        "ParentId": 136,
+        "Name": "Validate Function Compliance",
+        "Description": "Check that each function meets operational and regulatory requirements.",
+        "Inputs": [
+          "ART-108"
+        ],
+        "Outputs": [
+          "ART-109"
+        ],
+        "Standards": [
+          "ARP4754A §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 311,
+        "ParentId": 137,
+        "Name": "Review Aircraft Functions",
+        "Description": "Examine the reviewed aircraft functions to understand their scope and context.",
+        "Inputs": [
+          "ART-109"
+        ],
+        "Outputs": [
+          "ART-112"
+        ],
+        "Standards": [
+          "ARP4754A §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 312,
+        "ParentId": 137,
+        "Name": "Extract Functional Requirements",
+        "Description": "Derive functional requirements based on the reviewed aircraft functions and applicable regulations.",
+        "Inputs": [
+          "ART-002",
+          "ART-112"
+        ],
+        "Outputs": [
+          "ART-111"
+        ],
+        "Standards": [
+          "ARP4754A §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 313,
+        "ParentId": 138,
+        "Name": "Review Identified Functional Requirements",
+        "Description": "Review the identified functional requirements to ensure completeness and accuracy.",
+        "Inputs": [
+          "ART-111"
+        ],
+        "Outputs": [
+          "ART-112"
+        ],
+        "Standards": [
+          "ARP4754A §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 314,
+        "ParentId": 138,
+        "Name": "Compile Functional Requirements Document",
+        "Description": "Compile the reviewed functional requirements into a formal document.",
+        "Inputs": [
+          "ART-112"
+        ],
+        "Outputs": [
+          "ART-015"
+        ],
+        "Standards": [
+          "ARP4754A §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 315,
+        "ParentId": 139,
+        "Name": "Review Aircraft Functions",
+        "Description": "Examine the aircraft function list to understand interface needs.",
+        "Inputs": [
+          "ART-007"
+        ],
+        "Outputs": [
+          "ART-109"
+        ],
+        "Standards": [
+          "ARP4754A §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 316,
+        "ParentId": 139,
+        "Name": "Review Applicable Regulations",
+        "Description": "Analyze applicable regulations to determine interface requirements.",
+        "Inputs": [
+          "ART-002"
+        ],
+        "Outputs": [
+          "ART-112"
+        ],
+        "Standards": [
+          "ARP4754A §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 317,
+        "ParentId": 140,
+        "Name": "Review Interface Context",
+        "Description": "Examine the reviewed interface context to understand the scope and constraints.",
+        "Inputs": [
+          "ART-112"
+        ],
+        "Outputs": [
+          "ART-126"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 318,
+        "ParentId": 140,
+        "Name": "Analyze Interface Needs",
+        "Description": "Determine specific interface requirements based on the reviewed context.",
+        "Inputs": [
+          "ART-126"
+        ],
+        "Outputs": [
+          "ART-113"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 319,
+        "ParentId": 141,
+        "Name": "Format Interface Requirements",
+        "Description": "Format the identified interface requirements into a structured template.",
+        "Inputs": [
+          "ART-113"
+        ],
+        "Outputs": [
+          "ART-126"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 320,
+        "ParentId": 141,
+        "Name": "Review Formatted Requirements",
+        "Description": "Review the formatted interface requirements for completeness and accuracy.",
+        "Inputs": [
+          "ART-126"
+        ],
+        "Outputs": [
+          "ART-018"
+        ],
+        "Standards": [
+          "ARP4754A §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 321,
+        "ParentId": 142,
+        "Name": "Compile Functional Derived Requirements",
+        "Description": "Compile derived requirements specifically from the functional category.",
+        "Inputs": [
+          "ART-015"
+        ],
+        "Outputs": [
+          "ART-114"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 322,
+        "ParentId": 142,
+        "Name": "Compile Performance Derived Requirements",
+        "Description": "Compile derived requirements specifically from the performance category.",
+        "Inputs": [
+          "ART-016"
+        ],
+        "Outputs": [
+          "ART-114"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 323,
+        "ParentId": 142,
+        "Name": "Compile Safety Derived Requirements",
+        "Description": "Compile derived requirements specifically from the safety category.",
+        "Inputs": [
+          "ART-017"
+        ],
+        "Outputs": [
+          "ART-114"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 324,
+        "ParentId": 142,
+        "Name": "Compile Interface Derived Requirements",
+        "Description": "Compile derived requirements specifically from the interface category.",
+        "Inputs": [
+          "ART-018"
+        ],
+        "Outputs": [
+          "ART-114"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 325,
+        "ParentId": 143,
+        "Name": "Review Compiled Derived Requirements",
+        "Description": "Review the compiled derived requirements to ensure completeness and accuracy.",
+        "Inputs": [
+          "ART-114"
+        ],
+        "Outputs": [
+          "ART-148"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 326,
+        "ParentId": 143,
+        "Name": "Format System Requirements Specification",
+        "Description": "Format the reviewed derived requirements into the System Requirements Specification document.",
+        "Inputs": [
+          "ART-148"
+        ],
+        "Outputs": [
+          "ART-008"
+        ],
+        "Standards": [
+          "ARP4754A §5.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 327,
+        "ParentId": 144,
+        "Name": "Review System Requirements Specification",
+        "Description": "Examine the System Requirements Specification for completeness and correctness.",
+        "Inputs": [
+          "ART-008"
+        ],
+        "Outputs": [
+          "ART-148"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 328,
+        "ParentId": 144,
+        "Name": "Identify Architectural Needs",
+        "Description": "Determine the architectural needs based on the reviewed system requirements.",
+        "Inputs": [
+          "ART-148"
+        ],
+        "Outputs": [
+          "ART-115"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 329,
+        "ParentId": 144,
+        "Name": "Compile Reviewed System Requirements",
+        "Description": "Compile the findings from the review into a formal document.",
+        "Inputs": [
+          "ART-115"
+        ],
+        "Outputs": [
+          "ART-049"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 330,
+        "ParentId": 145,
+        "Name": "Review System Requirements",
+        "Description": "Review the system requirements to understand the architectural implications.",
+        "Inputs": [
+          "ART-049"
+        ],
+        "Outputs": [
+          "ART-148"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 331,
+        "ParentId": 145,
+        "Name": "Identify Architectural Components",
+        "Description": "Identify necessary architectural components based on the reviewed system requirements.",
+        "Inputs": [
+          "ART-148"
+        ],
+        "Outputs": [
+          "ART-115"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 332,
+        "ParentId": 146,
+        "Name": "Review System Requirements for Constraints",
+        "Description": "Examine the system requirements to identify potential architectural constraints.",
+        "Inputs": [
+          "ART-049"
+        ],
+        "Outputs": [
+          "ART-117"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 333,
+        "ParentId": 146,
+        "Name": "Document Architectural Constraints",
+        "Description": "Compile and document the identified architectural constraints.",
+        "Inputs": [
+          "ART-117"
+        ],
+        "Outputs": [
+          "ART-116"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 334,
+        "ParentId": 149,
+        "Name": "Analyze Architectural Needs and Constraints",
+        "Description": "Analyze the reviewed architectural needs and constraints to inform concept development.",
+        "Inputs": [
+          "ART-117"
+        ],
+        "Outputs": [
+          "ART-115"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 335,
+        "ParentId": 149,
+        "Name": "Generate Initial Hardware Architecture Concepts",
+        "Description": "Generate initial hardware architecture concepts based on analyzed needs and constraints.",
+        "Inputs": [
+          "ART-115"
+        ],
+        "Outputs": [
+          "ART-118"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 336,
+        "ParentId": 150,
+        "Name": "Assess Feasibility of Hardware Architecture Concepts",
+        "Description": "Analyze the hardware architecture concepts to determine their feasibility in meeting system requirements.",
+        "Inputs": [
+          "ART-118"
+        ],
+        "Outputs": [
+          "ART-119"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 337,
+        "ParentId": 150,
+        "Name": "Verify Compliance of Hardware Architecture Concepts",
+        "Description": "Evaluate the hardware architecture concepts for compliance with applicable standards and regulations.",
+        "Inputs": [
+          "ART-118"
+        ],
+        "Outputs": [
+          "ART-119"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 338,
+        "ParentId": 151,
+        "Name": "Review Evaluated Hardware Architecture Concepts",
+        "Description": "Review the evaluated hardware architecture concepts to ensure they meet the necessary criteria.",
+        "Inputs": [
+          "ART-119"
+        ],
+        "Outputs": [
+          "ART-118"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 339,
+        "ParentId": 151,
+        "Name": "Select Optimal Hardware Architecture",
+        "Description": "Select the optimal hardware architecture from the reviewed concepts based on evaluation results.",
+        "Inputs": [
+          "ART-118"
+        ],
+        "Outputs": [
+          "ART-120"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 340,
+        "ParentId": 152,
+        "Name": "Format Hardware Architecture Document",
+        "Description": "Format the selected hardware architecture into a structured document.",
+        "Inputs": [
+          "ART-120"
+        ],
+        "Outputs": [
+          "ART-143"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 341,
+        "ParentId": 152,
+        "Name": "Review Hardware Architecture Document",
+        "Description": "Review the formatted hardware architecture document for accuracy and completeness.",
+        "Inputs": [
+          "ART-143"
+        ],
+        "Outputs": [
+          "ART-020"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 342,
+        "ParentId": 153,
+        "Name": "Examine System Requirements",
+        "Description": "Examine the System Requirements Specification to identify key verification aspects.",
+        "Inputs": [
+          "ART-008"
+        ],
+        "Outputs": [
+          "ART-148"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 343,
+        "ParentId": 153,
+        "Name": "Identify Verification Needs",
+        "Description": "Identify the verification needs based on the examined system requirements.",
+        "Inputs": [
+          "ART-148"
+        ],
+        "Outputs": [
+          "ART-121"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 344,
+        "ParentId": 153,
+        "Name": "Compile Reviewed System Requirements",
+        "Description": "Compile the reviewed system requirements into a formal document.",
+        "Inputs": [
+          "ART-121"
+        ],
+        "Outputs": [
+          "ART-049"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 345,
+        "ParentId": 154,
+        "Name": "Review System Requirements for Verification",
+        "Description": "Review the system requirements to understand the context and scope of verification needs.",
+        "Inputs": [
+          "ART-049"
+        ],
+        "Outputs": [
+          "ART-148"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 346,
+        "ParentId": 154,
+        "Name": "Determine Specific Verification Needs",
+        "Description": "Identify specific verification needs based on the reviewed system requirements.",
+        "Inputs": [
+          "ART-148"
+        ],
+        "Outputs": [
+          "ART-121"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 347,
+        "ParentId": 156,
+        "Name": "Gather Verification Objectives",
+        "Description": "Collect verification objectives from the provided source document.",
+        "Inputs": [
+          "ART-025"
+        ],
+        "Outputs": [
+          "ART-055"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 348,
+        "ParentId": 156,
+        "Name": "Organize Verification Objectives",
+        "Description": "Arrange the gathered verification objectives into a structured format.",
+        "Inputs": [
+          "ART-055"
+        ],
+        "Outputs": [
+          "ART-122"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 349,
+        "ParentId": 157,
+        "Name": "Gather Verification Methods",
+        "Description": "Collect all relevant verification methods from the provided artifact.",
+        "Inputs": [
+          "ART-026"
+        ],
+        "Outputs": [
+          "ART-056"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 350,
+        "ParentId": 157,
+        "Name": "Organize Verification Methods",
+        "Description": "Structure the gathered verification methods for inclusion in the System Verification Plan.",
+        "Inputs": [
+          "ART-056"
+        ],
+        "Outputs": [
+          "ART-123"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 351,
+        "ParentId": 158,
+        "Name": "Gather Test Strategies",
+        "Description": "Collect all relevant test strategies from various sources.",
+        "Inputs": [
+          "ART-027"
+        ],
+        "Outputs": [
+          "ART-059"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 352,
+        "ParentId": 158,
+        "Name": "Organize Test Strategies",
+        "Description": "Arrange the gathered test strategies into a structured format.",
+        "Inputs": [
+          "ART-059"
+        ],
+        "Outputs": [
+          "ART-124"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 353,
+        "ParentId": 159,
+        "Name": "Integrate Verification Objectives",
+        "Description": "Integrate compiled verification objectives into the System Verification Plan.",
+        "Inputs": [
+          "ART-122"
+        ],
+        "Outputs": [
+          "ART-025"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 354,
+        "ParentId": 159,
+        "Name": "Integrate Verification Methods",
+        "Description": "Integrate compiled verification methods into the System Verification Plan.",
+        "Inputs": [
+          "ART-123"
+        ],
+        "Outputs": [
+          "ART-026"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 355,
+        "ParentId": 159,
+        "Name": "Integrate Test Strategies",
+        "Description": "Integrate compiled test strategies into the System Verification Plan.",
+        "Inputs": [
+          "ART-124"
+        ],
+        "Outputs": [
+          "ART-027"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 356,
+        "ParentId": 159,
+        "Name": "Compile Final System Verification Plan",
+        "Description": "Compile the integrated components into the final System Verification Plan.",
+        "Inputs": [
+          "ART-025",
+          "ART-026",
+          "ART-027"
+        ],
+        "Outputs": [
+          "ART-011"
+        ],
+        "Standards": [
+          "ARP4754A §6"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 357,
+        "ParentId": 160,
+        "Name": "Review System Architecture Document",
+        "Description": "Examine the System Architecture Description for completeness and accuracy.",
+        "Inputs": [
+          "ART-009"
+        ],
+        "Outputs": [
+          "ART-125"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 358,
+        "ParentId": 160,
+        "Name": "Identify Integration Needs",
+        "Description": "Determine the integration needs based on the reviewed System Architecture Description.",
+        "Inputs": [
+          "ART-125"
+        ],
+        "Outputs": [
+          "ART-125"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 359,
+        "ParentId": 161,
+        "Name": "Review System Architecture for Interface Points",
+        "Description": "Examine the system architecture to identify potential interface points required for integration.",
+        "Inputs": [
+          "ART-125"
+        ],
+        "Outputs": [
+          "ART-126"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 360,
+        "ParentId": 162,
+        "Name": "Review Interface Points",
+        "Description": "Review the identified interface points to understand their context and relevance.",
+        "Inputs": [
+          "ART-126"
+        ],
+        "Outputs": [
+          "ART-112"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 361,
+        "ParentId": 162,
+        "Name": "Determine Interface Requirements",
+        "Description": "Determine specific requirements for each interface point based on system needs.",
+        "Inputs": [
+          "ART-112"
+        ],
+        "Outputs": [
+          "ART-113"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 362,
+        "ParentId": 162,
+        "Name": "Document Interface Requirements",
+        "Description": "Document the determined interface requirements in a structured format.",
+        "Inputs": [
+          "ART-113"
+        ],
+        "Outputs": [
+          "ART-127"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 363,
+        "ParentId": 163,
+        "Name": "Review Analyzed Interface Requirements",
+        "Description": "Review the analyzed interface requirements to ensure completeness and accuracy.",
+        "Inputs": [
+          "ART-127"
+        ],
+        "Outputs": [
+          "ART-138"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 364,
+        "ParentId": 163,
+        "Name": "Organize Interface Requirements",
+        "Description": "Organize the reviewed interface requirements into a structured format.",
+        "Inputs": [
+          "ART-138"
+        ],
+        "Outputs": [
+          "ART-139"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 365,
+        "ParentId": 163,
+        "Name": "Compile System Interface List",
+        "Description": "Compile the organized interface requirements into a comprehensive list of system interfaces.",
+        "Inputs": [
+          "ART-139"
+        ],
+        "Outputs": [
+          "ART-028"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 366,
+        "ParentId": 164,
+        "Name": "Check Interface Completeness",
+        "Description": "Ensure all necessary system interfaces are identified and documented.",
+        "Inputs": [
+          "ART-028"
+        ],
+        "Outputs": [
+          "ART-112"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 367,
+        "ParentId": 164,
+        "Name": "Verify Interface Accuracy",
+        "Description": "Confirm the accuracy of the identified system interfaces against system requirements.",
+        "Inputs": [
+          "ART-112"
+        ],
+        "Outputs": [
+          "ART-128"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 368,
+        "ParentId": 165,
+        "Name": "Gather Reviewed System Interfaces",
+        "Description": "Collect all reviewed system interfaces for inclusion in the Interface Control Document.",
+        "Inputs": [
+          "ART-128"
+        ],
+        "Outputs": [
+          "ART-112"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 369,
+        "ParentId": 165,
+        "Name": "Format Interface Control Document",
+        "Description": "Format the gathered interfaces into the Interface Control Document structure.",
+        "Inputs": [
+          "ART-112"
+        ],
+        "Outputs": [
+          "ART-012"
+        ],
+        "Standards": [
+          "ARP4754A §5.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 370,
+        "ParentId": 166,
+        "Name": "Review Preliminary Function List",
+        "Description": "Examine the preliminary aircraft function list to ensure completeness and accuracy.",
+        "Inputs": [
+          "ART-013"
+        ],
+        "Outputs": [
+          "ART-108"
+        ],
+        "Standards": [
+          "ARP4754A §5.1"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 371,
+        "ParentId": 166,
+        "Name": "Understand Function Context",
+        "Description": "Analyze the reviewed function list to understand the context for function allocation.",
+        "Inputs": [
+          "ART-108"
+        ],
+        "Outputs": [
+          "ART-109"
+        ],
+        "Standards": [
+          "ARP4754A §5.1"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 372,
+        "ParentId": 53,
+        "Name": "Review Assigned Software Requirements",
+        "Description": "Examine the assigned software requirements to ensure they are complete and accurate.",
+        "Inputs": [
+          "ART-052"
+        ],
+        "Outputs": [
+          "ART-080"
+        ],
+        "Standards": [
+          "DO-178C §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 373,
+        "ParentId": 53,
+        "Name": "Compile Allocated Software Requirements Document",
+        "Description": "Compile the reviewed software requirements into a formal document for allocation.",
+        "Inputs": [
+          "ART-080"
+        ],
+        "Outputs": [
+          "ART-024"
+        ],
+        "Standards": [
+          "DO-178C §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 374,
+        "ParentId": 56,
+        "Name": "Review Traceability Matrix",
+        "Description": "Examine the traceability matrix to ensure all requirements are covered and linked.",
+        "Inputs": [
+          "ART-053"
+        ],
+        "Outputs": [
+          "ART-080"
+        ],
+        "Standards": [
+          "DO-178C §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 375,
+        "ParentId": 56,
+        "Name": "Review Completeness Verification Report",
+        "Description": "Verify the completeness of the software requirements using the verification report.",
+        "Inputs": [
+          "ART-054"
+        ],
+        "Outputs": [
+          "ART-081"
+        ],
+        "Standards": [
+          "DO-178C §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 376,
+        "ParentId": 56,
+        "Name": "Compile Final Software Requirements Specification",
+        "Description": "Integrate reviewed traceability and completeness verification into the final specification document.",
+        "Inputs": [
+          "ART-080",
+          "ART-081"
+        ],
+        "Outputs": [
+          "ART-010"
+        ],
+        "Standards": [
+          "DO-178C §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 377,
+        "ParentId": 59,
+        "Name": "Review Potential Verification Methods",
+        "Description": "Examine potential verification methods to ensure they meet project requirements.",
+        "Inputs": [
+          "ART-056"
+        ],
+        "Outputs": [
+          "ART-121"
+        ],
+        "Standards": [
+          "DO-178C §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 378,
+        "ParentId": 59,
+        "Name": "Analyze Verification Method Suitability",
+        "Description": "Assess the suitability of each verification method for the intended application.",
+        "Inputs": [
+          "ART-121"
+        ],
+        "Outputs": [
+          "ART-122"
+        ],
+        "Standards": [
+          "DO-178C §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 379,
+        "ParentId": 59,
+        "Name": "Document Evaluated Verification Methods",
+        "Description": "Compile the results of the verification method evaluation into a formal document.",
+        "Inputs": [
+          "ART-122"
+        ],
+        "Outputs": [
+          "ART-057"
+        ],
+        "Standards": [
+          "DO-178C §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 380,
+        "ParentId": 65,
+        "Name": "Define Certification Objectives",
+        "Description": "Identify and define the certification objectives for the software project based on the certification basis.",
+        "Inputs": [
+          "ART-003"
+        ],
+        "Outputs": [
+          "ART-122"
+        ],
+        "Standards": [
+          "DO-178C §4.1"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 381,
+        "ParentId": 65,
+        "Name": "Identify Software Life Cycle Processes",
+        "Description": "Determine the software life cycle processes to be used, including development, verification, configuration management, and quality assurance.",
+        "Inputs": [
+          "ART-122"
+        ],
+        "Outputs": [
+          "ART-030"
+        ],
+        "Standards": [
+          "DO-178C §4.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 382,
+        "ParentId": 65,
+        "Name": "Define Software Development Environment",
+        "Description": "Specify the tools, methods, and environment to be used for software development.",
+        "Inputs": [
+          "ART-030"
+        ],
+        "Outputs": [
+          "ART-031"
+        ],
+        "Standards": [
+          "DO-178C §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 383,
+        "ParentId": 65,
+        "Name": "Establish Verification Strategies",
+        "Description": "Develop strategies for verifying the software against its requirements, including reviews, analyses, and tests.",
+        "Inputs": [
+          "ART-031"
+        ],
+        "Outputs": [
+          "ART-026"
+        ],
+        "Standards": [
+          "DO-178C §6.0"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 384,
+        "ParentId": 65,
+        "Name": "Compile PSAC Document",
+        "Description": "Compile the Plan for Software Aspects of Certification document, integrating all defined objectives, processes, and strategies.",
+        "Inputs": [
+          "ART-026"
+        ],
+        "Outputs": [
+          "ART-029"
+        ],
+        "Standards": [
+          "DO-178C §11.0"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 385,
+        "ParentId": 66,
+        "Name": "Define Software Development Objectives",
+        "Description": "Establish the objectives and scope of the Software Development Plan (SDP) based on the certification basis.",
+        "Inputs": [
+          "ART-003"
+        ],
+        "Outputs": [
+          "ART-122"
+        ],
+        "Standards": [
+          "DO-178C §4.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 386,
+        "ParentId": 66,
+        "Name": "Identify Software Development Processes",
+        "Description": "Identify and document the processes to be used in software development, including planning, development, and verification.",
+        "Inputs": [
+          "ART-122"
+        ],
+        "Outputs": [
+          "ART-030"
+        ],
+        "Standards": [
+          "DO-178C §4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 387,
+        "ParentId": 66,
+        "Name": "Define Software Development Environment",
+        "Description": "Specify the tools, methods, and environment to be used for software development and verification.",
+        "Inputs": [
+          "ART-030"
+        ],
+        "Outputs": [
+          "ART-031"
+        ],
+        "Standards": [
+          "DO-178C §4.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 388,
+        "ParentId": 66,
+        "Name": "Establish Verification Strategies",
+        "Description": "Develop strategies for verifying the software development processes and outputs to ensure compliance with objectives.",
+        "Inputs": [
+          "ART-031"
+        ],
+        "Outputs": [
+          "ART-026"
+        ],
+        "Standards": [
+          "DO-178C §6.0"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 389,
+        "ParentId": 66,
+        "Name": "Compile Software Development Plan",
+        "Description": "Compile the Software Development Plan (SDP) document, integrating all defined objectives, processes, and strategies.",
+        "Inputs": [
+          "ART-026"
+        ],
+        "Outputs": [
+          "ART-030"
+        ],
+        "Standards": [
+          "DO-178C §4.5"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 390,
+        "ParentId": 67,
+        "Name": "Define Verification Objectives",
+        "Description": "Identify and document the objectives for software verification based on the certification basis.",
+        "Inputs": [
+          "ART-003"
+        ],
+        "Outputs": [
+          "ART-025"
+        ],
+        "Standards": [
+          "DO-178C §6.1"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 391,
+        "ParentId": 67,
+        "Name": "Select Verification Methods",
+        "Description": "Determine and document the methods to be used for verifying the software against its requirements.",
+        "Inputs": [
+          "ART-025"
+        ],
+        "Outputs": [
+          "ART-026"
+        ],
+        "Standards": [
+          "DO-178C §6.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 392,
+        "ParentId": 67,
+        "Name": "Develop Verification Cases and Procedures",
+        "Description": "Create detailed verification cases and procedures to ensure all objectives are met.",
+        "Inputs": [
+          "ART-026"
+        ],
+        "Outputs": [
+          "ART-098"
+        ],
+        "Standards": [
+          "DO-178C §6.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 393,
+        "ParentId": 67,
+        "Name": "Compile Software Verification Plan",
+        "Description": "Integrate the defined objectives, methods, and procedures into a comprehensive Software Verification Plan.",
+        "Inputs": [
+          "ART-025",
+          "ART-026",
+          "ART-098"
+        ],
+        "Outputs": [
+          "ART-031"
+        ],
+        "Standards": [
+          "DO-178C §6.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 394,
+        "ParentId": 68,
+        "Name": "Define Configuration Management Objectives",
+        "Description": "Establish the objectives for software configuration management based on the certification basis.",
+        "Inputs": [
+          "ART-003"
+        ],
+        "Outputs": [
+          "ART-066"
+        ],
+        "Standards": [
+          "DO-178C §7.1"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 395,
+        "ParentId": 68,
+        "Name": "Identify Configuration Items",
+        "Description": "Determine the software items that need to be controlled and tracked as part of configuration management.",
+        "Inputs": [
+          "ART-066"
+        ],
+        "Outputs": [
+          "ART-067"
+        ],
+        "Standards": [
+          "DO-178C §7.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 396,
+        "ParentId": 68,
+        "Name": "Establish Configuration Control Procedures",
+        "Description": "Develop procedures for managing changes to configuration items to ensure integrity and traceability.",
+        "Inputs": [
+          "ART-067"
+        ],
+        "Outputs": [
+          "ART-068"
+        ],
+        "Standards": [
+          "DO-178C §7.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 397,
+        "ParentId": 68,
+        "Name": "Document Software Configuration Management Plan",
+        "Description": "Compile the defined objectives, identified items, and established procedures into the Software Configuration Management Plan.",
+        "Inputs": [
+          "ART-068"
+        ],
+        "Outputs": [
+          "ART-032"
+        ],
+        "Standards": [
+          "DO-178C §7.4"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 398,
+        "ParentId": 69,
+        "Name": "Define SQAP Objectives",
+        "Description": "Establish the objectives and scope of the Software Quality Assurance Plan (SQAP).",
+        "Inputs": [
+          "ART-003"
+        ],
+        "Outputs": [
+          "ART-033"
+        ],
+        "Standards": [
+          "DO-178C §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 399,
+        "ParentId": 69,
+        "Name": "Identify Quality Assurance Activities",
+        "Description": "Determine the specific quality assurance activities required to meet the SQAP objectives.",
+        "Inputs": [
+          "ART-003"
+        ],
+        "Outputs": [
+          "ART-033"
+        ],
+        "Standards": [
+          "DO-178C §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 400,
+        "ParentId": 69,
+        "Name": "Document SQAP",
+        "Description": "Compile the identified objectives and activities into the Software Quality Assurance Plan document.",
+        "Inputs": [
+          "ART-003"
+        ],
+        "Outputs": [
+          "ART-033"
+        ],
+        "Standards": [
+          "DO-178C §5.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 401,
+        "ParentId": 73,
+        "Name": "Prepare Unit Test Environment",
+        "Description": "Set up the necessary environment and tools for executing unit tests on the source code.",
+        "Inputs": [
+          "ART-031",
+          "ART-037"
+        ],
+        "Outputs": [
+          "ART-038"
+        ],
+        "Standards": [
+          "DO-178C §6.4.1"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 402,
+        "ParentId": 73,
+        "Name": "Execute Unit Tests",
+        "Description": "Run the unit tests on the source code to verify the implementation against the requirements.",
+        "Inputs": [
+          "ART-038"
+        ],
+        "Outputs": [
+          "ART-063"
+        ],
+        "Standards": [
+          "DO-178C §6.4.2"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      },
+      {
+        "Id": 403,
+        "ParentId": 73,
+        "Name": "Analyze Unit Test Results",
+        "Description": "Review and analyze the results of the unit tests to ensure compliance with the expected outcomes.",
+        "Inputs": [
+          "ART-063"
+        ],
+        "Outputs": [
+          "ART-063"
+        ],
+        "Standards": [
+          "DO-178C §6.4.3"
+        ],
+        "AcademicRefs": [],
+        "IsSequential": false
+      }
+    ]
+  }
+}
