@@ -102,7 +102,10 @@ nor outputs of any other task:
 
 {json.dumps(still_undefined, indent=2)}
 
-Current process graph:
+Artifact legend (use ART-xxx IDs in all Inputs/Outputs):
+{self._art_legend()}
+
+Current process graph (ART-xxx IDs):
 {self._graph_json()}
 {ctx}
 
@@ -121,6 +124,10 @@ Instructions:
         new_graph = self._parse_graph_response(raw)
         if new_graph is None:
             return False
+
+        # Migrate any plain names to ART-xxx IDs before merging
+        if self.art_reg is not None:
+            new_graph.migrate_artifacts(self.art_reg)
 
         existing_ids = {t.id for t in self.graph.tasks}
         changed = False
@@ -200,10 +207,11 @@ class ACADAgent(BaseAgent):
 
         user_msg = f"""
 You are the ACAD (Academic) agent.
-
-For the following aeronautical development task, provide 1–3 academic
-references (papers, books, or standards) relevant to automation or
-machine-learning support for this activity. Cite published, citable works.
+You are an expert in machine learning.
+For the following aeronautical development task, provide 1-3 academic
+references (papers, books, or standards) published no earlier than 2024 
+relevant to the use of machine learning to support for this activity. 
+Cite published, citable works.
 
 Task:
 {json.dumps(task_summary, indent=2)}
@@ -242,3 +250,113 @@ If no relevant academic work exists, return: []
         else:
             # Fallback: store full strings (backward-compatible)
             return citations
+
+# ─────────────────────────────────────────────────────────────────────────────
+class DESCAgent(BaseAgent):
+    """
+    Description Completion Agent.
+
+    Scans every task in the graph and fills in the ``description`` field
+    whenever it is empty (or contains only whitespace).  The generated
+    description is derived solely from:
+
+      - the task name
+      - the resolved names of its input artifacts
+      - the resolved names of its output artifacts
+      - the task's standard references
+
+    No graph structure is modified — only ``task.description`` is written.
+
+    Token efficiency
+    ────────────────
+    Each task is handled in a single, compact LLM call.  The prompt does
+    not include the full graph — just the task's own attributes — so the
+    token cost is O(1) per task regardless of graph size.
+
+    Convergence behaviour
+    ─────────────────────
+    Once a description is written it is considered complete and will not be
+    overwritten in future iterations.  The agent returns True only when at
+    least one description was updated.
+    """
+
+    name = "DESC"
+
+    def run(self) -> bool:
+        self._log("Running description completion pass.")
+        candidates = [t for t in self.graph.tasks if not t.description.strip()]
+        if not candidates:
+            self._log("All tasks already have descriptions.")
+            return False
+
+        self._log("%d task(s) need descriptions.", len(candidates))
+        changed = False
+        for task in candidates:
+            desc = self._generate_description(task)
+            if desc:
+                task.description = desc
+                self._log("Task %d (%s): description written.", task.id, task.name)
+                changed = True
+
+        self._log("Changed: %s", changed)
+        return changed
+
+    def _generate_description(self, task) -> str:
+        """
+        Ask the LLM to write a precise, verifiable description for *task*.
+
+        The prompt is intentionally minimal — name, inputs, outputs, and
+        standards — to keep token usage low and focus the LLM on what the
+        task actually does rather than on irrelevant graph context.
+        """
+        # Resolve artifact IDs to full names when a registry is available
+        def _resolve(art_ids: list[str]) -> list[str]:
+            if self.art_reg:
+                return [self.art_reg.resolve(a) or a for a in art_ids]
+            return art_ids
+
+        inputs_resolved  = _resolve(task.inputs)
+        outputs_resolved = _resolve(task.outputs)
+
+        task_summary = {
+            "Name":      task.name,
+            "Inputs":    inputs_resolved,
+            "Outputs":   outputs_resolved,
+            "Standards": task.standards,
+        }
+
+        ctx = self._rag_context(
+            f"{task.name} {' '.join(task.standards)}"
+        )
+
+        user_msg = f"""
+You are the DESC (Description) agent.
+
+Write a concise, precise, and verifiable description for the following
+aeronautical development task.  The description must:
+  - State clearly what activity is performed (one to three sentences maximum)
+  - Be grounded in the listed input and output artifacts
+  - Reference the applicable standard if provided
+  - Be written in the third person (e.g. "This task defines …")
+  - Contain no redundancy and no vague terms such as "various" or "relevant"
+
+Task:
+{json.dumps(task_summary, indent=2, ensure_ascii=False)}
+{ctx if ctx else ""}
+
+Return ONLY the description text — no JSON, no bullet points, no preamble.
+""".strip()
+
+        raw = self._call_llm(SYSTEM_PREAMBLE, user_msg)
+
+        # Strip any accidental markdown or quote wrapping
+        desc = raw.strip().strip('"').strip("'").strip()
+        # Reject responses that look like JSON or are suspiciously long
+        if not desc or desc.startswith("{") or len(desc) > 800:
+            self._log(
+                "Task %d: description response rejected (empty or malformed).",
+                task.id,
+            )
+            return ""
+        return desc
+

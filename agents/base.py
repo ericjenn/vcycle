@@ -355,10 +355,22 @@ class BaseAgent(ABC):
         return None
 
     # ── refinement budget ──────────────────────────────────────────────────────
+    def reset_refinement_count(self) -> None:
+        """
+        Reset the per-iteration refinement counter to zero.
+
+        Called by the orchestrator at the start of each iteration so that
+        ``max_refinements`` is interpreted as a *per-iteration* cap (not a
+        lifetime cap).  Without this reset, once the budget is exhausted in
+        iteration 1 it would remain exhausted for all subsequent iterations,
+        preventing any further decomposition regardless of max_iterations.
+        """
+        self._refinement_count = 0
+
     @property
     def refinement_budget_exhausted(self) -> bool:
         """
-        Return True when the per-agent refinement budget is exhausted.
+        Return True when this iteration's refinement budget is exhausted.
 
         ``max_refinements=None`` means unlimited.
         """
@@ -369,10 +381,10 @@ class BaseAgent(ABC):
 
     def _consume_refinement(self) -> bool:
         """
-        Check the budget and, if available, consume one refinement slot.
+        Check the per-iteration budget and, if available, consume one slot.
 
         Returns True if the refinement is allowed, False if the budget is
-        exhausted.  Logs a one-time warning when the limit is first hit.
+        exhausted.  Logs a warning when the limit is first hit.
         """
         if self.max_refinements is not None:
             if self._refinement_count >= self.max_refinements:

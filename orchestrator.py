@@ -35,7 +35,7 @@ from core.model import ProcessGraph, ReferenceRegistry, ArtifactRegistry
 from rag.pipeline import RAGPipeline
 from agents.engineering import ESYSAgent, ESAFAgent, ESWAgent
 from agents.refinement import CSYSAgent, CSWAgent
-from agents.consistency import IOAgent, ACADAgent
+from agents.consistency import IOAgent, ACADAgent, DESCAgent
 
 
 # ── logging setup (called once) ───────────────────────────────────────────────
@@ -174,16 +174,17 @@ def run(
     csys = CSYSAgent(**agent_kwargs)
     csw  = CSWAgent(**agent_kwargs)
     io   = IOAgent(**agent_kwargs)
+    desc = DESCAgent(**agent_kwargs)
     acad = ACADAgent(**agent_kwargs)
 
-    all_agents = [esys, esaf, esw, csys, csw, io, acad]
+    all_agents = [esys, esaf, esw, csys, csw, io, desc, acad]
 
     def _sync():
         for agent in all_agents:
             agent.graph = graph
 
     # ── agent filter ─────────────────────────────────────────────────────────
-    _ALL_AGENTS = {"ESYS", "ESW", "ESAF", "CSYS", "CSW", "IO", "ACAD"}
+    _ALL_AGENTS = {"ESYS", "ESW", "ESAF", "CSYS", "CSW", "IO", "DESC", "ACAD"}
     if active_agents is not None:
         unknown = active_agents - _ALL_AGENTS
         if unknown:
@@ -207,6 +208,11 @@ def run(
                         len(graph.tasks), len(graph.inputs))
 
             any_change = False
+
+            # Reset per-iteration refinement counters for engineering agents
+            if max_refinements is not None:
+                for agent in (esys, esw, esaf):
+                    agent.reset_refinement_count()
 
             # Step 1 — Engineering (extend + refine)
             logger.info("--- Step 1: Engineering agents ---")
@@ -251,18 +257,30 @@ def run(
         else:
             logger.warning("Reached max_iterations=%d.", max_iterations)
 
-    except Exception:
-        # ── crash save ────────────────────────────────────────────────────────
-        logger.error("Unhandled exception — saving crash snapshot.")
-        logger.error(traceback.format_exc())
+    except BaseException as _exc:
+        # ── dump on any exit (Ctrl-C, crash, or any other signal) ───────────
+        is_interrupt = isinstance(_exc, KeyboardInterrupt)
+        if is_interrupt:
+            logger.warning("KeyboardInterrupt — dumping all files before exit.")
+        else:
+            logger.error("Unhandled exception — saving crash snapshot.")
+            logger.error(traceback.format_exc())
         try:
             _save_graph(graph, crash_path)
             _save_refs(registry, crash_refs)
             art_reg.save(output_path.replace(".json", "_crash_artifacts.txt"))
-            logger.error("Crash snapshot saved to '%s' and '%s'.",
-                         crash_path, crash_refs)
+            if not is_interrupt and graphviz_output:
+                # Also render the graph snapshot if Graphviz was requested
+                try:
+                    render_graph(graph, art_reg=art_reg,
+                                 output_stem=crash_path.replace(".json", ""),
+                                 fmt=graphviz_fmt)
+                except Exception:
+                    pass
+            level = logger.warning if is_interrupt else logger.error
+            level("Snapshot saved: '%s', '%s'.", crash_path, crash_refs)
         except Exception as save_err:
-            logger.error("Could not write crash snapshot: %s", save_err)
+            logger.error("Could not write snapshot: %s", save_err)
         raise
 
     # ── final save ────────────────────────────────────────────────────────────

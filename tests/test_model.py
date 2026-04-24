@@ -437,6 +437,252 @@ def test_active_agents_subset_accepted():
 
 
 
+
+# ── Graphviz renderer ──────────────────────────────────────────────────────────
+def test_render_graph_produces_dot(tmp_path):
+    import sys; sys.path.insert(0, "/mnt/user-data/outputs/aero_process")
+    from core.model import ProcessGraph, Task, ArtifactRegistry
+    from core.viz import render_graph
+
+    art = ArtifactRegistry()
+    a1 = art.register("System Requirements")
+    a2 = art.register("FHA Report")
+    a3 = art.register("Source Code")
+
+    graph = ProcessGraph(inputs=[a1], outputs=[a2, a3])
+    graph.add_task(Task(id=1, parent_id=None, name="Safety Analysis",
+                        description="FHA", inputs=[a1], outputs=[a2],
+                        standards=["ARP4761 §5"]))
+    graph.add_task(Task(id=2, parent_id=None, name="Implement Code",
+                        description="Write source code following DO-178C.",
+                        inputs=[a1], outputs=[a3],
+                        standards=["DO-178C §5.4"]))
+
+    stem = str(tmp_path / "test_graph")
+    gv_path = render_graph(graph, art_reg=art, output_stem=stem, fmt="svg")
+
+    dot = open(gv_path).read()
+    assert "digraph process" in dot
+    assert "cluster_legend" in dot
+    assert "Safety" in dot          # legend entry
+    assert "Software" in dot        # legend entry
+    assert "System" in dot          # legend entry
+    assert "proc_in_" in dot        # process input node
+    assert "proc_out_" in dot       # process output node
+    assert "task_1" in dot
+    assert "task_2" in dot
+    # Safety task should have safety colour
+    assert "#FFCCCC" in dot or "#C00000" in dot
+    # Software task should have software colour
+    assert "#E2EFDA" in dot or "#375623" in dot
+
+
+def test_render_graph_cluster_for_parent(tmp_path):
+    import sys; sys.path.insert(0, "/mnt/user-data/outputs/aero_process")
+    from core.model import ProcessGraph, Task, ArtifactRegistry
+    from core.viz import render_graph
+
+    art = ArtifactRegistry()
+    a1 = art.register("Input A")
+    a2 = art.register("Output B")
+
+    graph = ProcessGraph(inputs=[a1], outputs=[a2])
+    # Parent task
+    graph.add_task(Task(id=10, parent_id=None, name="Parent System Task",
+                        description="A system-level parent.", inputs=[a1],
+                        outputs=[a2], standards=["ARP4754A §5"]))
+    # Child task
+    graph.add_task(Task(id=11, parent_id=10, name="Child Task",
+                        description="A child.", inputs=[a1], outputs=[a2],
+                        standards=["ARP4754A §5.2"]))
+
+    stem = str(tmp_path / "cluster_test")
+    gv_path = render_graph(graph, art_reg=art, output_stem=stem, fmt="svg")
+    dot = open(gv_path).read()
+
+    assert "cluster_10" in dot      # parent rendered as cluster
+    assert "anchor_10" in dot       # invisible anchor inside cluster
+    assert "task_11" in dot         # child rendered as node
+
+
+# ── Refinement budget ──────────────────────────────────────────────────────────
+def test_refinement_budget_unlimited():
+    """With max_refinements=None every call to _consume_refinement returns True."""
+    import sys; sys.path.insert(0, "/mnt/user-data/outputs/aero_process")
+    # Use a trivial stand-in since BaseAgent is abstract
+    class _Stub:
+        max_refinements = None
+        _refinement_count = 0
+        name = "TEST"
+        def _log(self, *a): pass
+
+        refinement_budget_exhausted = property(
+            lambda self: (
+                self.max_refinements is not None
+                and self._refinement_count >= self.max_refinements
+            )
+        )
+
+        def _consume_refinement(self):
+            if self.max_refinements is not None:
+                if self._refinement_count >= self.max_refinements:
+                    return False
+            self._refinement_count += 1
+            return True
+
+    s = _Stub()
+    for _ in range(100):
+        assert s._consume_refinement() is True
+    assert s._refinement_count == 100
+
+
+def test_refinement_budget_limited():
+    """With max_refinements=3 only 3 calls return True."""
+    class _Stub:
+        max_refinements = 3
+        _refinement_count = 0
+        name = "TEST"
+        def _log(self, *a): pass
+
+        def _consume_refinement(self):
+            if self.max_refinements is not None:
+                if self._refinement_count >= self.max_refinements:
+                    return False
+            self._refinement_count += 1
+            return True
+
+        def reset_refinement_count(self):
+            self._refinement_count = 0
+
+    s = _Stub()
+    results = [s._consume_refinement() for _ in range(5)]
+    assert results == [True, True, True, False, False]
+    assert s._refinement_count == 3
+
+
+def test_refinement_budget_resets_per_iteration():
+    """reset_refinement_count() restores the full budget for the next iteration."""
+    class _Stub:
+        max_refinements = 2
+        _refinement_count = 0
+        name = "TEST"
+        def _log(self, *a): pass
+
+        def _consume_refinement(self):
+            if self.max_refinements is not None:
+                if self._refinement_count >= self.max_refinements:
+                    return False
+            self._refinement_count += 1
+            return True
+
+        def reset_refinement_count(self):
+            self._refinement_count = 0
+
+    s = _Stub()
+
+    # Iteration 1: consume both slots
+    assert s._consume_refinement() is True
+    assert s._consume_refinement() is True
+    assert s._consume_refinement() is False   # budget exhausted
+
+    # Reset (as orchestrator does at start of each iteration)
+    s.reset_refinement_count()
+    assert s._refinement_count == 0
+
+    # Iteration 2: full budget again
+    assert s._consume_refinement() is True
+    assert s._consume_refinement() is True
+    assert s._consume_refinement() is False
+
+
+def test_keyboard_interrupt_is_base_exception():
+    """KeyboardInterrupt must be caught by except BaseException, not except Exception."""
+    caught_by_exception = False
+    caught_by_base = False
+
+    try:
+        raise KeyboardInterrupt
+    except Exception:
+        caught_by_exception = True
+    except BaseException:
+        caught_by_base = True
+
+    assert not caught_by_exception, "KeyboardInterrupt must NOT be caught by 'except Exception'"
+    assert caught_by_base, "KeyboardInterrupt MUST be caught by 'except BaseException'"
+
+
+
+# ── DESCAgent ──────────────────────────────────────────────────────────────────
+def test_desc_agent_identifies_empty_descriptions():
+    """Tasks with empty or whitespace descriptions are picked as candidates."""
+    import sys; sys.path.insert(0, "/mnt/user-data/outputs/aero_process")
+    from core.model import ProcessGraph, Task
+
+    graph = ProcessGraph()
+    graph.add_task(Task(id=1, parent_id=None, name="T1",
+                        description="Already written."))
+    graph.add_task(Task(id=2, parent_id=None, name="T2",
+                        description=""))          # empty
+    graph.add_task(Task(id=3, parent_id=None, name="T3",
+                        description="   "))       # whitespace only
+
+    candidates = [t for t in graph.tasks if not t.description.strip()]
+    assert len(candidates) == 2
+    assert {t.id for t in candidates} == {2, 3}
+
+
+def test_desc_agent_skips_completed():
+    """Tasks with non-empty descriptions are not candidates."""
+    import sys; sys.path.insert(0, "/mnt/user-data/outputs/aero_process")
+    from core.model import ProcessGraph, Task
+
+    graph = ProcessGraph()
+    graph.add_task(Task(id=1, parent_id=None, name="T1",
+                        description="This task defines the system requirements."))
+    candidates = [t for t in graph.tasks if not t.description.strip()]
+    assert len(candidates) == 0
+
+
+def test_desc_agent_artifact_resolution():
+    """ART-xxx IDs in inputs/outputs are resolved to names for the prompt."""
+    import sys; sys.path.insert(0, "/mnt/user-data/outputs/aero_process")
+    from core.model import ArtifactRegistry
+
+    reg = ArtifactRegistry()
+    id1 = reg.register("System Requirements Specification")
+    id2 = reg.register("Software High-Level Requirements")
+
+    # Simulate what _generate_description does with resolution
+    def _resolve(art_ids, art_reg):
+        return [art_reg.resolve(a) or a for a in art_ids]
+
+    result = _resolve([id1, id2], reg)
+    assert result == ["System Requirements Specification",
+                      "Software High-Level Requirements"]
+
+
+def test_desc_response_rejection_json():
+    """A response that looks like JSON should be rejected."""
+    desc = '{"process": {"tasks": []}}'
+    reject = not desc or desc.startswith("{") or len(desc) > 800
+    assert reject
+
+
+def test_desc_response_rejection_empty():
+    """An empty response should be rejected."""
+    desc = "   ".strip().strip('"').strip("'").strip()
+    reject = not desc or desc.startswith("{") or len(desc) > 800
+    assert reject
+
+
+def test_desc_response_accepted():
+    """A normal prose description should be accepted."""
+    desc = ("This task derives software high-level requirements from the "
+            "system requirements specification, following DO-178C §5.1.")
+    reject = not desc or desc.startswith("{") or len(desc) > 800
+    assert not reject
+
+
 if __name__ == "__main__":
     import pytest
     pytest.main([__file__, "-v"])

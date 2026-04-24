@@ -1,0 +1,18 @@
+REF-001 | Liu, Y., & Yao, X. (2019). A survey on artificial intelligence for aircraft systems. IEEE Transactions on Systems, Man, and Cybernetics: Systems.
+REF-002 | Nguyen, T. T., & Bui, T. D. (2020). Machine learning approaches for aircraft design and optimization. Aerospace Science and Technology.
+REF-003 | Gonzalez, L. F., & Vachtsevanos, G. (2018). Intelligent systems for aircraft design: A review. Progress in Aerospace Sciences.
+REF-004 | P. C. Clements et al. (2010). Documenting Software Architectures: Views and Beyond. Addison-Wesley.
+REF-005 | I. Sommerville (2016). Software Engineering. Pearson.
+REF-006 | B. Boehm et al. (2000). Software Cost Estimation with COCOMO II. Prentice Hall.
+REF-007 | Bass, L., Clements, P., & Kazman, R. (2012). Software Architecture in Practice. Addison-Wesley.
+REF-008 | Garlan, D., & Shaw, M. (1993). An Introduction to Software Architecture. Advances in Software Engineering and Knowledge Engineering.
+REF-009 | Clements, P., Kazman, R., & Klein, M. (2002). Evaluating Software Architectures: Methods and Case Studies. Addison-Wesley.
+REF-010 | Feiler, P. H., & Gluch, D. P. (2012). Model-Based Engineering with AADL: An Introduction to the SAE Architecture Analysis & Design Language. Addison-Wesley.
+REF-011 | Ponsard, C., & Massonet, P. (2010). Requirements Engineering in the Context of Model-Driven Engineering. In: Proceedings of the 16th IEEE International Requirements Engineering Conference.
+REF-012 | Whittle, J., Hutchinson, J., & Rouncefield, M. (2014). The State of Practice in Model-Driven Engineering. IEEE Software.
+REF-013 | Maier, M. W. (1998). Architecting principles for systems-of-systems. Systems Engineering, 1(4), 267-284.
+REF-014 | Estefan, J. A. (2008). Survey of model-based systems engineering (MBSE) methodologies. INCOSE MBSE Focus Group.
+REF-015 | Sangiovanni-Vincentelli, A., & Martin, G. (2001). Platform-based design and software design methodology for embedded systems. IEEE Design & Test of Computers, 18(6), 23-33.
+REF-016 | Feigh, K. M., & Pritchett, A. R. (2011). Requirements for effective function allocation: A critical review. Journal of Cognitive Engineering and Decision Making.
+REF-017 | Cummings, M. L. (2014). Man versus machine or man + machine? IEEE Intelligent Systems.
+REF-018 | Parasuraman, R., Sheridan, T. B., & Wickens, C. D. (2000). A model for types and levels of human interaction with automation. IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans.
